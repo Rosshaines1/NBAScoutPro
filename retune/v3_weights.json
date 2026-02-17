@@ -1,0 +1,25 @@
+{
+  "v3_weights": {
+    "bpm": 5.0,
+    "threeP": 0.3,
+    "fg": 3.2,
+    "ppg": 1.0,
+    "obpm": 2.72,
+    "dbpm": 2.66,
+    "usg": 2.61,
+    "rpg": 1.0,
+    "age": 2.13,
+    "mpg": 1.0,
+    "bpg": 0.83,
+    "stl_per": 0.76,
+    "spg": 0.63,
+    "tpg": 0.57,
+    "ft": 3.5,
+    "apg": 0.17,
+    "weight": 0.0,
+    "ws": 0.0,
+    "ath": 0.0,
+    "fta_pg": 3.0
+  },
+  "archetype_suggestions": {}
+}

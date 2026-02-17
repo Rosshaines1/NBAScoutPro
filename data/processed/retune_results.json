@@ -1,0 +1,45 @@
+{
+  "retune_date": "2026-02-16",
+  "dataset": "493 players, 2009-2019 drafts, all with college stats",
+  "correlation_findings": {
+    "top_predictors": [
+      "bpm (r=0.276)",
+      "age (r=-0.209)",
+      "obpm (r=0.186)",
+      "fta (r=0.171)",
+      "dbpm (r=0.162)"
+    ],
+    "surprises": [
+      "FT% near-zero r overall but works as penalty (FT<65=71% bust rate)",
+      "3P% negatively correlated (r=-0.092)",
+      "APG near-zero (r=0.008)",
+      "eFG% moderate positive (r=0.103)"
+    ],
+    "class_year_signal": "Fr avg WS=23.7, So=19.1, Jr=16.9, Sr=10.5"
+  },
+  "predict_tier_improvement": {
+    "before": {
+      "exact": "34.5%",
+      "within_1": "71.0%",
+      "star_detection": "~15%"
+    },
+    "after": {
+      "exact": "35.5%",
+      "within_1": "70.6%",
+      "star_detection": "56%"
+    }
+  },
+  "comp_backtest": {
+    "note": "Comp-based prediction flat across V1/V2/V3 (~30% exact, ~81% within-1)",
+    "reason": "Structural ceiling \u2014 T5 dominates database, weighted avg always trends T4"
+  },
+  "v3_changes": [
+    "New V3_WEIGHTS derived from clean data correlations",
+    "Retuned STAR_SIGNAL_THRESHOLDS (BPM 7.5->9.6, OBPM 5.0->7.1, FTA 5.7->4.6)",
+    "Added class year signal to predict_tier (+5 freshman, -4 senior)",
+    "Disabled weight/wingspan in similarity (placeholder data)",
+    "eFG% weight increased 0.5->3.2 (verified predictor)",
+    "APG weight reduced 0.3->0.17 (near-zero predictor)",
+    "Archetype modifiers updated (reduced APG/3P% boosts)"
+  ]
+}

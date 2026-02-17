@@ -1,0 +1,71 @@
+{
+  "thresholds": {
+    "bpm": {
+      "threshold": 9.6,
+      "precision": 0.267,
+      "recall": 0.364,
+      "f1": 0.308
+    },
+    "obpm": {
+      "threshold": 7.1,
+      "precision": 0.281,
+      "recall": 0.277,
+      "f1": 0.279
+    },
+    "dbpm": {
+      "threshold": 3.2,
+      "precision": 0.197,
+      "recall": 0.591,
+      "f1": 0.295
+    },
+    "fta": {
+      "threshold": 4.6,
+      "precision": 0.207,
+      "recall": 0.712,
+      "f1": 0.321
+    },
+    "spg": {
+      "threshold": 1.4,
+      "precision": 0.196,
+      "recall": 0.424,
+      "f1": 0.268
+    },
+    "stl_per": {
+      "threshold": 2.5,
+      "precision": 0.186,
+      "recall": 0.409,
+      "f1": 0.256
+    },
+    "usg": {
+      "threshold": 25.9,
+      "precision": 0.183,
+      "recall": 0.515,
+      "f1": 0.27
+    },
+    "ft": {
+      "threshold": 79.9,
+      "precision": 0.173,
+      "recall": 0.348,
+      "f1": 0.231
+    },
+    "ppg": {
+      "threshold": 16.5,
+      "precision": 0.159,
+      "recall": 0.47,
+      "f1": 0.238
+    },
+    "apg": {
+      "threshold": 2.2,
+      "precision": 0.14,
+      "recall": 0.485,
+      "f1": 0.218
+    },
+    "rpg": {
+      "threshold": 6.3,
+      "precision": 0.17,
+      "recall": 0.576,
+      "f1": 0.263
+    }
+  },
+  "n_players": 493
+}
