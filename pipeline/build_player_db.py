@@ -67,6 +67,111 @@ WS_TIERS = {
     # 5: below 5 (Bust)
 }
 
+# Manual tier corrections from user review (Feb 2026).
+# WS-based tiers misclassify players affected by injuries, bad teams, or longevity.
+# 99 corrections: role players on good teams demoted, injured stars promoted, etc.
+TIER_OVERRIDES = {
+    "Andrew Nicholson": 4,
+    "Austin Rivers": 3,
+    "Avery Bradley": 3,
+    "Ben Simmons": 2,
+    "Bol Bol": 4,
+    "Bradley Beal": 1,
+    "Brandon Ingram": 2,
+    "Brandon Knight": 3,
+    "Cam Reddish": 4,
+    "Chinanu Onuaku": 4,
+    "Coby White": 3,
+    "Cody Martin": 3,
+    "Collin Sexton": 3,
+    "Danny Green": 3,
+    "Darius Garland": 2,
+    "Darren Collison": 3,
+    "De'Aaron Fox": 2,
+    "Deandre Ayton": 3,
+    "Derrick Favors": 3,
+    "Derrick White": 3,
+    "Devin Booker": 1,
+    "Devonte' Graham": 3,
+    "Dillon Brooks": 3,
+    "Dion Waiters": 3,
+    "Donovan Mitchell": 1,
+    "Dwight Powell": 3,
+    "Ed Davis": 4,
+    "Elfrid Payton": 3,
+    "Eric Bledsoe": 3,
+    "Eric Paschall": 4,
+    "Frank Kaminsky": 3,
+    "Gary Trent Jr.": 3,
+    "Grant Williams": 3,
+    "Greg Monroe": 3,
+    "Greivis Vasquez": 3,
+    "Iman Shumpert": 3,
+    "Ja Morant": 2,
+    "Jabari Parker": 3,
+    "Jae Crowder": 3,
+    "Jakob Poeltl": 3,
+    "Jalen Brunson": 1,
+    "Jalen McDaniels": 3,
+    "Jared Sullinger": 3,
+    "Jaren Jackson Jr.": 2,
+    "Jarrett Allen": 3,
+    "Jarrett Culver": 4,
+    "Jaylen Brown": 1,
+    "Jayson Tatum": 1,
+    "Jeff Withey": 5,
+    "Jonathan Isaac": 3,
+    "Jordan Bell": 4,
+    "Jordan Poole": 3,
+    "Josh Hart": 3,
+    "Justin Anderson": 4,
+    "Kelly Olynyk": 3,
+    "Kentavious Caldwell-Pope": 3,
+    "Kevin Porter Jr.": 3,
+    "Kevon Looney": 4,
+    "Klay Thompson": 1,
+    "Kyle Anderson": 3,
+    "Kyle Kuzma": 3,
+    "Lance Stephenson": 3,
+    "Landry Shamet": 3,
+    "Larry Nance Jr.": 4,
+    "Lauri Markkanen": 2,
+    "Lonnie Walker IV": 4,
+    "Lonzo Ball": 2,
+    "Luke Kennard": 4,
+    "Malik Monk": 3,
+    "Markelle Fultz": 3,
+    "Mason Plumlee": 3,
+    "Meyers Leonard": 3,
+    "Michael Carter-Williams": 3,
+    "Michael Porter Jr.": 2,
+    "Mo Bamba": 5,
+    "Montrezl Harrell": 3,
+    "Moritz Wagner": 3,
+    "Nassir Little": 4,
+    "Nickeil Alexander-Walker": 3,
+    "Nikola Vucevic": 2,
+    "Norris Cole": 4,
+    "OG Anunoby": 2,
+    "P.J. Washington": 3,
+    "RJ Barrett": 3,
+    "Rodney Hood": 3,
+    "Rui Hachimura": 3,
+    "Sam Young": 5,
+    "Shai Gilgeous-Alexander": 1,
+    "Skal Labissiere": 4,
+    "Steven Adams": 3,
+    "Taj Gibson": 3,
+    "Talen Horton-Tucker": 3,
+    "Terrence Jones": 3,
+    "Tristan Thompson": 3,
+    "Ty Lawson": 3,
+    "Tyler Herro": 2,
+    "Zach Collins": 3,
+    "Zach LaVine": 2,
+    "Zion Williamson": 2,
+}
+
 
 def load_datasets():
     """Load college data from archive.zip.
@@ -385,6 +490,24 @@ def build_player_db():
             adjoe = safe_float(row.get("adjoe"))
             adrtg = safe_float(row.get("adrtg"))
 
+            # NEW stats for correlation analysis
+            tpa_raw = safe_float(row.get("TPA"))  # 3pt attempts (season total)
+            tpm_raw = safe_float(row.get("TPM"))  # 3pt makes (season total)
+            two_pa_raw = safe_float(row.get("twoPA"))  # 2pt attempts (season total)
+            two_pm_raw = safe_float(row.get("twoPM"))  # 2pt makes (season total)
+            two_p_pct = safe_float(row.get("twoP_per"))  # 2pt %
+            oreb_pg = safe_float(row.get("oreb"))  # offensive reb (per-game)
+            dreb_pg = safe_float(row.get("dreb"))  # defensive reb (per-game)
+            ftr_val = safe_float(row.get("ftr"))  # FT rate
+            orb_per = safe_float(row.get("ORB_per"))  # offensive reb %
+            drb_per = safe_float(row.get("DRB_per"))  # defensive reb %
+            ast_per = safe_float(row.get("AST_per"))  # assist %
+            to_per = safe_float(row.get("TO_per"))  # turnover %
+            blk_per = safe_float(row.get("blk_per"))  # block %
+            ortg = safe_float(row.get("Ortg"))  # offensive rating
+            porpag_val = safe_float(row.get("porpag"))  # pts over replacement/game
+            dporpag_val = safe_float(row.get("dporpag"))  # defensive PORG
+
             # Convert season totals to per-game
             gp_div = gp if gp > 0 else 30
             fta = fta_raw / gp_div if fta_raw else 0
@@ -392,6 +515,10 @@ def build_player_db():
             stops = stops_raw / gp_div if stops_raw else 0
             rimmade = rimmade_raw / gp_div if rimmade_raw else 0
             rim_att = rim_att_raw / gp_div if rim_att_raw else 0
+            tpa = tpa_raw / gp_div if tpa_raw else 0
+            tpm = tpm_raw / gp_div if tpm_raw else 0
+            two_pa = two_pa_raw / gp_div if two_pa_raw else 0
+            two_pm = two_pm_raw / gp_div if two_pm_raw else 0
 
             tier, outcome = assign_tier_ws(nba_ws, draft_pick, nba_games)
             class_year = parse_class_year(row)
@@ -426,6 +553,18 @@ def build_player_db():
                     "ts_per": round(ts_per, 2), "adjoe": round(adjoe, 1),
                     "adrtg": round(adrtg, 1),
                     "gp": round(gp, 0),
+                    # NEW stats
+                    "tpa": round(tpa, 2), "tpm": round(tpm, 2),
+                    "two_pa": round(two_pa, 2), "two_pm": round(two_pm, 2),
+                    "two_p_pct": round(two_p_pct, 3),
+                    "oreb": round(oreb_pg, 2), "dreb": round(dreb_pg, 2),
+                    "ftr": round(ftr_val, 1),
+                    "orb_per": round(orb_per, 1), "drb_per": round(drb_per, 1),
+                    "ast_per": round(ast_per, 1), "to_per": round(to_per, 1),
+                    "blk_per": round(blk_per, 1),
+                    "ortg": round(ortg, 1),
+                    "porpag": round(porpag_val, 2),
+                    "dporpag": round(dporpag_val, 2),
                 },
                 "outcome": outcome,
                 "tier": tier,
@@ -577,6 +716,25 @@ def build_player_db():
                 p["stats"][stat_key] = val
             override_count += 1
 
+    # --- Apply manual tier corrections ---
+    # Match by exact name first, then by accent-stripped name
+    tier_override_count = 0
+    tier_override_index = {}
+    for override_name, override_tier in TIER_OVERRIDES.items():
+        tier_override_index[override_name] = override_tier
+        stripped = unicodedata.normalize("NFKD", override_name).encode("ascii", "ignore").decode("ascii")
+        if stripped != override_name:
+            tier_override_index[stripped] = override_tier
+
+    for p in players:
+        name = p["name"]
+        stripped_name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode("ascii")
+        new_tier = tier_override_index.get(name) or tier_override_index.get(stripped_name)
+        if new_tier is not None and new_tier != p["tier"]:
+            p["tier"] = new_tier
+            p["outcome"] = TIER_LABELS[new_tier]
+            tier_override_count += 1
+
     print(f"\n  Match results:")
     print(f"    Exact name match:  {matched_count}")
     print(f"    Alias match:       {alias_count}")
@@ -584,6 +742,7 @@ def build_player_db():
     print(f"    BRef-only (no college stats): {bref_only_count}")
     print(f"    Removed (bad data):          {removed_count}")
     print(f"    Stat overrides applied:      {override_count}")
+    print(f"    Tier overrides applied:      {tier_override_count}/{len(TIER_OVERRIDES)}")
     print(f"    Undrafted NBA players added:  {undrafted_added}")
     print(f"    TOTAL: {len(players)}")
 

@@ -1,71 +1,71 @@
 {
   "thresholds": {
     "bpm": {
-      "threshold": 9.6,
-      "precision": 0.267,
-      "recall": 0.364,
-      "f1": 0.308
+      "threshold": 7.7,
+      "precision": 0.151,
+      "recall": 0.579,
+      "f1": 0.24
     },
     "obpm": {
-      "threshold": 7.1,
-      "precision": 0.281,
-      "recall": 0.277,
-      "f1": 0.279
+      "threshold": 6.9,
+      "precision": 0.208,
+      "recall": 0.286,
+      "f1": 0.241
     },
     "dbpm": {
-      "threshold": 3.2,
-      "precision": 0.197,
-      "recall": 0.591,
-      "f1": 0.295
+      "threshold": 2.6,
+      "precision": 0.137,
+      "recall": 0.614,
+      "f1": 0.224
     },
     "fta": {
-      "threshold": 4.6,
-      "precision": 0.207,
-      "recall": 0.712,
-      "f1": 0.321
+      "threshold": 6.1,
+      "precision": 0.222,
+      "recall": 0.351,
+      "f1": 0.272
     },
     "spg": {
       "threshold": 1.4,
-      "precision": 0.196,
-      "recall": 0.424,
-      "f1": 0.268
+      "precision": 0.174,
+      "recall": 0.439,
+      "f1": 0.249
     },
     "stl_per": {
-      "threshold": 2.5,
-      "precision": 0.186,
-      "recall": 0.409,
-      "f1": 0.256
+      "threshold": 2.4,
+      "precision": 0.158,
+      "recall": 0.474,
+      "f1": 0.237
     },
     "usg": {
       "threshold": 25.9,
-      "precision": 0.183,
-      "recall": 0.515,
-      "f1": 0.27
+      "precision": 0.161,
+      "recall": 0.526,
+      "f1": 0.247
     },
     "ft": {
-      "threshold": 79.9,
-      "precision": 0.173,
-      "recall": 0.348,
-      "f1": 0.231
+      "threshold": 81.3,
+      "precision": 0.181,
+      "recall": 0.333,
+      "f1": 0.235
     },
     "ppg": {
-      "threshold": 16.5,
-      "precision": 0.159,
-      "recall": 0.47,
-      "f1": 0.238
+      "threshold": 16.6,
+      "precision": 0.144,
+      "recall": 0.474,
+      "f1": 0.221
     },
     "apg": {
-      "threshold": 2.2,
-      "precision": 0.14,
-      "recall": 0.485,
-      "f1": 0.218
+      "threshold": 3.7,
+      "precision": 0.155,
+      "recall": 0.298,
+      "f1": 0.204
     },
     "rpg": {
-      "threshold": 6.3,
-      "precision": 0.17,
-      "recall": 0.576,
-      "f1": 0.263
+      "threshold": 9.7,
+      "precision": 0.239,
+      "recall": 0.193,
+      "f1": 0.214
     }
   },
-  "n_players": 493
+  "n_players": 496
 }

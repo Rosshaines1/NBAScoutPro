@@ -54,6 +54,7 @@ MAX_STATS = {
     "stl_per": 5.0, "usg": 40,
     "stops": 10, "rimmade": 5, "rim_att": 8,
     "ts_per": 70, "adjoe": 135, "adrtg": 110,
+    "ftr": 60, "rim_pct": 85, "tpa": 10,
 }
 
 # Range-based normalization: (min, max) for each stat.
@@ -95,7 +96,16 @@ STAT_RANGES = {
     "stops": (0, 10),
     "rimmade": (0, 5),
     "rim_att": (0, 8),
+
+    # NEW stats (V4)
+    "ftr": (15, 60),         # FT rate (FTA/FGA * 100)
+    "rim_pct": (30, 85),     # Rim finishing %
+    "tpa": (0, 10),          # 3PA per game
 }
+
+# Valid draft year range for comp pool and backtest (we only have reliable
+# college data for these years — pre-2009 and post-2019 have incomplete/mismatched data)
+COMP_YEAR_RANGE = (2009, 2019)
 
 EXCLUDE_PLAYERS = [
     "Joel Embiid", "Donovan Mitchell", "Larry Johnson", "Emeka Okafor",
@@ -168,37 +178,40 @@ V2_WEIGHTS = {
     "ath": 0.0,
 }
 
-# V3 weights: retuned on clean 493-player dataset (2009-2019 drafts)
-# Derived from Pearson r vs NBA WS + star/bust separation analysis.
+# V3 weights: retuned on corrected 496-player dataset (2009-2019 drafts, Feb 2026 tier fixes)
+# Derived from Pearson r vs corrected tiers + star/bust separation analysis.
 V3_WEIGHTS = {
-    # Tier 1: Advanced metrics (strongest predictors, translate directly)
-    "bpm": 5.0,       # r=0.276, #1 predictor, Cohen d=0.69
-    "fg": 3.2,        # r=0.103, eFG% sep=+1.39 (efficient scoring translates)
-    "fta_pg": 3.0,    # r=0.171, FTA volume = star signal (Cohen d=0.50)
-    "obpm": 2.72,     # r=0.186, offensive impact
-    "dbpm": 2.66,     # r=0.162, defensive impact (Cohen d=0.46)
-    "usg": 2.61,      # r=0.086, offensive load indicator
+    # Tier 1: Advanced metrics (strongest predictors)
+    "bpm": 5.0,       # r=0.277, #1 predictor, Cohen d=0.53
+    "usg": 3.9,       # r=0.087, sep=+1.52 (up from 2.61 — usage matters more with clean tiers)
+    "obpm": 3.49,     # r=0.187, offensive impact
+    "age": 3.47,      # r=-0.208, #2 predictor! Fr=25% stars vs Sr=2%
+    "fg": 3.4,        # r=0.105, eFG% sep=+1.27
+    "fta_pg": 3.0,    # r=0.173, FTA volume = star signal
 
-    # Tier 2: Physical + age (translate directly)
+    # Tier 2: Physical + penalty-stat
     "height": 2.5,    # physical translation — range-normalized (70-86")
-    "age": 2.13,      # r=-0.209, #2 raw predictor! Fr=23.7 WS vs Sr=10.5 WS
+    "ft": 3.5,        # penalty-stat: FT<65 = 65% bust rate. Style fingerprint.
+    "dbpm": 1.98,     # r=0.164, defensive impact
 
-    # Tier 3: Penalty-stat (FT%) + moderate predictors
-    # FT% has r=0.018 overall BUT FT<65 = 71% bust rate. Works as penalty.
-    # Kept high for similarity matching (player style fingerprint).
-    "ft": 3.5,        # penalty-stat: broken shot = bust signal, good FT = style match
-    "ppg": 1.0,       # r=0.106, context-dependent (level-adjusted only)
-    "rpg": 1.0,       # r=0.128, context-dependent
-    "mpg": 1.0,       # r=0.054, context indicator
-    "bpg": 0.83,      # r=0.084, mostly height-dependent
-    "stl_per": 0.76,  # r=0.111, defensive instincts
-    "spg": 0.63,      # r=0.110, partially opportunity-based
-    "tpg": 0.57,      # r=0.054, turnover rate
+    # Tier 3: Moderate predictors
+    "ppg": 1.0,       # r=0.109, context-dependent (level-adjusted only)
+    "rpg": 1.0,       # r=0.130, context-dependent
+    "stl_per": 0.94,  # r=0.112, defensive instincts
+    "mpg": 0.4,       # r=0.058, weak
+    "bpg": 0.63,      # r=0.085, mostly height-dependent
+    "spg": 0.77,      # r=0.112, partially opportunity-based
+    "tpg": 0.73,      # r=0.056, turnover rate
+    "apg": 0.81,      # r=0.010 (near-zero, but kept for similarity matching)
     "ato": 0.5,       # derived from apg/tpg
 
-    # Tier 4: Weak/zero predictors
-    "threeP": 0.3,    # r=-0.092 (NEGATIVE — stars shoot worse 3P% in college)
-    "apg": 0.17,      # r=0.008 (essentially zero)
+    # Tier 4: Weak/negative predictors
+    "threeP": 0.3,    # r=-0.091 (NEGATIVE — stars shoot worse 3P% in college)
+
+    # NEW: independent predictors (V4)
+    "ftr": 2.5,       # r=0.156, independent of BPM (r=0.103), star-bust gap +4.0
+    "rim_pct": 2.0,   # r=0.138, very independent (r=0.045 vs BPM), rim finishing
+    "tpa": 0.3,       # r=-0.073, weak but useful for 3P% volume context
 
     # Disabled — no real data
     "weight": 0.0,    # all placeholder 200lbs
@@ -206,16 +219,16 @@ V3_WEIGHTS = {
     "ath": 0.0,       # no data for historicals
 }
 
-# Star signal thresholds (retuned on clean 493-player dataset, 2009-2019)
+# Star signal thresholds (retuned on corrected 496-player dataset, Feb 2026)
 # Optimal cutpoints for separating T1+T2 from T4+T5 by F1 score.
 STAR_SIGNAL_THRESHOLDS = {
-    "bpm": 9.6,       # F1=0.308, precision=0.267
-    "obpm": 7.1,      # F1=0.279, precision=0.281
-    "fta": 4.6,       # F1=0.321, precision=0.207 (high recall)
-    "spg": 1.4,       # F1=0.268, precision=0.196
-    "stl_per": 2.5,   # F1=0.256, precision=0.186
-    "usg": 25.9,      # F1=0.270, precision=0.183
-    "ft": 79.9,       # F1=0.231 (new: FT% as star signal)
+    "bpm": 7.7,       # F1=0.240, precision=0.151 (wider net with corrected tiers)
+    "obpm": 6.9,      # F1=0.241, precision=0.208
+    "fta": 6.1,       # F1=0.272, precision=0.222 (up from 4.6 — tighter)
+    "spg": 1.4,       # F1=0.249, precision=0.174
+    "stl_per": 2.4,   # F1=0.237, precision=0.158
+    "usg": 25.9,      # F1=0.247, precision=0.161
+    "ft": 81.3,       # F1=0.235, precision=0.181 (up from 79.9)
 }
 
 # Archetype weight modifiers: multipliers applied to V3_WEIGHTS per archetype.

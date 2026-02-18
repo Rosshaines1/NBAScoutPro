@@ -16,9 +16,31 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import PLAYER_DB_PATH, LEVEL_MODIFIERS
 
 STATS_TO_ANALYZE = [
+    # Current stats
     "ppg", "rpg", "apg", "spg", "bpg", "fg", "threeP", "ft",
     "mpg", "bpm", "obpm", "dbpm", "fta", "stl_per", "usg",
     "age", "tpg",
+    # NEW: stats we have in CSV but don't use yet
+    "gp",           # games played
+    "tpa",          # 3-point attempts per game
+    "tpm",          # 3-point makes per game
+    "ftm",          # free throws made per game
+    "ftr",          # FT rate (FTA/FGA)
+    "oreb",         # offensive rebounds per game
+    "dreb",         # defensive rebounds per game
+    "ts_per",       # true shooting %
+    "orb_per",      # offensive rebound %
+    "drb_per",      # defensive rebound %
+    "ast_per",      # assist %
+    "to_per",       # turnover %
+    "blk_per",      # block %
+    "ortg",         # offensive rating
+    "porpag",       # points over replacement per game
+    "adjoe",        # adjusted offensive efficiency
+    "rim_pct",      # rim finishing %
+    "rim_att",      # rim attempts per game
+    "mid_pct",      # mid-range %
+    "dunk_pct",     # dunk percentage of rim attempts
 ]
 
 
@@ -29,7 +51,7 @@ def load_clean_db():
     clean = [
         p for p in db
         if p.get("has_college_stats")
-        and 2009 <= p.get("draft_year", 0) <= 2019
+        and 2009 <= (p.get("draft_year") or 0) <= 2019
         and p.get("nba_ws") is not None
     ]
     print(f"Loaded {len(clean)} players (2009-2019 with college stats + WS)")
@@ -45,6 +67,16 @@ def get_stat(player, stat):
         apg = s.get("apg", 0) or 0
         tpg = s.get("tpg", 0) or 0
         return apg / tpg if tpg > 0 else apg
+    if stat == "rim_pct":
+        made = s.get("rimmade", 0) or 0
+        att = s.get("rim_att", 0) or 0
+        return (made / att * 100) if att > 0 else 0
+    if stat == "mid_pct":
+        # Not extracted — skip
+        return 0
+    if stat == "dunk_pct":
+        # Not extracted — skip
+        return 0
     val = s.get(stat, 0) or 0
     return val
 

@@ -17,7 +17,7 @@ from config import (
     MAX_STATS, LEVEL_MODIFIERS, POSITIONAL_AVGS, V2_WEIGHTS, V3_WEIGHTS,
     PLAYER_DB_PATH, POSITIONAL_AVGS_PATH, FEATURE_IMPORTANCE_PATH,
     STAR_SIGNAL_THRESHOLDS, ARCHETYPE_WEIGHT_MODS, STAT_RANGES,
-    EXCLUDE_PLAYERS,
+    EXCLUDE_PLAYERS, COMP_YEAR_RANGE,
 )
 
 # Maximum total penalty (percentage points) — prevents penalty stacking from
@@ -128,15 +128,14 @@ def detect_unicorn_traits(prospect, pos_avg):
 
 
 def predict_tier(player, pos_avgs=None):
-    """Predict NBA tier using validated rules from rule_lab.py (34.6% exact accuracy).
+    """Predict NBA tier from college stats only (no draft position or NBA data).
 
-    Key improvements over V3:
+    V4 improvements:
+      - Removed draft_pick (NBA data, not available for prospects)
+      - Added FT Rate, Rim%, 3PA volume context
       - Conference-adjusted BPM/OBPM (level_mod applied before scoring)
-      - FTA per-game rate instead of raw season total
-      - Position-dependent FT% (bigs can succeed with bad FT, guards can't)
-      - "Athlete without skill" penalty (dunks + bad FT for G/W = bust signal)
-      - Draft position as penalty only (lottery bonuses backfire)
-      - Low-MPG + early pick bonus (teams see something stats don't)
+      - Red flag counter-indicators (6 rules from bust pattern analysis)
+      - Boundaries retuned: 80/54/40/22
 
     Returns: dict with tier, score, confidence, reasons, signals
     """
@@ -156,7 +155,9 @@ def predict_tier(player, pos_avgs=None):
     mpg = player.get("mpg", 30) or 30
     level = player.get("level", "High Major")
     fg = player.get("fg", 45) or 45
-    draft_pick = player.get("draft_pick", 0)
+    ftr = player.get("ftr", 0) or 0
+    rim_pct = player.get("rim_pct", 0) or 0
+    tpa = player.get("tpa", 0) or 0
     pos = player.get("pos", "W")
 
     star_count, star_tags = count_star_signals(player)
@@ -164,22 +165,6 @@ def predict_tier(player, pos_avgs=None):
 
     score = 0.0
     reasons = []
-
-    # --- Draft position: PENALTY ONLY, no bonus ---
-    # Lottery bonuses backfire (boost lottery busts equally).
-    # Prospects (no pick yet) default to 0 = neutral.
-    if draft_pick and draft_pick > 0:
-        if draft_pick <= 20:
-            pass
-        elif draft_pick <= 30:
-            score -= 5
-            reasons.append(f"Mid-1st discount (#{draft_pick})")
-        elif draft_pick <= 45:
-            score -= 15
-            reasons.append(f"Late pick discount (#{draft_pick})")
-        elif draft_pick <= 60:
-            score -= 25
-            reasons.append(f"Deep 2nd round discount (#{draft_pick})")
 
     # --- Conference-adjusted BPM/OBPM ---
     # BPM at weaker conferences is inflated by weaker competition.
@@ -239,6 +224,31 @@ def predict_tier(player, pos_avgs=None):
         score += 5
     elif fta_pg >= 2.5:
         score += 2
+
+    # --- FT Rate (ftr): how often you get to the line per shot attempt ---
+    # Independent of BPM (r=0.103 vs bpm), star-bust gap +4.0
+    # Measures aggressiveness/craft — translates to NBA
+    if ftr > 0:
+        if ftr >= 50:
+            score += 8
+            reasons.append(f"Elite FT rate ({ftr:.0f}% of shots)")
+        elif ftr >= 42:
+            score += 4
+        elif ftr >= 35:
+            score += 1
+
+    # --- Rim finishing (rim_pct): percentage at the rim ---
+    # Very independent of BPM (r=0.045), r=0.138 with WS
+    # Finishing at the rim translates directly to NBA
+    if rim_pct > 0:
+        if rim_pct >= 72:
+            score += 6
+            reasons.append(f"Elite rim finisher ({rim_pct:.0f}%)")
+        elif rim_pct >= 65:
+            score += 3
+        elif rim_pct < 55:
+            score -= 3
+            reasons.append(f"Poor rim finishing ({rim_pct:.0f}%)")
 
     # --- Steals (consolidated: use STL_PER if available, else SPG) ---
     # Both r~0.11 and highly correlated — pick the better one, don't double-dip.
@@ -307,6 +317,16 @@ def predict_tier(player, pos_avgs=None):
         score += 4
         reasons.append(f"Efficient scorer ({fg:.0f}% on {adj_ppg:.0f} PPG)")
 
+    # --- 3PA volume context ---
+    # Good 3P% on low volume is meaningless; high volume + good % is a real skill
+    threeP = player.get("threeP", 0) or 0
+    if tpa > 0 and threeP > 0:
+        if tpa >= 5 and threeP >= 35:
+            score += 4
+            reasons.append(f"High-volume 3PT shooter ({tpa:.1f} 3PA on {threeP:.0f}%)")
+        elif tpa >= 3 and threeP >= 37:
+            score += 2
+
     # --- Star signal count ---
     n_thresholds = len(STAR_SIGNAL_THRESHOLDS)
     if star_count >= 5:
@@ -335,11 +355,19 @@ def predict_tier(player, pos_avgs=None):
         score -= 5
         reasons.append(f"Low minutes ({mpg:.0f} MPG)")
 
-    # --- Low-MPG + early pick = potential signal ---
-    # Freshmen on stacked teams play fewer minutes but get drafted high.
-    if mpg < 25 and draft_pick > 0 and draft_pick <= 14:
-        score += 8
-        reasons.append(f"Early pick despite low minutes (potential)")
+    # --- Height / size filter ---
+    # Guards under 6'1": 77% bust rate, only 1 star (Isaiah Thomas) in dataset.
+    # Wings under 6'4": 60% bust rate, 0 stars in dataset.
+    h = player.get("h", 78) or 78
+    if pos == "G" and h < 73:
+        score -= 10
+        reasons.append(f"Red flag: undersized guard ({h // 12}'{h % 12:02d}\" — 77% bust rate under 6'1\")")
+    elif pos == "G" and h < 74:
+        score -= 5
+        reasons.append(f"Red flag: undersized guard ({h // 12}'{h % 12:02d}\")")
+    elif pos == "W" and h < 76:
+        score -= 8
+        reasons.append(f"Red flag: undersized wing ({h // 12}'{h % 12:02d}\" — 60% bust rate under 6'4\")")
 
     # --- Missing advanced stats fallback ---
     # Players without BPM/OBPM/USG can't earn those star signals, so they're
@@ -376,26 +404,81 @@ def predict_tier(player, pos_avgs=None):
         reasons.append("Freshman declaring (strong signal)")
     elif class_yr == 2:  # Sophomore
         score += 2
+    elif class_yr == 3:  # Junior — 64% bust rate, 9% star rate
+        score -= 2
+        reasons.append("Junior (weaker outlook than underclassmen)")
     elif class_yr == 4:  # Senior
-        score -= 4
+        score -= 6
         reasons.append("Senior (weaker NBA outlook)")
 
-    # Map score to tier (V3: retuned boundaries from clean 493-player dataset)
-    if score >= 68:
+    # ================================================================
+    # RED FLAGS: Counter-indicators that predict bust despite good stats
+    # Derived from corrected-tier analysis (Feb 2026, 496 players)
+    # These fire AFTER bonuses so they counterbalance inflated scores.
+    # ================================================================
+
+    # Red flag 1: Empty calories — high usage but low impact
+    # USG>24 + BPM<6 = 74% bust rate, 8% star rate
+    # Scaled: bigger gap between USG and BPM = stronger penalty
+    if has_advanced and usg >= 24 and adj_bpm < 6:
+        gap_severity = (24 - adj_bpm) / 4  # 0 at BPM=6, ~1.5 at BPM=0
+        ec_penalty = min(10, round(4 + gap_severity * 4))
+        score -= ec_penalty
+        reasons.append(f"Red flag: empty calories (USG {usg:.0f}% but adj-BPM only {adj_bpm:.1f})")
+
+    # Red flag 2: Offense-only player — no defensive value
+    # OBPM>5 + DBPM<1 = 67% bust rate
+    if has_advanced and obpm >= 5 and dbpm < 1:
+        score -= 6
+        reasons.append(f"Red flag: offense-only (OBPM {obpm:.1f} but DBPM {dbpm:.1f})")
+
+    # Red flag 3: Inefficient volume scorer
+    # PPG>14 + eFG<46 = 62% bust rate, 0% star rate
+    if adj_ppg >= 14 and fg < 46:
+        score -= 8
+        reasons.append(f"Red flag: inefficient volume ({adj_ppg:.0f} PPG on {fg:.0f}% eFG)")
+
+    # Red flag 4: Can't draw fouls at high usage
+    # USG>24 + FTA<3 = 70% bust rate — can't create at next level
+    if has_advanced and usg >= 24 and fta_pg < 3:
+        score -= 6
+        reasons.append(f"Red flag: high usage but can't draw fouls (USG {usg:.0f}%, FTA {fta_pg:.1f})")
+
+    # Red flag 5: Senior stat-stuffer — strongest bust signal in dataset
+    # Senior + PPG>14 = 75% bust rate, 3% star rate
+    # Senior + BPM>7 = 70% bust rate, 3% star rate
+    # Stacks with -6 senior penalty above.
+    if class_yr == 4 and adj_ppg >= 14:
+        score -= 7
+        reasons.append(f"Red flag: senior scorer ({adj_ppg:.0f} adj PPG at age 4 — 75% bust rate)")
+    if class_yr == 4 and has_advanced and adj_bpm >= 7:
+        score -= 5
+        reasons.append(f"Red flag: senior with high BPM ({adj_bpm:.1f} — likely peaked)")
+
+    # Red flag 6: Low/Mid major stat inflation
+    # Mid/Low Major + BPM>8 = 60% bust rate — stats inflated by weak competition
+    # (level_mod already discounts BPM, but this adds explicit penalty for extreme cases)
+    if level in ("Mid Major", "Low Major") and has_advanced and bpm >= 8:
+        penalty = -5 if level == "Mid Major" else -8
+        score += penalty
+        reasons.append(f"Red flag: {level} stat inflation (raw BPM {bpm:.1f} vs weak competition)")
+
+    # Map score to tier (V4: retuned after adding ftr/rim_pct/tpa, removing draft_pick)
+    if score >= 80:
         tier = 1
-        confidence = min(95, 60 + score - 68)
-    elif score >= 48:
+        confidence = min(95, 60 + score - 80)
+    elif score >= 54:
         tier = 2
-        confidence = 50 + (score - 48)
-    elif score >= 30:
+        confidence = 50 + (score - 54)
+    elif score >= 40:
         tier = 3
-        confidence = 40 + (score - 30)
-    elif score >= 15:
+        confidence = 40 + (score - 40)
+    elif score >= 22:
         tier = 4
-        confidence = 35 + (score - 15)
+        confidence = 35 + (score - 22)
     else:
         tier = 5
-        confidence = 30 + max(0, 15 - score)
+        confidence = 30 + max(0, 22 - score)
 
     return {
         "tier": tier,
@@ -685,6 +768,10 @@ def calculate_similarity(player_a, player_b, pos_avgs=None, use_v2=True, weight_
         "fta_pg": base_weights.get("fta_pg", 3.5),
         "stl_per": base_weights.get("stl_per", 1.5),
         "usg": base_weights.get("usg", 1.0),
+        # New V4 stats
+        "ftr": base_weights.get("ftr", 2.5),
+        "rim_pct": base_weights.get("rim_pct", 2.0),
+        "tpa": base_weights.get("tpa", 0.3),
     }
 
     # ---- PENALTIES (scaled down, capped) ----
@@ -813,6 +900,16 @@ def calculate_similarity(player_a, player_b, pos_avgs=None, use_v2=True, weight_
     elif fta_pg_a != 0 and fta_pg_b == 0:
         diffs["fta_pg"] = (range_normalize(fta_pg_a, "fta_pg") - 0.5) ** 2 * w_fta * 0.5
 
+    # New V4 stats: FTR, rim_pct, TPA
+    for stat in ["ftr", "rim_pct", "tpa"]:
+        val_a = get_a(stat)
+        val_b = get_b(stat)
+        w = dynamic_weights.get(stat, 0.5)
+        if val_a != 0 and val_b != 0:
+            diffs[stat] = (range_normalize(val_a, stat) - range_normalize(val_b, stat)) ** 2 * w
+        elif val_a != 0 and val_b == 0:
+            diffs[stat] = (range_normalize(val_a, stat) - 0.5) ** 2 * w * 0.5
+
     raw_dist = math.sqrt(sum(diffs.values()))
     max_dist = 6.0  # Lower = more spread. Range-norm produces larger diffs.
     similarity = max(0, 100 - (raw_dist / max_dist * 100))
@@ -837,8 +934,12 @@ def calculate_similarity(player_a, player_b, pos_avgs=None, use_v2=True, weight_
 def find_top_matches(prospect, player_db, pos_avgs=None, weights_override=None, top_n=5, use_v2=True, use_v3=False):
     """Find the top N most similar players from the database."""
     results = []
+    yr_lo, yr_hi = COMP_YEAR_RANGE
     for player in player_db:
         if player.get("name", "") in EXCLUDE_PLAYERS:
+            continue
+        draft_yr = player.get("draft_year") or 0
+        if draft_yr < yr_lo or draft_yr > yr_hi:
             continue
         s = player.get("stats", {})
         if (s.get("gp", 30) or 30) < 25 or (s.get("mpg", 30) or 30) < 20:
@@ -868,12 +969,16 @@ def find_archetype_matches(prospect, player_db, pos_avgs=None, top_n=10, use_v2=
     weight_mods = ARCHETYPE_WEIGHT_MODS.get(archetype, {})
 
     # Pre-classify all DB players and filter to same archetype
-    # Skip excluded players (broken data) and small samples (gp<25 or mpg<20)
+    # Skip excluded players, out-of-range years, and small samples
     same_arch = []
+    yr_lo, yr_hi = COMP_YEAR_RANGE
     for player in player_db:
         if not player.get("has_college_stats"):
             continue
         if player.get("name", "") in EXCLUDE_PLAYERS:
+            continue
+        draft_yr = player.get("draft_year") or 0
+        if draft_yr < yr_lo or draft_yr > yr_hi:
             continue
         s = player.get("stats", {})
         if (s.get("gp", 30) or 30) < 25 or (s.get("mpg", 30) or 30) < 20:

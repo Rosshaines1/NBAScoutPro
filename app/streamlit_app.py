@@ -234,25 +234,35 @@ def main():
         with c3:
             ft = st.number_input("FT%", 30.0, 100.0, 75.0, step=0.1, format="%.1f", key="inp_ft")
 
-        mpg = st.number_input("MPG", 10.0, 42.0, 30.0, step=0.1, format="%.1f", key="inp_mpg")
+        c1, c2 = st.columns(2)
+        with c1:
+            mpg = st.number_input("MPG", 10.0, 42.0, 30.0, step=0.1, format="%.1f", key="inp_mpg")
+        with c2:
+            tpa = st.number_input("3PA/G", 0.0, 12.0, 0.0, step=0.1, format="%.1f",
+                                  help="3-point attempts per game (volume context for 3P%)", key="inp_tpa")
 
         st.subheader("Advanced Stats (Per Game)")
         st.caption("These stats drive the prediction model. Add them for full accuracy.")
         st.caption("(from basketball-reference or equivalent)")
-        ac1, ac2 = st.columns(2)
+        ac1, ac2, ac3 = st.columns(3)
         with ac1:
             bpm = st.number_input("BPM", -10.0, 20.0, 0.0, step=0.1, format="%.1f",
                                   help="Box Plus/Minus", key="inp_bpm")
             obpm = st.number_input("OBPM", -10.0, 15.0, 0.0, step=0.1, format="%.1f",
-                                   help="Offensive BPM - top superstar separator", key="inp_obpm")
+                                   help="Offensive BPM", key="inp_obpm")
             fta = st.number_input("FTA/G", 0.0, 12.0, 0.0, step=0.1, format="%.1f",
-                                  help="Free throw attempts per game - #1 raw predictor", key="inp_fta")
+                                  help="Free throw attempts per game", key="inp_fta")
         with ac2:
             stl_per = st.number_input("Steal %", 0.0, 6.0, 0.0, step=0.1, format="%.1f", key="inp_stl_per")
             usg = st.number_input("USG%", 0.0, 45.0, 0.0, step=0.1, format="%.1f",
                                   help="Usage rate", key="inp_usg")
             dbpm = st.number_input("DBPM", -8.0, 12.0, 0.0, step=0.1, format="%.1f",
                                    help="Defensive BPM", key="inp_dbpm")
+        with ac3:
+            ftr = st.number_input("FT Rate", 0.0, 70.0, 0.0, step=0.1, format="%.1f",
+                                  help="FTA/FGA — how often you get to the line", key="inp_ftr")
+            rim_pct = st.number_input("Rim %", 0.0, 90.0, 0.0, step=0.1, format="%.1f",
+                                      help="Shooting % at the rim", key="inp_rim_pct")
 
     # Build prospect dict (w/ws/ath set as internal defaults — no user input)
     prospect = {
@@ -263,6 +273,7 @@ def main():
         "fg": fg, "threeP": threeP, "ft": ft, "tpg": tpg, "mpg": mpg,
         "bpm": bpm, "obpm": obpm, "dbpm": dbpm, "fta": fta,
         "stl_per": stl_per, "usg": usg,
+        "ftr": ftr, "rim_pct": rim_pct, "tpa": tpa,
     }
 
     # ---- RUN V4 SYSTEMS ----

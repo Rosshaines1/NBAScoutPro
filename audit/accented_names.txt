@@ -1,0 +1,3 @@
+'Greivis Vásquez' -> 'Greivis Vasquez'
+'Nikola Vučević' -> 'Nikola Vucevic'
+'Skal Labissière' -> 'Skal Labissiere'

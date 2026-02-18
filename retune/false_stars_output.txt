@@ -1,0 +1,590 @@
+﻿FALSE STARS: 40 players predicted T1/T2 but actually T4/T5
+
+Name                         Pred Act  Score  Pick  Yr  Age Pos Lvl         PPG   eFG   FT%   BPM  OBPM  DBPM   FTA   USG   WS
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Sindarius Thornwell           T1  T5     95   #48  2017   4   W  High Major    20.7  51.0  83.0  13.5   7.7   5.9   8.1  29.2   1.1
+Dominique Jones               T1  T5     93   #25  2010   3   W  High Major    21.4  50.3  74.1   8.5   6.0   2.5   8.6  30.2   0.3
+Derrick Williams              T1  T4     83    #2  2011   2   W  High Major    19.5  65.0  74.6   9.3   7.3   2.0   8.7  28.7  14.1
+Nick Calathes                 T1  T5     82   #45  2009   2   W  High Major    17.2  56.8  70.7   8.9   7.0   1.8   5.3  27.8   2.6
+Jordan Adams                  T1  T5     82   #22  2014   2   W  High Major    17.4  54.5  83.6  10.6   7.7   2.9   5.2  25.7   0.4
+DeJuan Blair                  T1  T4     80   #37  2009   2   W  High Major    15.6  58.4  60.6  14.1   9.5   4.6   4.8  26.2  19.0
+Bol Bol                       T2  T4     78   #44  2019   1   B  High Major    21.0  61.0  75.7  10.5   3.1   7.4   4.1  30.4   5.0
+Landry Fields                 T2  T4     75   #39  2010   4   W  High Major    22.0  51.9  69.6   8.9   5.7   3.3   8.0  31.0  10.5
+Trey Burke                    T2  T4     74    #9  2013   2   G  High Major    18.6  52.9  80.5  11.3   9.6   1.7   4.3  28.9  12.9
+Jarrett Culver                T2  T4     71    #6  2019   2   W  High Major    18.5  50.5  70.7  10.3   5.4   4.9   5.5  32.2  -0.1
+Marvin Bagley III             T2  T4     71    #2  2018   1   B  High Major    21.0  64.0  62.7   8.7   6.3   2.4   6.3  25.8  14.9
+Caleb Swanigan                T2  T5     70   #26  2017   2   W  High Major    18.5  57.2  78.1   8.4   3.7   4.7   6.0  28.5  -0.2
+Toney Douglas                 T2  T4     68   #29  2009   4   G  High Major    21.5  52.5  81.0   8.1   6.6   1.5   6.6  27.6  12.1
+Jawun Evans                   T2  T5     68   #39  2017   2   G  High Major    19.2  47.5  80.6   8.6   8.4   0.3   5.8  33.3  -0.4
+Kris Dunn                     T2  T4     66    #5  2016   3   W  High Major    16.4  49.9  69.5   9.7   4.7   5.0   5.8  29.3  14.0
+Damion James                  T2  T5     63   #24  2010   4   W  High Major    18.0  54.4  67.4   8.4   5.1   3.3   6.8  25.5   0.0
+Pierre Jackson                T2  T5     62   #42  2013   4   G  High Major    19.8  51.4  80.0   8.9   8.7   0.3   6.7  30.6   0.0
+Erick Green                   T2  T5     62   #46  2013   4   W  High Major    25.0  53.0  81.6   7.5   9.2  -1.7   8.3  31.6   0.1
+Chuma Okeke                   T2  T5     62   #16  2019   2   W  High Major    12.0  57.7  72.2  12.6   6.8   5.8   2.4  20.9   5.0
+K.J. McDaniels                T2  T5     61   #32  2014   3   W  High Major    17.1  50.5  84.2  11.0   4.1   6.9   5.1  28.5   1.3
+Jahlil Okafor                 T2  T4     60    #3  2015   1   B  High Major    17.3  66.4  51.0   9.3   5.7   3.6   5.1  27.6   7.2
+Stanley Johnson               T2  T4     60    #8  2015   1   W  High Major    13.8  50.1  74.2   8.8   4.1   4.7   4.7  26.0   6.9
+Jerian Grant                  T2  T4     60   #19  2015   4   W  High Major    16.5  53.6  78.0   8.4   7.9   0.5   5.7  25.6   8.3
+Keita Bates-Diop              T2  T4     60   #48  2018   3   W  High Major    19.8  54.4  79.4   8.2   4.2   4.1   4.2  27.5   7.4
+Jordan Hamilton               T2  T5     59   #26  2011   2   W  High Major    18.6  52.2  77.9   9.0   6.2   2.8   3.4  27.1   3.0
+Josh Jackson                  T2  T5     59    #4  2017   1   W  High Major    16.3  55.2  56.6   9.1   4.4   4.6   4.9  27.3  -1.7
+Quincy Pondexter              T2  T4     58   #26  2010   4   W  High Major    19.3  54.7  82.7   9.2   6.6   2.6   6.3  25.2   9.7
+Denzel Valentine              T2  T5     58   #14  2016   4   W  High Major    19.2  57.9  85.3  14.4  11.2   3.2   3.1  28.9   4.5
+Khyri Thomas                  T2  T5     58   #38  2018   3   G  High Major    15.1  62.9  78.8   8.4   5.6   2.8   2.7  20.7   0.5
+Jimmer Fredette               T2  T5     57   #10  2011   4   G  Mid Major     29.3  53.1  89.3   7.1   8.2  -1.2   7.8  36.6   2.2
+Jarnell Stokes                T2  T5     57   #35  2014   3   W  High Major    15.2  53.7  69.0   9.2   5.3   3.9   6.3  25.7   0.6
+Lamar Patterson               T2  T5     57   #48  2014   4   W  High Major    17.1  52.8  75.4  10.2   6.9   3.3   4.9  28.4   0.1
+Jevon Carter                  T2  T4     57   #32  2018   4   G  High Major    17.3  49.8  85.8  11.3   7.8   3.5   4.2  25.1   8.7
+Xavier Henry                  T2  T5     56   #12  2010   1   W  High Major    13.4  55.5  78.3   8.3   5.4   2.9   3.2  21.7   0.8
+Tyler Zeller                  T2  T4     56   #17  2012   4   B  High Major    16.3  55.3  80.8  10.0   5.4   4.6   5.9  24.4  17.1
+Tyler Ulis                    T2  T5     56   #34  2016   2   G  High Major    17.3  49.7  85.6   9.1   8.7   0.4   5.6  24.1   0.5
+Royce White                   T2  T5     55   #16  2012   2   W  High Major    13.4  54.0  49.8   8.2   2.7   5.5   6.0  29.1   0.0
+P.J. Hairston                 T2  T5     55   #26  2014   2   W  High Major    14.7  55.1  77.5  10.3   8.8   1.5   3.4  25.2   0.9
+Marcus Thornton               T2  T4     54   #43  2009   4   W  High Major    21.1  54.4  74.5   7.7   7.9  -0.1   5.7  28.9  20.0
+Brice Johnson                 T2  T5     54   #25  2016   4   B  High Major    16.9  61.4  78.3  11.3   6.1   5.2   4.6  24.5   0.1
+
+
+DETAILED BREAKDOWN:
+
+--- Sindarius Thornwell (predicted T1, actually T5, 1 WS) ---
+    South Carolina | W | High Major | Age 4 | Pick #48 (2017)
+    Stats: 20.7ppg 6.9rpg 2.7apg | 51%eFG 83%FT | BPM=13.5 OBPM=7.7 DBPM=5.9 | FTA=8.1 USG=29
+    Model reasons:
+      - Elite adj-BPM (13.5)
+      - Elite adj-OBPM (7.7)
+      - Elite DBPM (5.9)
+      - Elite FTA rate (8.1/game)
+      - Elite FT rate (59% of shots)
+      - Elite steal rate (3.6%)
+      - 20+ PPG scorer (20.7 adj)
+      - 5+ star signals (7/7)
+      - Unicorn traits: defensive_unicorn
+      - Senior (weaker NBA outlook)
+      - Red flag: senior scorer (21 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (13.5 ù likely peaked) <<<
+
+--- Dominique Jones (predicted T1, actually T5, 0 WS) ---
+    South Florida | W | High Major | Age 3 | Pick #25 (2010)
+    Stats: 21.4ppg 6.1rpg 3.6apg | 50%eFG 74%FT | BPM=8.5 OBPM=6.0 DBPM=2.5 | FTA=8.6 USG=30
+    Model reasons:
+      - Star-level adj-BPM (8.5)
+      - Star adj-OBPM (6.0)
+      - Elite FTA rate (8.6/game)
+      - Elite FT rate (57% of shots)
+      - Elite steal rate (2.8%)
+      - High usage (30%)
+      - 20+ PPG scorer (21.4 adj)
+      - 5+ star signals (5/7)
+      (NO red flags fired)
+
+--- Derrick Williams (predicted T1, actually T4, 14 WS) ---
+    Arizona | W | High Major | Age 2 | Pick #2 (2011)
+    Stats: 19.5ppg 8.3rpg 1.1apg | 65%eFG 75%FT | BPM=9.3 OBPM=7.3 DBPM=2.0 | FTA=8.7 USG=29
+    Model reasons:
+      - Star-level adj-BPM (9.3)
+      - Elite adj-OBPM (7.3)
+      - Elite FTA rate (8.7/game)
+      - Elite FT rate (87% of shots)
+      - Efficient scorer (65% on 20 PPG)
+      - 3+ star signals (4/7)
+      (NO red flags fired)
+
+--- Nick Calathes (predicted T1, actually T5, 3 WS) ---
+    Florida | W | High Major | Age 2 | Pick #45 (2009)
+    Stats: 17.2ppg 5.3rpg 6.4apg | 57%eFG 71%FT | BPM=8.9 OBPM=7.0 DBPM=1.8 | FTA=5.3 USG=28
+    Model reasons:
+      - Star-level adj-BPM (8.9)
+      - Elite adj-OBPM (7.0)
+      - Elite steal rate (3.3%)
+      - Efficient scorer (57% on 17 PPG)
+      - High-volume 3PT shooter (5.2 3PA on 39%)
+      - 5+ star signals (5/7)
+      - Unicorn traits: defensive_unicorn
+      (NO red flags fired)
+
+--- Jordan Adams (predicted T1, actually T5, 0 WS) ---
+    UCLA | W | High Major | Age 2 | Pick #22 (2014)
+    Stats: 17.4ppg 5.3rpg 2.3apg | 54%eFG 84%FT | BPM=10.6 OBPM=7.7 DBPM=2.9 | FTA=5.2 USG=26
+    Model reasons:
+      - Star-level adj-BPM (10.6)
+      - Elite adj-OBPM (7.7)
+      - Elite steal rate (5.0%)
+      - Efficient scorer (54% on 17 PPG)
+      - 5+ star signals (5/7)
+      - Unicorn traits: defensive_unicorn
+      (NO red flags fired)
+
+--- DeJuan Blair (predicted T1, actually T4, 19 WS) ---
+    Pittsburgh | W | High Major | Age 2 | Pick #37 (2009)
+    Stats: 15.6ppg 12.3rpg 1.2apg | 58%eFG 61%FT | BPM=14.1 OBPM=9.5 DBPM=4.6 | FTA=4.8 USG=26
+    Model reasons:
+      - Elite adj-BPM (14.1)
+      - Elite adj-OBPM (9.5)
+      - Elite DBPM (4.6)
+      - Elite steal rate (3.5%)
+      - Poor FT shooter (61%)
+      - Efficient scorer (58% on 16 PPG)
+      - 5+ star signals (5/7)
+      (NO red flags fired)
+
+--- Bol Bol (predicted T2, actually T4, 5 WS) ---
+    Oregon | B | High Major | Age 1 | Pick #44 (2019)
+    Stats: 21.0ppg 9.8rpg 1.0apg | 61%eFG 76%FT | BPM=10.5 OBPM=3.1 DBPM=7.4 | FTA=4.1 USG=30
+    Model reasons:
+      - Star-level adj-BPM (10.5)
+      - Strong adj-OBPM (3.1)
+      - Elite DBPM (7.4)
+      - Elite rim finisher (72%)
+      - High usage (30%)
+      - 20+ PPG scorer (21.0 adj)
+      - Efficient scorer (61% on 21 PPG)
+      - Unicorn traits: stretch_big
+      - Freshman declaring (strong signal)
+      (NO red flags fired)
+
+--- Landry Fields (predicted T2, actually T4, 10 WS) ---
+    Stanford | W | High Major | Age 4 | Pick #39 (2010)
+    Stats: 22.0ppg 8.8rpg 2.8apg | 52%eFG 70%FT | BPM=8.9 OBPM=5.7 DBPM=3.3 | FTA=8.0 USG=31
+    Model reasons:
+      - Star-level adj-BPM (8.9)
+      - Star adj-OBPM (5.7)
+      - Elite FTA rate (8.0/game)
+      - Elite FT rate (51% of shots)
+      - Elite steal rate (2.6%)
+      - High usage (31%)
+      - Poor FT shooter (70%)
+      - 20+ PPG scorer (22.0 adj)
+      - 5+ star signals (5/7)
+      - Senior (weaker NBA outlook)
+      - Red flag: senior scorer (22 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (8.9 ù likely peaked) <<<
+
+--- Trey Burke (predicted T2, actually T4, 13 WS) ---
+    Michigan | G | High Major | Age 2 | Pick #9 (2013)
+    Stats: 18.6ppg 3.2rpg 6.6apg | 53%eFG 80%FT | BPM=11.3 OBPM=9.6 DBPM=1.7 | FTA=4.3 USG=29
+    Model reasons:
+      - Star-level adj-BPM (11.3)
+      - Elite adj-OBPM (9.6)
+      - Elite steal rate (2.8%)
+      - Efficient scorer (53% on 19 PPG)
+      - High-volume 3PT shooter (5.1 3PA on 38%)
+      - 5+ star signals (5/7)
+      (NO red flags fired)
+
+--- Jarrett Culver (predicted T2, actually T4, -0 WS) ---
+    Texas Tech | W | High Major | Age 2 | Pick #6 (2019)
+    Stats: 18.5ppg 6.4rpg 3.7apg | 50%eFG 71%FT | BPM=10.3 OBPM=5.4 DBPM=4.9 | FTA=5.5 USG=32
+    Model reasons:
+      - Star-level adj-BPM (10.3)
+      - Star adj-OBPM (5.4)
+      - Elite DBPM (4.9)
+      - Elite steal rate (2.7%)
+      - High usage (32%)
+      - 3+ star signals (3/7)
+      (NO red flags fired)
+
+--- Marvin Bagley III (predicted T2, actually T4, 15 WS) ---
+    Duke | B | High Major | Age 1 | Pick #2 (2018)
+    Stats: 21.0ppg 11.1rpg 1.5apg | 64%eFG 63%FT | BPM=8.7 OBPM=6.3 DBPM=2.4 | FTA=6.3 USG=26
+    Model reasons:
+      - Star-level adj-BPM (8.7)
+      - Star adj-OBPM (6.3)
+      - High FTA rate (6.3/game)
+      - Elite rim finisher (73%)
+      - Poor FT shooter (63%)
+      - 20+ PPG scorer (21.0 adj)
+      - Efficient scorer (64% on 21 PPG)
+      - Unicorn traits: stretch_big
+      - Freshman declaring (strong signal)
+      (NO red flags fired)
+
+--- Caleb Swanigan (predicted T2, actually T5, -0 WS) ---
+    Purdue | W | High Major | Age 2 | Pick #26 (2017)
+    Stats: 18.5ppg 12.5rpg 3.0apg | 57%eFG 78%FT | BPM=8.4 OBPM=3.7 DBPM=4.7 | FTA=6.0 USG=28
+    Model reasons:
+      - Star-level adj-BPM (8.4)
+      - Strong adj-OBPM (3.7)
+      - Elite DBPM (4.7)
+      - High FTA rate (6.0/game)
+      - Elite rim finisher (76%)
+      - Efficient scorer (57% on 18 PPG)
+      (NO red flags fired)
+
+--- Toney Douglas (predicted T2, actually T4, 12 WS) ---
+    Florida St. | G | High Major | Age 4 | Pick #29 (2009)
+    Stats: 21.5ppg 3.9rpg 2.9apg | 52%eFG 81%FT | BPM=8.1 OBPM=6.6 DBPM=1.5 | FTA=6.6 USG=28
+    Model reasons:
+      - Star-level adj-BPM (8.1)
+      - Star adj-OBPM (6.6)
+      - High FTA rate (6.6/game)
+      - Elite steal rate (2.9%)
+      - 20+ PPG scorer (21.5 adj)
+      - Efficient scorer (52% on 22 PPG)
+      - High-volume 3PT shooter (6.3 3PA on 38%)
+      - 5+ star signals (5/7)
+      - Senior (weaker NBA outlook)
+      - Red flag: senior scorer (22 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (8.1 ù likely peaked) <<<
+
+--- Jawun Evans (predicted T2, actually T5, -0 WS) ---
+    Oklahoma St. | G | High Major | Age 2 | Pick #39 (2017)
+    Stats: 19.2ppg 3.4rpg 6.4apg | 48%eFG 81%FT | BPM=8.6 OBPM=8.4 DBPM=0.3 | FTA=5.8 USG=33
+    Model reasons:
+      - Star-level adj-BPM (8.6)
+      - Elite adj-OBPM (8.4)
+      - High FTA rate (5.8/game)
+      - Poor rim finishing (49%)
+      - Elite steal rate (3.2%)
+      - High usage (33%)
+      - 5+ star signals (5/7)
+      - Red flag: offense-only (OBPM 8.4 but DBPM 0.3) <<<
+
+--- Kris Dunn (predicted T2, actually T4, 14 WS) ---
+    Providence | W | High Major | Age 3 | Pick #5 (2016)
+    Stats: 16.4ppg 5.3rpg 6.2apg | 50%eFG 70%FT | BPM=9.7 OBPM=4.7 DBPM=5.0 | FTA=5.8 USG=29
+    Model reasons:
+      - Star-level adj-BPM (9.7)
+      - Strong adj-OBPM (4.7)
+      - Elite DBPM (5.0)
+      - High FTA rate (5.8/game)
+      - Elite steal rate (4.3%)
+      - Poor FT shooter (70%)
+      - 3+ star signals (4/7)
+      - Unicorn traits: defensive_unicorn
+      (NO red flags fired)
+
+--- Damion James (predicted T2, actually T5, 0 WS) ---
+    Texas | W | High Major | Age 4 | Pick #24 (2010)
+    Stats: 18.0ppg 10.3rpg 1.0apg | 54%eFG 67%FT | BPM=8.4 OBPM=5.1 DBPM=3.3 | FTA=6.8 USG=26
+    Model reasons:
+      - Star-level adj-BPM (8.4)
+      - Star adj-OBPM (5.1)
+      - High FTA rate (6.8/game)
+      - Elite FT rate (55% of shots)
+      - Elite rim finisher (73%)
+      - Elite steal rate (3.0%)
+      - Poor FT shooter (67%)
+      - Efficient scorer (54% on 18 PPG)
+      - 3+ star signals (4/7)
+      - Senior (weaker NBA outlook)
+      - Red flag: senior scorer (18 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (8.4 ù likely peaked) <<<
+
+--- Pierre Jackson (predicted T2, actually T5, 0 WS) ---
+    Baylor | G | High Major | Age 4 | Pick #42 (2013)
+    Stats: 19.8ppg 3.8rpg 7.1apg | 51%eFG 80%FT | BPM=8.9 OBPM=8.7 DBPM=0.3 | FTA=6.7 USG=31
+    Model reasons:
+      - Star-level adj-BPM (8.9)
+      - Elite adj-OBPM (8.7)
+      - High FTA rate (6.7/game)
+      - Elite steal rate (2.5%)
+      - High usage (31%)
+      - High-volume 3PT shooter (6.8 3PA on 36%)
+      - 5+ star signals (6/7)
+      - Senior (weaker NBA outlook)
+      - Red flag: offense-only (OBPM 8.7 but DBPM 0.3) <<<
+      - Red flag: senior scorer (20 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (8.9 ù likely peaked) <<<
+
+--- Erick Green (predicted T2, actually T5, 0 WS) ---
+    Virginia Tech | W | High Major | Age 4 | Pick #46 (2013)
+    Stats: 25.0ppg 4.0rpg 3.8apg | 53%eFG 82%FT | BPM=7.5 OBPM=9.2 DBPM=-1.7 | FTA=8.3 USG=32
+    Model reasons:
+      - Strong adj-BPM (7.5)
+      - Elite adj-OBPM (9.2)
+      - Elite FTA rate (8.3/game)
+      - High usage (32%)
+      - 20+ PPG scorer (25.0 adj)
+      - Efficient scorer (53% on 25 PPG)
+      - 3+ star signals (4/7)
+      - Senior (weaker NBA outlook)
+      - Red flag: offense-only (OBPM 9.2 but DBPM -1.7) <<<
+      - Red flag: senior scorer (25 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (7.5 ù likely peaked) <<<
+
+--- Chuma Okeke (predicted T2, actually T5, 5 WS) ---
+    Auburn | W | High Major | Age 2 | Pick #16 (2019)
+    Stats: 12.0ppg 6.8rpg 1.9apg | 58%eFG 72%FT | BPM=12.6 OBPM=6.8 DBPM=5.8 | FTA=2.4 USG=21
+    Model reasons:
+      - Elite adj-BPM (12.6)
+      - Star adj-OBPM (6.8)
+      - Elite DBPM (5.8)
+      - Elite steal rate (3.7%)
+      - 3+ star signals (3/7)
+      (NO red flags fired)
+
+--- K.J. McDaniels (predicted T2, actually T5, 1 WS) ---
+    Clemson | W | High Major | Age 3 | Pick #32 (2014)
+    Stats: 17.1ppg 7.1rpg 1.6apg | 50%eFG 84%FT | BPM=11.0 OBPM=4.1 DBPM=6.9 | FTA=5.1 USG=28
+    Model reasons:
+      - Star-level adj-BPM (11.0)
+      - Strong adj-OBPM (4.1)
+      - Elite DBPM (6.9)
+      - 3+ star signals (3/7)
+      - Unicorn traits: shot_blocking_wing
+      (NO red flags fired)
+
+--- Jahlil Okafor (predicted T2, actually T4, 7 WS) ---
+    Duke | B | High Major | Age 1 | Pick #3 (2015)
+    Stats: 17.3ppg 8.5rpg 1.3apg | 66%eFG 51%FT | BPM=9.3 OBPM=5.7 DBPM=3.6 | FTA=5.1 USG=28
+    Model reasons:
+      - Star-level adj-BPM (9.3)
+      - Star adj-OBPM (5.7)
+      - Elite rim finisher (79%)
+      - Broken FT shot (51%)
+      - Efficient scorer (66% on 17 PPG)
+      - Freshman declaring (strong signal)
+      (NO red flags fired)
+
+--- Stanley Johnson (predicted T2, actually T4, 7 WS) ---
+    Arizona | W | High Major | Age 1 | Pick #8 (2015)
+    Stats: 13.8ppg 6.5rpg 1.7apg | 50%eFG 74%FT | BPM=8.8 OBPM=4.1 DBPM=4.7 | FTA=4.7 USG=26
+    Model reasons:
+      - Star-level adj-BPM (8.8)
+      - Strong adj-OBPM (4.1)
+      - Elite DBPM (4.7)
+      - Poor rim finishing (54%)
+      - Elite steal rate (3.2%)
+      - 3+ star signals (4/7)
+      - Freshman declaring (strong signal)
+      (NO red flags fired)
+
+--- Jerian Grant (predicted T2, actually T4, 8 WS) ---
+    Notre Dame | W | High Major | Age 4 | Pick #19 (2015)
+    Stats: 16.5ppg 3.0rpg 6.6apg | 54%eFG 78%FT | BPM=8.4 OBPM=7.9 DBPM=0.5 | FTA=5.7 USG=26
+    Model reasons:
+      - Star-level adj-BPM (8.4)
+      - Elite adj-OBPM (7.9)
+      - High FTA rate (5.7/game)
+      - Elite FT rate (51% of shots)
+      - Elite rim finisher (75%)
+      - Elite steal rate (2.8%)
+      - Efficient scorer (54% on 16 PPG)
+      - 3+ star signals (4/7)
+      - Senior (weaker NBA outlook)
+      - Red flag: offense-only (OBPM 7.9 but DBPM 0.5) <<<
+      - Red flag: senior scorer (16 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (8.4 ù likely peaked) <<<
+
+--- Keita Bates-Diop (predicted T2, actually T4, 7 WS) ---
+    Ohio St. | W | High Major | Age 3 | Pick #48 (2018)
+    Stats: 19.8ppg 8.7rpg 1.6apg | 54%eFG 79%FT | BPM=8.2 OBPM=4.2 DBPM=4.1 | FTA=4.2 USG=28
+    Model reasons:
+      - Star-level adj-BPM (8.2)
+      - Strong adj-OBPM (4.2)
+      - Elite DBPM (4.1)
+      - Efficient scorer (54% on 20 PPG)
+      - High-volume 3PT shooter (5.4 3PA on 36%)
+      - Unicorn traits: shot_blocking_wing
+      (NO red flags fired)
+
+--- Jordan Hamilton (predicted T2, actually T5, 3 WS) ---
+    Texas | W | High Major | Age 2 | Pick #26 (2011)
+    Stats: 18.6ppg 7.7rpg 2.1apg | 52%eFG 78%FT | BPM=9.0 OBPM=6.2 DBPM=2.8 | FTA=3.4 USG=27
+    Model reasons:
+      - Star-level adj-BPM (9.0)
+      - Star adj-OBPM (6.2)
+      - Elite rim finisher (72%)
+      - Efficient scorer (52% on 19 PPG)
+      - High-volume 3PT shooter (6.5 3PA on 38%)
+      (NO red flags fired)
+
+--- Josh Jackson (predicted T2, actually T5, -2 WS) ---
+    Kansas | W | High Major | Age 1 | Pick #4 (2017)
+    Stats: 16.3ppg 7.4rpg 3.0apg | 55%eFG 57%FT | BPM=9.1 OBPM=4.4 DBPM=4.6 | FTA=4.9 USG=27
+    Model reasons:
+      - Star-level adj-BPM (9.1)
+      - Strong adj-OBPM (4.4)
+      - Elite DBPM (4.6)
+      - Elite steal rate (3.1%)
+      - Broken FT shot (57%)
+      - Efficient scorer (55% on 16 PPG)
+      - 3+ star signals (4/7)
+      - Freshman declaring (strong signal)
+      (NO red flags fired)
+
+--- Quincy Pondexter (predicted T2, actually T4, 10 WS) ---
+    Washington | W | High Major | Age 4 | Pick #26 (2010)
+    Stats: 19.3ppg 7.4rpg 1.8apg | 55%eFG 83%FT | BPM=9.2 OBPM=6.6 DBPM=2.6 | FTA=6.3 USG=25
+    Model reasons:
+      - Star-level adj-BPM (9.2)
+      - Star adj-OBPM (6.6)
+      - High FTA rate (6.3/game)
+      - Elite rim finisher (79%)
+      - Efficient scorer (55% on 19 PPG)
+      - 3+ star signals (3/7)
+      - Senior (weaker NBA outlook)
+      - Red flag: senior scorer (19 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (9.2 ù likely peaked) <<<
+
+--- Denzel Valentine (predicted T2, actually T5, 4 WS) ---
+    Michigan St. | W | High Major | Age 4 | Pick #14 (2016)
+    Stats: 19.2ppg 7.5rpg 7.8apg | 58%eFG 85%FT | BPM=14.4 OBPM=11.2 DBPM=3.2 | FTA=3.1 USG=29
+    Model reasons:
+      - Elite adj-BPM (14.4)
+      - Elite adj-OBPM (11.2)
+      - Efficient scorer (58% on 19 PPG)
+      - High-volume 3PT shooter (7.5 3PA on 44%)
+      - 3+ star signals (4/7)
+      - Senior (weaker NBA outlook)
+      - Red flag: senior scorer (19 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (14.4 ù likely peaked) <<<
+
+--- Khyri Thomas (predicted T2, actually T5, 0 WS) ---
+    Creighton | G | High Major | Age 3 | Pick #38 (2018)
+    Stats: 15.1ppg 4.4rpg 2.8apg | 63%eFG 79%FT | BPM=8.4 OBPM=5.6 DBPM=2.8 | FTA=2.7 USG=21
+    Model reasons:
+      - Star-level adj-BPM (8.4)
+      - Star adj-OBPM (5.6)
+      - Elite rim finisher (77%)
+      - Elite steal rate (3.0%)
+      - Efficient scorer (63% on 15 PPG)
+      - 3+ star signals (3/7)
+      (NO red flags fired)
+
+--- Jimmer Fredette (predicted T2, actually T5, 2 WS) ---
+    BYU | G | Mid Major | Age 4 | Pick #10 (2011)
+    Stats: 29.3ppg 3.5rpg 4.3apg | 53%eFG 89%FT | BPM=7.1 OBPM=8.2 DBPM=-1.2 | FTA=7.8 USG=37
+    Model reasons:
+      - Strong adj-BPM (6.0)
+      - Star adj-OBPM (7.0)
+      - Elite FTA rate (7.8/game)
+      - Elite rim finisher (72%)
+      - High usage (37%)
+      - 20+ PPG scorer (24.9 adj)
+      - Efficient scorer (53% on 25 PPG)
+      - High-volume 3PT shooter (8.6 3PA on 39%)
+      - 3+ star signals (4/7)
+      - Senior (weaker NBA outlook)
+      - Red flag: offense-only (OBPM 8.2 but DBPM -1.2) <<<
+      - Red flag: senior scorer (25 adj PPG at age 4 ù 75% bust rate) <<<
+
+--- Jarnell Stokes (predicted T2, actually T5, 1 WS) ---
+    Tennessee | W | High Major | Age 3 | Pick #35 (2014)
+    Stats: 15.2ppg 10.7rpg 2.0apg | 54%eFG 69%FT | BPM=9.2 OBPM=5.3 DBPM=3.9 | FTA=6.3 USG=26
+    Model reasons:
+      - Star-level adj-BPM (9.2)
+      - Star adj-OBPM (5.3)
+      - High FTA rate (6.3/game)
+      - Elite FT rate (62% of shots)
+      - Poor FT shooter (69%)
+      - Efficient scorer (54% on 15 PPG)
+      (NO red flags fired)
+
+--- Lamar Patterson (predicted T2, actually T5, 0 WS) ---
+    Pittsburgh | W | High Major | Age 4 | Pick #48 (2014)
+    Stats: 17.1ppg 4.9rpg 4.3apg | 53%eFG 75%FT | BPM=10.2 OBPM=6.9 DBPM=3.3 | FTA=4.9 USG=28
+    Model reasons:
+      - Star-level adj-BPM (10.2)
+      - Star adj-OBPM (6.9)
+      - Elite steal rate (2.8%)
+      - Efficient scorer (53% on 17 PPG)
+      - High-volume 3PT shooter (5.7 3PA on 39%)
+      - 3+ star signals (3/7)
+      - Senior (weaker NBA outlook)
+      - Red flag: senior scorer (17 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (10.2 ù likely peaked) <<<
+
+--- Jevon Carter (predicted T2, actually T4, 9 WS) ---
+    West Virginia | G | High Major | Age 4 | Pick #32 (2018)
+    Stats: 17.3ppg 4.6rpg 6.6apg | 50%eFG 86%FT | BPM=11.3 OBPM=7.8 DBPM=3.5 | FTA=4.2 USG=25
+    Model reasons:
+      - Star-level adj-BPM (11.3)
+      - Elite adj-OBPM (7.8)
+      - Poor rim finishing (47%)
+      - Elite steal rate (4.8%)
+      - High-volume 3PT shooter (5.3 3PA on 39%)
+      - 5+ star signals (5/7)
+      - Unicorn traits: pickpocket
+      - Senior (weaker NBA outlook)
+      - Red flag: senior scorer (17 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (11.3 ù likely peaked) <<<
+
+--- Xavier Henry (predicted T2, actually T5, 1 WS) ---
+    Kansas | W | High Major | Age 1 | Pick #12 (2010)
+    Stats: 13.4ppg 4.4rpg 1.5apg | 56%eFG 78%FT | BPM=8.3 OBPM=5.4 DBPM=2.9 | FTA=3.2 USG=22
+    Model reasons:
+      - Star-level adj-BPM (8.3)
+      - Star adj-OBPM (5.4)
+      - Elite steal rate (3.1%)
+      - 3+ star signals (3/7)
+      - Freshman declaring (strong signal)
+      (NO red flags fired)
+
+--- Tyler Zeller (predicted T2, actually T4, 17 WS) ---
+    North Carolina | B | High Major | Age 4 | Pick #17 (2012)
+    Stats: 16.3ppg 9.6rpg 0.9apg | 55%eFG 81%FT | BPM=10.0 OBPM=5.4 DBPM=4.6 | FTA=5.9 USG=24
+    Model reasons:
+      - Star-level adj-BPM (10.0)
+      - Star adj-OBPM (5.4)
+      - Elite DBPM (4.6)
+      - High FTA rate (5.9/game)
+      - Elite FT rate (56% of shots)
+      - Efficient scorer (55% on 16 PPG)
+      - Senior (weaker NBA outlook)
+      - Red flag: senior scorer (16 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (10.0 ù likely peaked) <<<
+
+--- Tyler Ulis (predicted T2, actually T5, 0 WS) ---
+    Kentucky | G | High Major | Age 2 | Pick #34 (2016)
+    Stats: 17.3ppg 3.0rpg 7.0apg | 50%eFG 86%FT | BPM=9.1 OBPM=8.7 DBPM=0.4 | FTA=5.6 USG=24
+    Model reasons:
+      - Star-level adj-BPM (9.1)
+      - Elite adj-OBPM (8.7)
+      - High FTA rate (5.6/game)
+      - 3+ star signals (4/7)
+      - Red flag: offense-only (OBPM 8.7 but DBPM 0.4) <<<
+
+--- Royce White (predicted T2, actually T5, 0 WS) ---
+    Iowa St. | W | High Major | Age 2 | Pick #16 (2012)
+    Stats: 13.4ppg 9.3rpg 5.0apg | 54%eFG 50%FT | BPM=8.2 OBPM=2.7 DBPM=5.5 | FTA=6.0 USG=29
+    Model reasons:
+      - Star-level adj-BPM (8.2)
+      - Elite DBPM (5.5)
+      - High FTA rate (6.0/game)
+      - Elite FT rate (62% of shots)
+      - Elite rim finisher (73%)
+      - Broken FT shot (50%)
+      (NO red flags fired)
+
+--- P.J. Hairston (predicted T2, actually T5, 1 WS) ---
+    North Carolina | W | High Major | Age 2 | Pick #26 (2014)
+    Stats: 14.7ppg 4.4rpg 1.3apg | 55%eFG 78%FT | BPM=10.3 OBPM=8.8 DBPM=1.5 | FTA=3.4 USG=25
+    Model reasons:
+      - Star-level adj-BPM (10.3)
+      - Elite adj-OBPM (8.8)
+      - Elite steal rate (2.8%)
+      - High-volume 3PT shooter (6.7 3PA on 40%)
+      - 3+ star signals (3/7)
+      (NO red flags fired)
+
+--- Marcus Thornton (predicted T2, actually T4, 20 WS) ---
+    LSU | W | High Major | Age 4 | Pick #43 (2009)
+    Stats: 21.1ppg 5.5rpg 2.1apg | 54%eFG 74%FT | BPM=7.7 OBPM=7.9 DBPM=-0.1 | FTA=5.7 USG=29
+    Model reasons:
+      - Strong adj-BPM (7.7)
+      - Elite adj-OBPM (7.9)
+      - High FTA rate (5.7/game)
+      - Elite steal rate (2.9%)
+      - 20+ PPG scorer (21.1 adj)
+      - Efficient scorer (54% on 21 PPG)
+      - High-volume 3PT shooter (5.7 3PA on 39%)
+      - 3+ star signals (4/7)
+      - Senior (weaker NBA outlook)
+      - Red flag: offense-only (OBPM 7.9 but DBPM -0.1) <<<
+      - Red flag: senior scorer (21 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (7.7 ù likely peaked) <<<
+
+--- Brice Johnson (predicted T2, actually T5, 0 WS) ---
+    North Carolina | B | High Major | Age 4 | Pick #25 (2016)
+    Stats: 16.9ppg 10.4rpg 1.4apg | 61%eFG 78%FT | BPM=11.3 OBPM=6.1 DBPM=5.2 | FTA=4.6 USG=24
+    Model reasons:
+      - Star-level adj-BPM (11.3)
+      - Star adj-OBPM (6.1)
+      - Elite DBPM (5.2)
+      - Elite rim finisher (82%)
+      - Efficient scorer (61% on 17 PPG)
+      - Senior (weaker NBA outlook)
+      - Red flag: senior scorer (17 adj PPG at age 4 ù 75% bust rate) <<<
+      - Red flag: senior with high BPM (11.3 ù likely peaked) <<<
+

@@ -102,7 +102,9 @@ def run_backtest(player_db, pos_avgs, weights_override=None, label="", use_v2=Tr
                         if p.get("draft_year") == test_year
                         and p.get("has_college_stats")
                         and p.get("draft_pick", 61) <= 60
-                        and p.get("nba_ws") is not None]  # Need WS to evaluate
+                        and p.get("nba_ws") is not None
+                        and (p.get("stats", {}).get("gp", 30) or 30) >= 25
+                        and (p.get("stats", {}).get("mpg", 30) or 30) >= 20]
 
         if not test_players:
             continue
@@ -221,7 +223,7 @@ def main():
     # Filter to clean dataset (2009-2019 with college stats)
     clean_db = [p for p in player_db
                 if p.get("has_college_stats")
-                and 2009 <= p.get("draft_year", 0) <= 2019]
+                and 2009 <= (p.get("draft_year") or 0) <= 2019]
     print(f"Clean dataset: {len(clean_db)} players (2009-2019 with college stats)")
 
     # Run with V1 (original weights)
