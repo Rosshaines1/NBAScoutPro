@@ -119,6 +119,23 @@ ATHLETIC_VALUES = {
     "Elite": 4,
 }
 
+# Team strength quadrants based on Barttorvik/KenPom team ranking
+# Replaces the old conference-based High/Mid/Low Major system
+QUADRANT_RANGES = {
+    "Q1": (1, 50),     # Elite teams
+    "Q2": (51, 100),   # Good teams
+    "Q3": (101, 200),  # Average teams
+    "Q4": (201, 999),  # Weak teams
+}
+
+QUADRANT_MODIFIERS = {
+    "Q1": 1.0,
+    "Q2": 0.90,
+    "Q3": 0.80,
+    "Q4": 0.70,
+}
+
+# Legacy level system (kept for fallback if no team rank available)
 LEVEL_MODIFIERS = {
     "High Major": 1.0,
     "Mid Major": 0.85,
@@ -133,6 +150,8 @@ HIGH_MAJORS = [
 MID_MAJORS = [
     "A10", "MWC", "WCC", "AAC", "Amer", "CUSA", "MAC",
 ]
+
+TEAM_RANKS_PATH = os.path.join(PROCESSED_DIR, "team_ranks.json")
 
 # WAR tier thresholds
 TIER_THRESHOLDS = {

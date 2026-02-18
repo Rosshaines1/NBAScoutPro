@@ -41,6 +41,7 @@ for p in clean:
         "name": p["name"], "pos": p["pos"], "h": p["h"], "w": p.get("w", 200),
         "ws": p.get("ws", p["h"] + 4), "age": p.get("age", 4),
         "level": p.get("level", "High Major"),
+        "quadrant": p.get("quadrant", "Q1"),
         "ath": p.get("ath", 0), "draft_pick": p.get("draft_pick", 0),
         "ppg": s.get("ppg", 0), "rpg": s.get("rpg", 0), "apg": s.get("apg", 0),
         "spg": s.get("spg", 0), "bpg": s.get("bpg", 0), "tpg": s.get("tpg", 0),

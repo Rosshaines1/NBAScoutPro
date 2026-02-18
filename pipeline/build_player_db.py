@@ -22,11 +22,33 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import (
     ZIP_PATH, PROCESSED_DIR, PLAYER_DB_PATH, POSITIONAL_AVGS_PATH,
     ZIP_FILES, HIGH_MAJORS, MID_MAJORS,
-    TIER_LABELS,
+    TIER_LABELS, TEAM_RANKS_PATH, QUADRANT_RANGES,
 )
 from pipeline.height_parser import parse_height
 
 BREF_PATH = os.path.join(PROCESSED_DIR, "bref_draft_stats.json")
+
+# Load team rankings (Barttorvik) for quadrant assignment
+_team_ranks = {}
+if os.path.exists(TEAM_RANKS_PATH):
+    with open(TEAM_RANKS_PATH) as _f:
+        _team_ranks = json.load(_f)
+
+
+def get_quadrant(college, draft_year):
+    """Get team quadrant from Barttorvik rankings.
+
+    Returns (quadrant, rank) tuple. Falls back to conference-based level
+    if no ranking found.
+    """
+    key = f"{college}|{draft_year}"
+    rank = _team_ranks.get(key)
+    if rank is None:
+        return None, None
+    for quad, (lo, hi) in QUADRANT_RANGES.items():
+        if lo <= rank <= hi:
+            return quad, rank
+    return "Q4", rank  # Beyond all ranges = Q4
 
 # Players to completely exclude from the database (per user audit review).
 # Reasons: bad data, played too few games, played overseas, etc.
@@ -523,6 +545,9 @@ def build_player_db():
             tier, outcome = assign_tier_ws(nba_ws, draft_pick, nba_games)
             class_year = parse_class_year(row)
 
+            # Quadrant from Barttorvik team rankings
+            quadrant, team_rank = get_quadrant(str(row.get("team", "")), draft_year)
+
             player = {
                 "name": bref_name,
                 "college": str(row.get("team", "")),
@@ -532,6 +557,8 @@ def build_player_db():
                 "ws": height + 4,
                 "age": class_year,
                 "level": level,
+                "quadrant": quadrant or "Q1",  # fallback if no rank found
+                "team_rank": team_rank,
                 "ath": 2,
                 "draft_pick": draft_pick,
                 "draft_year": draft_year,
@@ -595,6 +622,8 @@ def build_player_db():
                 "h": 78, "w": 200, "ws": 82,
                 "age": 4,  # No college row — default to senior
                 "level": "High Major",  # Assume for historical players
+                "quadrant": "Q1",  # Assume for historical players
+                "team_rank": None,
                 "ath": 2,
                 "draft_pick": draft_pick,
                 "draft_year": draft_year,
@@ -676,6 +705,8 @@ def build_player_db():
                 "h": height, "w": round(weight, 0), "ws": height + 4,
                 "age": u_class_year,
                 "level": get_conf_level(str(row.get("conf", ""))),
+                "quadrant": "Q2",  # Undrafted — no draft year for rank lookup
+                "team_rank": None,
                 "ath": 2,
                 "draft_pick": 61,
                 "draft_year": None,

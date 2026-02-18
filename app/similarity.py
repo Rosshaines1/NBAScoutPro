@@ -17,7 +17,7 @@ from config import (
     MAX_STATS, LEVEL_MODIFIERS, POSITIONAL_AVGS, V2_WEIGHTS, V3_WEIGHTS,
     PLAYER_DB_PATH, POSITIONAL_AVGS_PATH, FEATURE_IMPORTANCE_PATH,
     STAR_SIGNAL_THRESHOLDS, ARCHETYPE_WEIGHT_MODS, STAT_RANGES,
-    EXCLUDE_PLAYERS, COMP_YEAR_RANGE,
+    EXCLUDE_PLAYERS, COMP_YEAR_RANGE, QUADRANT_MODIFIERS,
 )
 
 # Maximum total penalty (percentage points) — prevents penalty stacking from
@@ -133,7 +133,7 @@ def predict_tier(player, pos_avgs=None):
     V4 improvements:
       - Removed draft_pick (NBA data, not available for prospects)
       - Added FT Rate, Rim%, 3PA volume context
-      - Conference-adjusted BPM/OBPM (level_mod applied before scoring)
+      - Team-strength-adjusted BPM/OBPM (quadrant modifier applied before scoring)
       - Red flag counter-indicators (6 rules from bust pattern analysis)
       - Boundaries retuned: 80/54/40/22
 
@@ -154,6 +154,7 @@ def predict_tier(player, pos_avgs=None):
     apg = player.get("apg", 0) or 0
     mpg = player.get("mpg", 30) or 30
     level = player.get("level", "High Major")
+    quadrant = player.get("quadrant", "Q1")
     fg = player.get("fg", 45) or 45
     ftr = player.get("ftr", 0) or 0
     rim_pct = player.get("rim_pct", 0) or 0
@@ -166,11 +167,12 @@ def predict_tier(player, pos_avgs=None):
     score = 0.0
     reasons = []
 
-    # --- Conference-adjusted BPM/OBPM ---
-    # BPM at weaker conferences is inflated by weaker competition.
-    level_mod = LEVEL_MODIFIERS.get(level, 1.0)
-    adj_bpm = bpm * level_mod
-    adj_obpm = obpm * level_mod
+    # --- Team-strength-adjusted BPM/OBPM ---
+    # BPM at weaker teams is inflated by weaker competition.
+    # Uses Barttorvik quadrant: Q1=1.0, Q2=0.90, Q3=0.80, Q4=0.70
+    quad_mod = QUADRANT_MODIFIERS.get(quadrant, 1.0)
+    adj_bpm = bpm * quad_mod
+    adj_obpm = obpm * quad_mod
 
     if adj_bpm >= 12.0:
         score += 20
@@ -291,8 +293,8 @@ def predict_tier(player, pos_avgs=None):
         reasons.append(f"Broken FT shot ({ft_pct:.0f}%)")
     score += ft_pts * ft_weight
 
-    # --- PPG with level adjustment ---
-    adj_ppg = ppg * level_mod
+    # --- PPG with team strength adjustment ---
+    adj_ppg = ppg * quad_mod
     if adj_ppg >= 20:
         score += 8
         reasons.append(f"20+ PPG scorer ({adj_ppg:.1f} adj)")
@@ -343,12 +345,15 @@ def predict_tier(player, pos_avgs=None):
         score += 3 * len(unicorns)
         reasons.append(f"Unicorn traits: {', '.join(unicorns)}")
 
-    # --- Level penalty ---
-    if level == "Mid Major":
-        score -= 5
-    elif level == "Low Major":
-        score -= 10
-        reasons.append("Low Major discount")
+    # --- Team strength penalty (quadrant-based) ---
+    if quadrant == "Q2":
+        score -= 3
+    elif quadrant == "Q3":
+        score -= 7
+        reasons.append("Q3 team (rank 101-200)")
+    elif quadrant == "Q4":
+        score -= 12
+        reasons.append("Q4 team (rank 200+)")
 
     # --- Minutes context ---
     if mpg < 22:
@@ -455,13 +460,13 @@ def predict_tier(player, pos_avgs=None):
         score -= 5
         reasons.append(f"Red flag: senior with high BPM ({adj_bpm:.1f} — likely peaked)")
 
-    # Red flag 6: Low/Mid major stat inflation
-    # Mid/Low Major + BPM>8 = 60% bust rate — stats inflated by weak competition
-    # (level_mod already discounts BPM, but this adds explicit penalty for extreme cases)
-    if level in ("Mid Major", "Low Major") and has_advanced and bpm >= 8:
-        penalty = -5 if level == "Mid Major" else -8
+    # Red flag 6: Weak team stat inflation
+    # Q3/Q4 team + BPM>8 = inflated stats against weak competition
+    # (quad_mod already discounts BPM, but this adds explicit penalty for extreme cases)
+    if quadrant in ("Q3", "Q4") and has_advanced and bpm >= 8:
+        penalty = -5 if quadrant == "Q3" else -8
         score += penalty
-        reasons.append(f"Red flag: {level} stat inflation (raw BPM {bpm:.1f} vs weak competition)")
+        reasons.append(f"Red flag: {quadrant} stat inflation (raw BPM {bpm:.1f} vs weak competition)")
 
     # Map score to tier (V4: retuned after adding ftr/rim_pct/tpa, removing draft_pick)
     if score >= 80:
@@ -704,9 +709,9 @@ def calculate_similarity(player_a, player_b, pos_avgs=None, use_v2=True, weight_
             if stat in base_weights:
                 base_weights[stat] = base_weights[stat] * mult
 
-    # Level modifiers
-    level_mod_a = LEVEL_MODIFIERS.get(player_a.get("level", "High Major"), 1.0)
-    level_mod_b = LEVEL_MODIFIERS.get(player_b.get("level", "High Major"), 0.8)
+    # Team strength modifiers (quadrant-based)
+    quad_mod_a = QUADRANT_MODIFIERS.get(player_a.get("quadrant", "Q1"), 1.0)
+    quad_mod_b = QUADRANT_MODIFIERS.get(player_b.get("quadrant", "Q1"), 1.0)
 
     # Per-30 normalization
     stats_a = {k: player_a.get(k, 0) for k in ["ppg", "rpg", "apg", "spg", "bpg", "tpg"]}
@@ -716,10 +721,10 @@ def calculate_similarity(player_a, player_b, pos_avgs=None, use_v2=True, weight_
     stats_b = {k: b_stats.get(k, 0) for k in ["ppg", "rpg", "apg", "spg", "bpg", "tpg"]}
     per30_b = normalize_to_30(stats_b, b_stats.get("mpg", 30))
 
-    # Adjusted stats: level modifier on scoring only
-    adj_a = {"ppg": per30_a["ppg"] * level_mod_a, "rpg": per30_a["rpg"],
+    # Adjusted stats: team strength modifier on scoring only
+    adj_a = {"ppg": per30_a["ppg"] * quad_mod_a, "rpg": per30_a["rpg"],
              "apg": per30_a["apg"], "spg": per30_a["spg"], "bpg": per30_a["bpg"]}
-    adj_b = {"ppg": per30_b["ppg"] * level_mod_b, "rpg": per30_b["rpg"],
+    adj_b = {"ppg": per30_b["ppg"] * quad_mod_b, "rpg": per30_b["rpg"],
              "apg": per30_b["apg"], "spg": per30_b["spg"], "bpg": per30_b["bpg"]}
 
     # ATO

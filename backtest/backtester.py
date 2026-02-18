@@ -55,6 +55,7 @@ def player_to_prospect(player):
         "ws": player.get("ws", player["h"] + 4),
         "age": player.get("age", 22),
         "level": player["level"],
+        "quadrant": player.get("quadrant", "Q1"),
         "ath": player.get("ath", 2),
         "ppg": s["ppg"], "rpg": s["rpg"], "apg": s["apg"],
         "spg": s["spg"], "bpg": s["bpg"],

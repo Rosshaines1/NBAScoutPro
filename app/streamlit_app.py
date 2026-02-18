@@ -15,7 +15,7 @@ import streamlit as st
 import plotly.graph_objects as go
 
 from config import (
-    POSITIONAL_AVGS, LEVEL_MODIFIERS, TIER_LABELS,
+    POSITIONAL_AVGS, LEVEL_MODIFIERS, QUADRANT_MODIFIERS, TIER_LABELS,
     PLAYER_DB_PATH, POSITIONAL_AVGS_PATH, MAX_STATS, DATA_DIR,
     STAR_SIGNAL_THRESHOLDS,
 )
@@ -152,7 +152,7 @@ def main():
     st.caption(f"Compare prospects against {len(player_db)} historical college players")
 
     pos_list = ["G", "W", "B"]
-    level_list = list(LEVEL_MODIFIERS.keys())
+    quadrant_list = list(QUADRANT_MODIFIERS.keys())
 
     def on_prospect_change():
         sel = st.session_state.prospect_select
@@ -176,8 +176,12 @@ def main():
                 st.session_state[widget_key] = p[json_key]
         if p.get("pos") in pos_list:
             st.session_state["inp_pos"] = p["pos"]
-        if p.get("level") in level_list:
-            st.session_state["inp_level"] = p["level"]
+        if p.get("quadrant") in quadrant_list:
+            st.session_state["inp_quadrant"] = p["quadrant"]
+        elif p.get("level") in list(LEVEL_MODIFIERS.keys()):
+            # Legacy fallback: map level to quadrant
+            level_to_quad = {"High Major": "Q1", "Mid Major": "Q2", "Low Major": "Q4"}
+            st.session_state["inp_quadrant"] = level_to_quad.get(p["level"], "Q1")
 
     # ---- SIDEBAR ----
     with st.sidebar:
@@ -193,7 +197,9 @@ def main():
         with col1:
             position = st.selectbox("Position", pos_list, key="inp_pos")
         with col2:
-            level = st.selectbox("Level", level_list, key="inp_level")
+            quadrant = st.selectbox("Team Strength", quadrant_list,
+                                    key="inp_quadrant",
+                                    help="Q1=Top 50, Q2=51-100, Q3=101-200, Q4=200+")
 
         st.subheader("Physical")
         c1, c2 = st.columns(2)
@@ -267,7 +273,7 @@ def main():
     # Build prospect dict (w/ws/ath set as internal defaults — no user input)
     prospect = {
         "name": name, "pos": position, "h": height, "w": 200,
-        "ws": height + 4, "age": age, "level": level,
+        "ws": height + 4, "age": age, "quadrant": quadrant,
         "ath": 0,
         "ppg": ppg, "rpg": rpg, "apg": apg, "spg": spg, "bpg": bpg,
         "fg": fg, "threeP": threeP, "ft": ft, "tpg": tpg, "mpg": mpg,
