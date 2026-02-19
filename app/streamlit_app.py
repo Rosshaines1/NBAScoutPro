@@ -192,6 +192,22 @@ def main():
     pos_list = ["G", "W", "B"]
     quadrant_list = list(QUADRANT_MODIFIERS.keys())
 
+    # Initialize session state defaults (avoids "default vs session state" warning)
+    _defaults = {
+        "inp_name": "Draft Prospect", "inp_h_ft": 6, "inp_h_in": 3,
+        "inp_age": "Fr", "inp_pos": "G", "inp_quadrant": "Q1",
+        "inp_ppg": 15.0, "inp_rpg": 4.5, "inp_apg": 3.5,
+        "inp_spg": 1.2, "inp_bpg": 0.4, "inp_tpg": 2.5,
+        "inp_fg": 45.0, "inp_3p": 35.0, "inp_ft": 75.0,
+        "inp_mpg": 30.0, "inp_tpa": 0.0,
+        "inp_bpm": 0.0, "inp_obpm": 0.0, "inp_dbpm": 0.0,
+        "inp_fta": 0.0, "inp_stl_per": 0.0, "inp_usg": 0.0,
+        "inp_ftr": 0.0, "inp_rim_pct": 0.0,
+    }
+    for k, v in _defaults.items():
+        if k not in st.session_state:
+            st.session_state[k] = v
+
     def on_prospect_change():
         sel = st.session_state.prospect_select
         if sel == "Custom":
@@ -229,7 +245,7 @@ def main():
         st.selectbox("Load Prospect", prospect_names,
                      key="prospect_select", on_change=on_prospect_change)
 
-        name = st.text_input("Name", "Draft Prospect", key="inp_name")
+        name = st.text_input("Name", key="inp_name")
         col1, col2 = st.columns(2)
         with col1:
             position = st.selectbox("Position", pos_list, key="inp_pos")
@@ -241,9 +257,9 @@ def main():
         st.subheader("Physical")
         c1, c2 = st.columns(2)
         with c1:
-            h_ft = st.number_input("Height (ft)", 5, 7, 6, key="inp_h_ft")
+            h_ft = st.number_input("Height (ft)", 5, 7, key="inp_h_ft")
         with c2:
-            h_in = st.number_input("Height (in)", 0, 11, 3, key="inp_h_in")
+            h_in = st.number_input("Height (in)", 0, 11, key="inp_h_in")
 
         height = h_ft * 12 + h_in
 
@@ -251,7 +267,7 @@ def main():
         with c1:
             class_yr_list = ["Fr", "So", "Jr", "Sr"]
             class_yr_map = {"Fr": 1, "So": 2, "Jr": 3, "Sr": 4}
-            class_yr_sel = st.selectbox("Class Year", class_yr_list, index=0, key="inp_age")
+            class_yr_sel = st.selectbox("Class Year", class_yr_list, key="inp_age")
             age = class_yr_map[class_yr_sel]
         with c2:
             pass
@@ -259,51 +275,51 @@ def main():
         st.subheader("Stats (Per Game)")
         c1, c2, c3 = st.columns(3)
         with c1:
-            ppg = st.number_input("PPG", 0.0, 40.0, 15.0, step=0.1, format="%.1f", key="inp_ppg")
-            spg = st.number_input("SPG", 0.0, 5.0, 1.2, step=0.1, format="%.1f", key="inp_spg")
+            ppg = st.number_input("PPG", 0.0, 40.0, step=0.1, format="%.1f", key="inp_ppg")
+            spg = st.number_input("SPG", 0.0, 5.0, step=0.1, format="%.1f", key="inp_spg")
         with c2:
-            rpg = st.number_input("RPG", 0.0, 20.0, 4.5, step=0.1, format="%.1f", key="inp_rpg")
-            bpg = st.number_input("BPG", 0.0, 6.0, 0.4, step=0.1, format="%.1f", key="inp_bpg")
+            rpg = st.number_input("RPG", 0.0, 20.0, step=0.1, format="%.1f", key="inp_rpg")
+            bpg = st.number_input("BPG", 0.0, 6.0, step=0.1, format="%.1f", key="inp_bpg")
         with c3:
-            apg = st.number_input("APG", 0.0, 15.0, 3.5, step=0.1, format="%.1f", key="inp_apg")
-            tpg = st.number_input("TPG", 0.0, 8.0, 2.5, step=0.1, format="%.1f", key="inp_tpg")
+            apg = st.number_input("APG", 0.0, 15.0, step=0.1, format="%.1f", key="inp_apg")
+            tpg = st.number_input("TPG", 0.0, 8.0, step=0.1, format="%.1f", key="inp_tpg")
 
         st.subheader("Shooting & Minutes")
         c1, c2, c3 = st.columns(3)
         with c1:
-            fg = st.number_input("eFG%", 20.0, 75.0, 45.0, step=0.1, format="%.1f", key="inp_fg")
+            fg = st.number_input("eFG%", 20.0, 75.0, step=0.1, format="%.1f", key="inp_fg")
         with c2:
-            threeP = st.number_input("3P%", 0.0, 55.0, 35.0, step=0.1, format="%.1f", key="inp_3p")
+            threeP = st.number_input("3P%", 0.0, 55.0, step=0.1, format="%.1f", key="inp_3p")
         with c3:
-            ft = st.number_input("FT%", 30.0, 100.0, 75.0, step=0.1, format="%.1f", key="inp_ft")
+            ft = st.number_input("FT%", 30.0, 100.0, step=0.1, format="%.1f", key="inp_ft")
 
         c1, c2 = st.columns(2)
         with c1:
-            mpg = st.number_input("MPG", 10.0, 42.0, 30.0, step=0.1, format="%.1f", key="inp_mpg")
+            mpg = st.number_input("MPG", 10.0, 42.0, step=0.1, format="%.1f", key="inp_mpg")
         with c2:
-            tpa = st.number_input("3PA/G", 0.0, 12.0, 0.0, step=0.1, format="%.1f",
+            tpa = st.number_input("3PA/G", 0.0, 12.0, step=0.1, format="%.1f",
                                   help="3-point attempts per game", key="inp_tpa")
 
         st.subheader("Advanced Stats")
         st.caption("These stats drive the prediction model. Add them for full accuracy.")
         ac1, ac2, ac3 = st.columns(3)
         with ac1:
-            bpm = st.number_input("BPM", -10.0, 20.0, 0.0, step=0.1, format="%.1f",
+            bpm = st.number_input("BPM", -10.0, 20.0, step=0.1, format="%.1f",
                                   help="Box Plus/Minus", key="inp_bpm")
-            obpm = st.number_input("OBPM", -10.0, 15.0, 0.0, step=0.1, format="%.1f",
+            obpm = st.number_input("OBPM", -10.0, 15.0, step=0.1, format="%.1f",
                                    help="Offensive BPM", key="inp_obpm")
-            fta = st.number_input("FTA/G", 0.0, 12.0, 0.0, step=0.1, format="%.1f",
+            fta = st.number_input("FTA/G", 0.0, 12.0, step=0.1, format="%.1f",
                                   help="Free throw attempts per game", key="inp_fta")
         with ac2:
-            stl_per = st.number_input("Steal %", 0.0, 6.0, 0.0, step=0.1, format="%.1f", key="inp_stl_per")
-            usg = st.number_input("USG%", 0.0, 45.0, 0.0, step=0.1, format="%.1f",
+            stl_per = st.number_input("Steal %", 0.0, 6.0, step=0.1, format="%.1f", key="inp_stl_per")
+            usg = st.number_input("USG%", 0.0, 45.0, step=0.1, format="%.1f",
                                   help="Usage rate", key="inp_usg")
-            dbpm = st.number_input("DBPM", -8.0, 12.0, 0.0, step=0.1, format="%.1f",
+            dbpm = st.number_input("DBPM", -8.0, 12.0, step=0.1, format="%.1f",
                                    help="Defensive BPM", key="inp_dbpm")
         with ac3:
-            ftr = st.number_input("FT Rate", 0.0, 70.0, 0.0, step=0.1, format="%.1f",
+            ftr = st.number_input("FT Rate", 0.0, 70.0, step=0.1, format="%.1f",
                                   help="FTA/FGA ratio", key="inp_ftr")
-            rim_pct = st.number_input("Rim %", 0.0, 90.0, 0.0, step=0.1, format="%.1f",
+            rim_pct = st.number_input("Rim %", 0.0, 90.0, step=0.1, format="%.1f",
                                       help="Shooting % at the rim", key="inp_rim_pct")
 
     # Build prospect dict
@@ -513,29 +529,14 @@ def main():
         sim_years = sorted(draft_sims.keys(), reverse=True)
         for year in sim_years:
             players = draft_sims[year]
-            correct = sum(1 for p in players if p["predicted_tier"] == p["actual_tier"])
-            within1 = sum(1 for p in players if abs(p["predicted_tier"] - p["actual_tier"]) <= 1)
             n = len(players)
-            acc_pct = correct / n * 100 if n > 0 else 0
-            w1_pct = within1 / n * 100 if n > 0 else 0
 
-            with st.expander(
-                f"{year} Draft  —  {n} players  |  "
-                f"Exact: {acc_pct:.0f}%  |  Within 1 Tier: {w1_pct:.0f}%",
-                expanded=False,
-            ):
-                header = "| Rank | Player | Model Projection | Actual Outcome |"
-                sep = "|:---:|:---|:---|:---|"
+            with st.expander(f"{year} Draft  —  {n} players", expanded=False):
+                header = "| Rank | Player |"
+                sep = "|:---:|:---|"
                 rows = [header, sep]
                 for p in players:
-                    pred_lbl = p["predicted_label"]
-                    actual_lbl = p["actual_label"]
-                    match_icon = "" if p["predicted_tier"] == p["actual_tier"] else ""
-                    if abs(p["predicted_tier"] - p["actual_tier"]) <= 1 and p["predicted_tier"] != p["actual_tier"]:
-                        match_icon = ""
-                    rows.append(
-                        f"| {p['rank']} | {p['name']} | {pred_lbl} | {actual_lbl} {match_icon} |"
-                    )
+                    rows.append(f"| {p['rank']} | {p['name']} |")
                 st.markdown("\n".join(rows))
 
     # Footer
