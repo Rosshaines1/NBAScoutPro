@@ -5,6 +5,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 PROCESSED_DIR = os.path.join(DATA_DIR, "processed")
 ZIP_PATH = os.path.join(DATA_DIR, "archive.zip")
+NEW_DATA_DIR = os.path.join(BASE_DIR, "NewCleanData")
 
 # Output files
 PLAYER_DB_PATH = os.path.join(PROCESSED_DIR, "player_db.json")
@@ -103,9 +104,9 @@ STAT_RANGES = {
     "tpa": (0, 10),          # 3PA per game
 }
 
-# Valid draft year range for comp pool and backtest (we only have reliable
-# college data for these years — pre-2009 and post-2019 have incomplete/mismatched data)
-COMP_YEAR_RANGE = (2009, 2019)
+# Valid draft year range for comp pool and backtest
+# 2010-2021: have both college advanced stats (Barttorvik) and NBA outcomes
+COMP_YEAR_RANGE = (2010, 2021)
 
 EXCLUDE_PLAYERS = [
     "Joel Embiid", "Donovan Mitchell", "Larry Johnson", "Emeka Okafor",
@@ -168,7 +169,11 @@ TIER_LABELS = {
     3: "Solid Starter",
     4: "Role Player",
     5: "Bust / Out of League",
+    6: "TBD (Too Early)",
 }
+
+# Draft year cutoff: players drafted in this year or later get TBD tier
+TBD_DRAFT_YEAR = 2022
 
 # Draft position fallback tiers (for players without RAPTOR data)
 DRAFT_POSITION_TIERS = [
@@ -200,37 +205,35 @@ V2_WEIGHTS = {
 # V3 weights: retuned on corrected 496-player dataset (2009-2019 drafts, Feb 2026 tier fixes)
 # Derived from Pearson r vs corrected tiers + star/bust separation analysis.
 V3_WEIGHTS = {
-    # Tier 1: Advanced metrics (strongest predictors)
-    "bpm": 5.0,       # r=0.277, #1 predictor, Cohen d=0.53
-    "usg": 3.9,       # r=0.087, sep=+1.52 (up from 2.61 — usage matters more with clean tiers)
-    "obpm": 3.49,     # r=0.187, offensive impact
-    "age": 3.47,      # r=-0.208, #2 predictor! Fr=25% stars vs Sr=2%
-    "fg": 3.4,        # r=0.105, eFG% sep=+1.27
-    "fta_pg": 3.0,    # r=0.173, FTA volume = star signal
+    # Tier 1: Advanced metrics (strongest predictors, retuned Feb 2026 on 547 corrected players)
+    "bpm": 5.0,       # r=0.230, #1 by |r|, Cohen d=0.28
+    "ftr": 4.0,       # r=0.183, #1 by combined score, star-bust gap +5.27
+    "fta_pg": 3.0,    # r=0.130, FTA volume = star signal
+    "fg": 3.2,        # r=0.122, eFG% sep=+1.43
+    "age": 3.0,       # r=-0.188, #2 by |r|, Fr=stars, Sr=busts
 
-    # Tier 2: Physical + penalty-stat
+    # Tier 2: Moderate predictors
     "height": 2.5,    # physical translation — range-normalized (70-86")
-    "ft": 3.5,        # penalty-stat: FT<65 = 65% bust rate. Style fingerprint.
-    "dbpm": 1.98,     # r=0.164, defensive impact
+    "rim_pct": 2.5,   # r=0.166, rim finishing translates, independent of BPM
+    "obpm": 2.0,      # r=0.124, offensive impact
+    "dbpm": 1.8,      # r=0.172, defensive impact
+    "ft": 1.5,        # r=0.022 (near-zero after tier corrections), penalty-only FT<65
+    "rpg": 1.5,       # r=0.157, context-dependent
+    "usg": 1.3,       # r=0.036, weak after tier corrections
 
-    # Tier 3: Moderate predictors
-    "ppg": 1.0,       # r=0.109, context-dependent (level-adjusted only)
-    "rpg": 1.0,       # r=0.130, context-dependent
-    "stl_per": 0.94,  # r=0.112, defensive instincts
-    "mpg": 0.4,       # r=0.058, weak
-    "bpg": 0.63,      # r=0.085, mostly height-dependent
-    "spg": 0.77,      # r=0.112, partially opportunity-based
-    "tpg": 0.73,      # r=0.056, turnover rate
-    "apg": 0.81,      # r=0.010 (near-zero, but kept for similarity matching)
+    # Tier 3: Counting stats + weak predictors
+    "ppg": 1.0,       # r=0.051, context-dependent (level-adjusted only)
+    "stl_per": 0.8,   # r=0.057, defensive instincts
+    "spg": 0.7,       # r=0.057, partially opportunity-based
+    "bpg": 0.7,       # r=0.129, mostly height-dependent
+    "tpg": 0.5,       # r=-0.016, turnover rate
+    "apg": 0.4,       # r=-0.022 (near-zero — assists don't predict NBA success)
     "ato": 0.5,       # derived from apg/tpg
+    "mpg": 0.4,       # r=0.024, weak
+    "tpa": 0.3,       # r=-0.112, weak but useful for 3P% volume context
 
     # Tier 4: Weak/negative predictors
-    "threeP": 0.3,    # r=-0.091 (NEGATIVE — stars shoot worse 3P% in college)
-
-    # NEW: independent predictors (V4)
-    "ftr": 2.5,       # r=0.156, independent of BPM (r=0.103), star-bust gap +4.0
-    "rim_pct": 2.0,   # r=0.138, very independent (r=0.045 vs BPM), rim finishing
-    "tpa": 0.3,       # r=-0.073, weak but useful for 3P% volume context
+    "threeP": 0.3,    # r=-0.088 (NEGATIVE — stars shoot worse 3P% in college)
 
     # Disabled — no real data
     "weight": 0.0,    # all placeholder 200lbs
@@ -238,16 +241,16 @@ V3_WEIGHTS = {
     "ath": 0.0,       # no data for historicals
 }
 
-# Star signal thresholds (retuned on corrected 496-player dataset, Feb 2026)
+# Star signal thresholds (retuned on 547-player corrected dataset, Feb 2026)
 # Optimal cutpoints for separating T1+T2 from T4+T5 by F1 score.
 STAR_SIGNAL_THRESHOLDS = {
-    "bpm": 7.7,       # F1=0.240, precision=0.151 (wider net with corrected tiers)
-    "obpm": 6.9,      # F1=0.241, precision=0.208
-    "fta": 6.1,       # F1=0.272, precision=0.222 (up from 4.6 — tighter)
-    "spg": 1.4,       # F1=0.249, precision=0.174
-    "stl_per": 2.4,   # F1=0.237, precision=0.158
-    "usg": 25.9,      # F1=0.247, precision=0.161
-    "ft": 81.3,       # F1=0.235, precision=0.181 (up from 79.9)
+    "bpm": 7.6,       # F1=0.235, precision=0.149
+    "obpm": 6.9,      # F1=0.215, precision=0.194
+    "fta": 4.7,       # F1=0.241, precision=0.151
+    "spg": 1.4,       # F1=0.238, precision=0.164
+    "stl_per": 2.3,   # F1=0.236, precision=0.151
+    "usg": 25.9,      # F1=0.232, precision=0.150
+    "ft": 81.3,       # F1=0.217, precision=0.160
 }
 
 # Archetype weight modifiers: multipliers applied to V3_WEIGHTS per archetype.
@@ -280,3 +283,18 @@ ARCHETYPE_WEIGHT_MODS = {
         "ft": 0.5, "threeP": 0.3, "obpm": 0.7,
     },
 }
+
+# Barttorvik CSV column headers (no header row in CSVs, apply programmatically)
+BAR_HEADERS = [
+    "player_name", "team", "conf", "GP", "Min_per", "ORtg", "usg", "eFG",
+    "TS_per", "ORB_per", "DRB_per", "AST_per", "TO_per", "FTM", "FTA",
+    "FT_per", "twoPM", "twoPA", "twoP_per", "TPM", "TPA", "TP_per",
+    "blk_per", "stl_per", "ftr", "yr", "ht", "num", "porpag", "adjoe",
+    "pfr", "year", "pid", "type", "Rec Rank", "ast/tov", "rimmade",
+    "rimmade+rimmiss", "midmade", "midmade+midmiss",
+    "rimmade/(rimmade+rimmiss)", "midmade/(midmade+midmiss)", "dunksmade",
+    "dunksmiss+dunksmade", "dunksmade/(dunksmade+dunksmiss)", "pick", "drtg",
+    "adrtg", "dporpag", "stops", "bpm", "obpm", "dbpm", "gbpm", "mp",
+    "ogbpm", "dgbpm", "oreb", "dreb", "treb", "ast", "stl", "blk", "pts",
+    "role", "3p/100",
+]

@@ -51,10 +51,11 @@ def load_clean_db():
     clean = [
         p for p in db
         if p.get("has_college_stats")
-        and 2009 <= (p.get("draft_year") or 0) <= 2019
+        and 2010 <= (p.get("draft_year") or 0) <= 2021
         and p.get("nba_ws") is not None
+        and p.get("tier", 5) != 6
     ]
-    print(f"Loaded {len(clean)} players (2009-2019 with college stats + WS)")
+    print(f"Loaded {len(clean)} players (2010-2021 with college stats + WS)")
     return clean
 
 

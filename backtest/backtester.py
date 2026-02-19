@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import PLAYER_DB_PATH, FEATURE_IMPORTANCE_PATH, PROCESSED_DIR, TIER_LABELS
 from app.similarity import calculate_similarity, find_top_matches
 
-TEST_YEARS = list(range(2009, 2020))  # 2009-2019 (clean dataset, verified college stats)
+TEST_YEARS = list(range(2010, 2022))  # 2010-2021 (have Barttorvik data + mature NBA outcomes)
 
 
 def load_data():
@@ -97,13 +97,15 @@ def run_backtest(player_db, pos_avgs, weights_override=None, label="", use_v2=Tr
     year_results = {}
 
     for test_year in TEST_YEARS:
-        # Split: train on other years, test on this year
-        train_db = [p for p in player_db if p.get("draft_year") != test_year]
+        # Split: train on other years (exclude TBD tier 6), test on this year
+        train_db = [p for p in player_db
+                    if p.get("draft_year") != test_year and p.get("tier", 5) != 6]
         test_players = [p for p in player_db
                         if p.get("draft_year") == test_year
                         and p.get("has_college_stats")
                         and p.get("draft_pick", 61) <= 60
                         and p.get("nba_ws") is not None
+                        and p.get("tier", 5) != 6
                         and (p.get("stats", {}).get("gp", 30) or 30) >= 25
                         and (p.get("stats", {}).get("mpg", 30) or 30) >= 20]
 
@@ -221,11 +223,12 @@ def run_backtest(player_db, pos_avgs, weights_override=None, label="", use_v2=Tr
 def main():
     player_db, pos_avgs, dd_weights = load_data()
 
-    # Filter to clean dataset (2009-2019 with college stats)
+    # Filter to clean dataset (2010-2021 with college stats, exclude TBD)
     clean_db = [p for p in player_db
                 if p.get("has_college_stats")
-                and 2009 <= (p.get("draft_year") or 0) <= 2019]
-    print(f"Clean dataset: {len(clean_db)} players (2009-2019 with college stats)")
+                and 2010 <= (p.get("draft_year") or 0) <= 2021
+                and p.get("tier", 5) != 6]
+    print(f"Clean dataset: {len(clean_db)} players (2010-2021 with college stats)")
 
     # Run with V1 (original weights)
     v1_results = run_backtest(clean_db, pos_avgs, label="V1 (ORIGINAL WEIGHTS)", use_v2=False)

@@ -24,8 +24,9 @@ def load_clean_db():
     return [
         p for p in db
         if p.get("has_college_stats")
-        and 2009 <= (p.get("draft_year") or 0) <= 2019
+        and 2010 <= (p.get("draft_year") or 0) <= 2021
         and p.get("nba_ws") is not None
+        and p.get("tier", 5) != 6
     ]
 
 

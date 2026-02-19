@@ -124,6 +124,7 @@ TIER_COLORS = {
     3: "#4CAF50",  # Green
     4: "#FF9800",  # Orange
     5: "#F44336",  # Red
+    6: "#9E9E9E",  # Gray (TBD)
 }
 
 ARCHETYPE_COLORS = {

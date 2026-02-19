@@ -1,1309 +1,1309 @@
 {
   "stats": {
     "ppg": {
-      "r": 0.1085,
-      "abs_r": 0.1085,
+      "r": 0.0508,
+      "abs_r": 0.0508,
       "tier_means": {
-        "1": 17.18,
+        "1": 15.6,
         "2": 16.04,
-        "3": 15.51,
-        "4": 14.86,
-        "5": 15.08
+        "3": 15.33,
+        "4": 15.47,
+        "5": 14.68
       },
-      "star_mean": 16.42,
-      "bust_mean": 15.01,
-      "separation": 1.41,
-      "cohens_d": 0.304,
-      "n_valid": 496,
-      "combined_score": 0.1911
+      "star_mean": 15.91,
+      "bust_mean": 15.03,
+      "separation": 0.88,
+      "cohens_d": 0.198,
+      "n_valid": 547,
+      "combined_score": 0.1089
     },
     "rpg": {
-      "r": 0.13,
-      "abs_r": 0.13,
+      "r": 0.1567,
+      "abs_r": 0.1567,
       "tier_means": {
-        "1": 6.22,
-        "2": 6.7,
-        "3": 6.32,
-        "4": 6.48,
-        "5": 5.98
+        "1": 5.58,
+        "2": 6.81,
+        "3": 6.4,
+        "4": 6.09,
+        "5": 6.05
       },
-      "star_mean": 6.54,
-      "bust_mean": 6.12,
-      "separation": 0.41,
-      "cohens_d": 0.158,
-      "n_valid": 496,
-      "combined_score": 0.1048
+      "star_mean": 6.44,
+      "bust_mean": 6.07,
+      "separation": 0.37,
+      "cohens_d": 0.148,
+      "n_valid": 547,
+      "combined_score": 0.1135
     },
     "apg": {
-      "r": 0.0101,
-      "abs_r": 0.0101,
+      "r": -0.0223,
+      "abs_r": 0.0223,
       "tier_means": {
-        "1": 2.93,
-        "2": 2.73,
-        "3": 2.62,
-        "4": 2.24,
-        "5": 2.56
+        "1": 3.07,
+        "2": 2.72,
+        "3": 2.61,
+        "4": 2.58,
+        "5": 2.36
       },
-      "star_mean": 2.8,
-      "bust_mean": 2.47,
-      "separation": 0.33,
-      "cohens_d": 0.174,
-      "n_valid": 495,
-      "combined_score": 0.0371
+      "star_mean": 2.82,
+      "bust_mean": 2.46,
+      "separation": 0.36,
+      "cohens_d": 0.188,
+      "n_valid": 545,
+      "combined_score": 0.0453
     },
     "spg": {
-      "r": 0.1116,
-      "abs_r": 0.1116,
+      "r": 0.0565,
+      "abs_r": 0.0565,
       "tier_means": {
         "1": 1.37,
         "2": 1.12,
-        "3": 1.23,
-        "4": 1.08,
-        "5": 1.08
+        "3": 1.18,
+        "4": 1.11,
+        "5": 1.05
       },
-      "star_mean": 1.21,
+      "star_mean": 1.19,
       "bust_mean": 1.08,
-      "separation": 0.12,
-      "cohens_d": 0.232,
-      "n_valid": 496,
-      "combined_score": 0.0675
+      "separation": 0.11,
+      "cohens_d": 0.22,
+      "n_valid": 546,
+      "combined_score": 0.0387
     },
     "bpg": {
-      "r": 0.0848,
-      "abs_r": 0.0848,
+      "r": 0.1292,
+      "abs_r": 0.1292,
       "tier_means": {
-        "1": 0.9,
+        "1": 0.98,
         "2": 1.09,
-        "3": 0.92,
-        "4": 1.01,
-        "5": 0.88
+        "3": 0.95,
+        "4": 0.93,
+        "5": 0.91
       },
-      "star_mean": 1.03,
+      "star_mean": 1.06,
       "bust_mean": 0.92,
-      "separation": 0.11,
-      "cohens_d": 0.118,
-      "n_valid": 485,
-      "combined_score": 0.0531
+      "separation": 0.14,
+      "cohens_d": 0.152,
+      "n_valid": 532,
+      "combined_score": 0.0779
     },
     "fg": {
-      "r": 0.1047,
-      "abs_r": 0.1047,
+      "r": 0.1219,
+      "abs_r": 0.1219,
       "tier_means": {
-        "1": 54.49,
-        "2": 54.99,
-        "3": 54.94,
-        "4": 54.21,
-        "5": 53.29
+        "1": 56.46,
+        "2": 54.54,
+        "3": 54.56,
+        "4": 54.39,
+        "5": 53.13
       },
-      "star_mean": 54.82,
-      "bust_mean": 53.55,
-      "separation": 1.27,
-      "cohens_d": 0.245,
-      "n_valid": 496,
-      "combined_score": 0.1757
+      "star_mean": 55.13,
+      "bust_mean": 53.7,
+      "separation": 1.43,
+      "cohens_d": 0.208,
+      "n_valid": 547,
+      "combined_score": 0.1966
     },
     "threeP": {
-      "r": -0.0908,
-      "abs_r": 0.0908,
+      "r": -0.0841,
+      "abs_r": 0.0841,
       "tier_means": {
-        "1": 34.1,
-        "2": 35.11,
-        "3": 35.64,
-        "4": 36.18,
-        "5": 36.85
+        "1": 34.99,
+        "2": 34.89,
+        "3": 35.5,
+        "4": 36.52,
+        "5": 36.58
       },
-      "star_mean": 34.75,
-      "bust_mean": 36.67,
-      "separation": -1.92,
-      "cohens_d": -0.219,
-      "n_valid": 433,
-      "combined_score": 0.2318
+      "star_mean": 34.93,
+      "bust_mean": 36.55,
+      "separation": -1.63,
+      "cohens_d": -0.192,
+      "n_valid": 483,
+      "combined_score": 0.1967
     },
     "ft": {
-      "r": 0.0173,
-      "abs_r": 0.0173,
+      "r": -0.0261,
+      "abs_r": 0.0261,
       "tier_means": {
-        "1": 78.91,
-        "2": 72.34,
-        "3": 72.86,
-        "4": 73.88,
-        "5": 73.34
+        "1": 79.18,
+        "2": 72.49,
+        "3": 72.9,
+        "4": 75.4,
+        "5": 73.23
       },
       "star_mean": 74.53,
-      "bust_mean": 73.5,
-      "separation": 1.03,
-      "cohens_d": 0.099,
-      "n_valid": 495,
-      "combined_score": 0.1086
+      "bust_mean": 74.21,
+      "separation": 0.33,
+      "cohens_d": 0.032,
+      "n_valid": 547,
+      "combined_score": 0.0444
     },
     "mpg": {
-      "r": 0.0581,
-      "abs_r": 0.0581,
+      "r": 0.0239,
+      "abs_r": 0.0239,
       "tier_means": {
-        "1": 31.69,
-        "2": 30.33,
-        "3": 31.31,
-        "4": 30.31,
-        "5": 30.89
+        "1": 30.02,
+        "2": 30.56,
+        "3": 31.28,
+        "4": 30.93,
+        "5": 30.47
       },
-      "star_mean": 30.78,
-      "bust_mean": 30.72,
-      "separation": 0.06,
-      "cohens_d": 0.012,
-      "n_valid": 496,
-      "combined_score": 0.0349
+      "star_mean": 30.4,
+      "bust_mean": 30.68,
+      "separation": -0.28,
+      "cohens_d": -0.05,
+      "n_valid": 547,
+      "combined_score": 0.0385
     },
     "bpm": {
-      "r": 0.2774,
-      "abs_r": 0.2774,
+      "r": 0.2303,
+      "abs_r": 0.2303,
       "tier_means": {
-        "1": 9.11,
-        "2": 7.67,
-        "3": 8.05,
-        "4": 7.34,
-        "5": 6.19
+        "1": 7.12,
+        "2": 7.63,
+        "3": 7.77,
+        "4": 7.06,
+        "5": 5.89
       },
-      "star_mean": 8.15,
-      "bust_mean": 6.53,
-      "separation": 1.63,
-      "cohens_d": 0.526,
-      "n_valid": 496,
-      "combined_score": 0.297
+      "star_mean": 7.48,
+      "bust_mean": 6.42,
+      "separation": 1.06,
+      "cohens_d": 0.277,
+      "n_valid": 547,
+      "combined_score": 0.2157
     },
     "obpm": {
-      "r": 0.1873,
-      "abs_r": 0.1873,
+      "r": 0.1237,
+      "abs_r": 0.1237,
       "tier_means": {
-        "1": 6.14,
-        "2": 4.56,
-        "3": 4.83,
-        "4": 4.23,
-        "5": 3.79
+        "1": 4.65,
+        "2": 4.44,
+        "3": 4.56,
+        "4": 4.35,
+        "5": 3.44
       },
-      "star_mean": 5.07,
-      "bust_mean": 3.92,
-      "separation": 1.15,
-      "cohens_d": 0.453,
-      "n_valid": 494,
-      "combined_score": 0.2053
+      "star_mean": 4.5,
+      "bust_mean": 3.85,
+      "separation": 0.66,
+      "cohens_d": 0.221,
+      "n_valid": 545,
+      "combined_score": 0.1245
     },
     "dbpm": {
-      "r": 0.1637,
-      "abs_r": 0.1637,
+      "r": 0.1719,
+      "abs_r": 0.1719,
       "tier_means": {
-        "1": 3.29,
-        "2": 3.12,
-        "3": 3.22,
-        "4": 3.15,
-        "5": 2.44
+        "1": 2.71,
+        "2": 3.19,
+        "3": 3.2,
+        "4": 2.77,
+        "5": 2.49
       },
-      "star_mean": 3.18,
-      "bust_mean": 2.64,
-      "separation": 0.54,
-      "cohens_d": 0.227,
-      "n_valid": 493,
-      "combined_score": 0.1343
+      "star_mean": 3.04,
+      "bust_mean": 2.62,
+      "separation": 0.42,
+      "cohens_d": 0.173,
+      "n_valid": 542,
+      "combined_score": 0.1258
     },
     "fta": {
-      "r": 0.1731,
-      "abs_r": 0.1731,
+      "r": 0.1298,
+      "abs_r": 0.1298,
       "tier_means": {
-        "1": 5.34,
-        "2": 5.02,
-        "3": 4.57,
-        "4": 4.36,
-        "5": 4.44
+        "1": 4.64,
+        "2": 4.88,
+        "3": 4.51,
+        "4": 4.35,
+        "5": 4.33
       },
-      "star_mean": 5.13,
-      "bust_mean": 4.41,
-      "separation": 0.72,
-      "cohens_d": 0.397,
-      "n_valid": 495,
-      "combined_score": 0.1565
+      "star_mean": 4.81,
+      "bust_mean": 4.34,
+      "separation": 0.47,
+      "cohens_d": 0.268,
+      "n_valid": 547,
+      "combined_score": 0.1095
     },
     "stl_per": {
-      "r": 0.1119,
-      "abs_r": 0.1119,
+      "r": 0.0571,
+      "abs_r": 0.0571,
       "tier_means": {
-        "1": 2.52,
-        "2": 2.09,
-        "3": 2.3,
-        "4": 2.09,
-        "5": 2.02
+        "1": 2.48,
+        "2": 2.1,
+        "3": 2.24,
+        "4": 2.07,
+        "5": 1.99
       },
-      "star_mean": 2.24,
-      "bust_mean": 2.04,
-      "separation": 0.19,
-      "cohens_d": 0.225,
-      "n_valid": 496,
-      "combined_score": 0.0744
+      "star_mean": 2.21,
+      "bust_mean": 2.03,
+      "separation": 0.18,
+      "cohens_d": 0.219,
+      "n_valid": 546,
+      "combined_score": 0.0456
     },
     "usg": {
-      "r": 0.087,
-      "abs_r": 0.087,
+      "r": 0.0358,
+      "abs_r": 0.0358,
       "tier_means": {
-        "1": 26.62,
-        "2": 25.64,
-        "3": 24.38,
-        "4": 24.43,
-        "5": 24.45
+        "1": 25.86,
+        "2": 25.82,
+        "3": 24.39,
+        "4": 24.67,
+        "5": 24.24
       },
-      "star_mean": 25.97,
-      "bust_mean": 24.44,
-      "separation": 1.52,
-      "cohens_d": 0.33,
-      "n_valid": 496,
-      "combined_score": 0.1911
+      "star_mean": 25.83,
+      "bust_mean": 24.43,
+      "separation": 1.4,
+      "cohens_d": 0.328,
+      "n_valid": 547,
+      "combined_score": 0.1507
     },
     "age": {
-      "r": -0.208,
-      "abs_r": 0.208,
+      "r": -0.1882,
+      "abs_r": 0.1882,
       "tier_means": {
-        "1": 1.84,
+        "1": 1.78,
         "2": 1.66,
-        "3": 2.39,
-        "4": 2.72,
-        "5": 2.87
+        "3": 2.27,
+        "4": 2.56,
+        "5": 2.86
       },
-      "star_mean": 1.72,
-      "bust_mean": 2.82,
-      "separation": -1.1,
-      "cohens_d": -1.067,
-      "n_valid": 496,
-      "combined_score": 0.2108
+      "star_mean": 1.69,
+      "bust_mean": 2.73,
+      "separation": -1.03,
+      "cohens_d": -0.963,
+      "n_valid": 547,
+      "combined_score": 0.1918
     },
     "tpg": {
-      "r": 0.0561,
-      "abs_r": 0.0561,
+      "r": -0.016,
+      "abs_r": 0.016,
       "tier_means": {
-        "1": 2.37,
-        "2": 2.3,
+        "1": 2.38,
+        "2": 2.24,
         "3": 2.11,
-        "4": 2.0,
-        "5": 2.16
+        "4": 2.11,
+        "5": 2.12
       },
-      "star_mean": 2.32,
-      "bust_mean": 2.11,
-      "separation": 0.21,
-      "cohens_d": 0.258,
-      "n_valid": 496,
-      "combined_score": 0.0484
+      "star_mean": 2.28,
+      "bust_mean": 2.12,
+      "separation": 0.16,
+      "cohens_d": 0.199,
+      "n_valid": 546,
+      "combined_score": 0.0232
     },
     "gp": {
-      "r": 0.0099,
-      "abs_r": 0.0099,
+      "r": 0.0432,
+      "abs_r": 0.0432,
       "tier_means": {
-        "1": 33.68,
-        "2": 32.95,
-        "3": 34.24,
-        "4": 33.49,
-        "5": 33.58
+        "1": 30.67,
+        "2": 31.93,
+        "3": 33.19,
+        "4": 31.35,
+        "5": 33.06
       },
-      "star_mean": 33.19,
-      "bust_mean": 33.55,
-      "separation": -0.36,
-      "cohens_d": -0.06,
-      "n_valid": 496,
-      "combined_score": 0.0399
+      "star_mean": 31.54,
+      "bust_mean": 32.29,
+      "separation": -0.75,
+      "cohens_d": -0.102,
+      "n_valid": 547,
+      "combined_score": 0.0928
     },
     "tpa": {
-      "r": -0.073,
-      "abs_r": 0.073,
+      "r": -0.1122,
+      "abs_r": 0.1122,
       "tier_means": {
-        "1": 3.87,
-        "2": 3.06,
-        "3": 3.4,
-        "4": 3.24,
-        "5": 3.74
+        "1": 4.12,
+        "2": 3.17,
+        "3": 3.42,
+        "4": 3.84,
+        "5": 3.51
       },
-      "star_mean": 3.33,
-      "bust_mean": 3.6,
-      "separation": -0.27,
-      "cohens_d": -0.115,
-      "n_valid": 453,
-      "combined_score": 0.0627
+      "star_mean": 3.45,
+      "bust_mean": 3.66,
+      "separation": -0.21,
+      "cohens_d": -0.094,
+      "n_valid": 506,
+      "combined_score": 0.076
     },
     "tpm": {
-      "r": -0.0545,
-      "abs_r": 0.0545,
+      "r": -0.0859,
+      "abs_r": 0.0859,
       "tier_means": {
-        "1": 1.43,
-        "2": 1.24,
-        "3": 1.32,
-        "4": 1.29,
-        "5": 1.43
+        "1": 1.53,
+        "2": 1.27,
+        "3": 1.34,
+        "4": 1.51,
+        "5": 1.34
       },
-      "star_mean": 1.31,
-      "bust_mean": 1.39,
-      "separation": -0.09,
-      "cohens_d": -0.096,
-      "n_valid": 433,
-      "combined_score": 0.036
+      "star_mean": 1.35,
+      "bust_mean": 1.42,
+      "separation": -0.07,
+      "cohens_d": -0.081,
+      "n_valid": 483,
+      "combined_score": 0.0496
     },
     "ftm": {
-      "r": 0.1653,
-      "abs_r": 0.1653,
+      "r": 0.1169,
+      "abs_r": 0.1169,
       "tier_means": {
-        "1": 4.18,
-        "2": 3.67,
-        "3": 3.34,
-        "4": 3.25,
-        "5": 3.28
+        "1": 3.75,
+        "2": 3.56,
+        "3": 3.3,
+        "4": 3.29,
+        "5": 3.19
       },
-      "star_mean": 3.84,
-      "bust_mean": 3.27,
-      "separation": 0.57,
-      "cohens_d": 0.388,
-      "n_valid": 495,
-      "combined_score": 0.138
+      "star_mean": 3.62,
+      "bust_mean": 3.24,
+      "separation": 0.38,
+      "cohens_d": 0.266,
+      "n_valid": 547,
+      "combined_score": 0.0945
     },
     "ftr": {
-      "r": 0.1564,
-      "abs_r": 0.1564,
+      "r": 0.1825,
+      "abs_r": 0.1825,
       "tier_means": {
-        "1": 45.56,
-        "2": 44.84,
-        "3": 42.05,
-        "4": 42.4,
-        "5": 40.56
+        "1": 51.44,
+        "2": 43.16,
+        "3": 41.91,
+        "4": 40.03,
+        "5": 40.74
       },
-      "star_mean": 45.08,
-      "bust_mean": 41.09,
-      "separation": 3.99,
-      "cohens_d": 0.275,
-      "n_valid": 495,
-      "combined_score": 0.4656
+      "star_mean": 45.69,
+      "bust_mean": 40.42,
+      "separation": 5.27,
+      "cohens_d": 0.259,
+      "n_valid": 547,
+      "combined_score": 0.5913
     },
     "oreb": {
-      "r": 0.1321,
-      "abs_r": 0.1321,
+      "r": 0.1755,
+      "abs_r": 0.1755,
       "tier_means": {
-        "1": 1.55,
-        "2": 1.9,
-        "3": 1.77,
-        "4": 1.92,
-        "5": 1.57
+        "1": 1.35,
+        "2": 1.89,
+        "3": 1.74,
+        "4": 1.6,
+        "5": 1.61
       },
-      "star_mean": 1.78,
-      "bust_mean": 1.67,
-      "separation": 0.11,
-      "cohens_d": 0.103,
-      "n_valid": 496,
-      "combined_score": 0.0767
+      "star_mean": 1.73,
+      "bust_mean": 1.6,
+      "separation": 0.13,
+      "cohens_d": 0.131,
+      "n_valid": 546,
+      "combined_score": 0.1001
     },
     "dreb": {
-      "r": 0.1104,
-      "abs_r": 0.1104,
+      "r": 0.128,
+      "abs_r": 0.128,
       "tier_means": {
-        "1": 4.67,
-        "2": 4.8,
-        "3": 4.55,
-        "4": 4.57,
-        "5": 4.41
+        "1": 4.31,
+        "2": 4.92,
+        "3": 4.66,
+        "4": 4.5,
+        "5": 4.44
       },
-      "star_mean": 4.76,
-      "bust_mean": 4.45,
-      "separation": 0.31,
-      "cohens_d": 0.17,
-      "n_valid": 496,
-      "combined_score": 0.0853
+      "star_mean": 4.74,
+      "bust_mean": 4.47,
+      "separation": 0.27,
+      "cohens_d": 0.158,
+      "n_valid": 547,
+      "combined_score": 0.0896
     },
     "ts_per": {
-      "r": 0.1382,
-      "abs_r": 0.1382,
+      "r": 0.1365,
+      "abs_r": 0.1365,
       "tier_means": {
-        "1": 59.26,
-        "2": 58.56,
-        "3": 58.39,
-        "4": 57.91,
-        "5": 56.97
+        "1": 60.03,
+        "2": 58.04,
+        "3": 58.08,
+        "4": 58.16,
+        "5": 56.85
       },
-      "star_mean": 58.8,
-      "bust_mean": 57.24,
-      "separation": 1.56,
-      "cohens_d": 0.334,
-      "n_valid": 496,
-      "combined_score": 0.2206
+      "star_mean": 58.65,
+      "bust_mean": 57.44,
+      "separation": 1.21,
+      "cohens_d": 0.237,
+      "n_valid": 547,
+      "combined_score": 0.1831
     },
     "orb_per": {
-      "r": 0.1023,
-      "abs_r": 0.1023,
+      "r": 0.1419,
+      "abs_r": 0.1419,
       "tier_means": {
-        "1": 6.03,
-        "2": 7.58,
-        "3": 6.92,
-        "4": 8.02,
-        "5": 6.32
+        "1": 5.26,
+        "2": 7.52,
+        "3": 6.89,
+        "4": 6.5,
+        "5": 6.55
       },
-      "star_mean": 7.06,
-      "bust_mean": 6.81,
-      "separation": 0.25,
-      "cohens_d": 0.058,
-      "n_valid": 496,
-      "combined_score": 0.0754
+      "star_mean": 6.86,
+      "bust_mean": 6.52,
+      "separation": 0.34,
+      "cohens_d": 0.079,
+      "n_valid": 546,
+      "combined_score": 0.1032
     },
     "drb_per": {
-      "r": 0.0836,
-      "abs_r": 0.0836,
+      "r": 0.1109,
+      "abs_r": 0.1109,
       "tier_means": {
-        "1": 16.14,
-        "2": 17.27,
-        "3": 16.23,
-        "4": 17.23,
-        "5": 15.83
+        "1": 15.76,
+        "2": 17.79,
+        "3": 16.71,
+        "4": 16.44,
+        "5": 16.25
       },
-      "star_mean": 16.89,
-      "bust_mean": 16.23,
-      "separation": 0.66,
-      "cohens_d": 0.11,
-      "n_valid": 496,
-      "combined_score": 0.1059
+      "star_mean": 17.17,
+      "bust_mean": 16.34,
+      "separation": 0.83,
+      "cohens_d": 0.142,
+      "n_valid": 547,
+      "combined_score": 0.1342
     },
     "ast_per": {
-      "r": 0.0352,
-      "abs_r": 0.0352,
+      "r": -0.0156,
+      "abs_r": 0.0156,
       "tier_means": {
-        "1": 19.55,
-        "2": 17.01,
-        "3": 16.5,
-        "4": 14.56,
-        "5": 16.22
+        "1": 19.64,
+        "2": 17.1,
+        "3": 16.52,
+        "4": 16.36,
+        "5": 15.25
       },
       "star_mean": 17.85,
       "bust_mean": 15.75,
-      "separation": 2.11,
+      "separation": 2.09,
       "cohens_d": 0.204,
-      "n_valid": 496,
-      "combined_score": 0.2225
+      "n_valid": 546,
+      "combined_score": 0.2061
     },
     "to_per": {
-      "r": -0.0391,
-      "abs_r": 0.0391,
+      "r": -0.0359,
+      "abs_r": 0.0359,
       "tier_means": {
-        "1": 16.19,
-        "2": 16.75,
-        "3": 16.13,
-        "4": 16.06,
-        "5": 16.82
+        "1": 18.83,
+        "2": 16.12,
+        "3": 16.17,
+        "4": 16.24,
+        "5": 16.83
       },
-      "star_mean": 16.57,
-      "bust_mean": 16.6,
-      "separation": -0.04,
-      "cohens_d": -0.009,
-      "n_valid": 496,
-      "combined_score": 0.0234
+      "star_mean": 16.95,
+      "bust_mean": 16.57,
+      "separation": 0.39,
+      "cohens_d": 0.073,
+      "n_valid": 547,
+      "combined_score": 0.055
     },
     "blk_per": {
-      "r": 0.0605,
-      "abs_r": 0.0605,
+      "r": 0.1033,
+      "abs_r": 0.1033,
       "tier_means": {
-        "1": 2.9,
-        "2": 3.83,
-        "3": 3.24,
-        "4": 3.8,
-        "5": 3.15
+        "1": 3.1,
+        "2": 3.92,
+        "3": 3.3,
+        "4": 3.42,
+        "5": 3.28
       },
-      "star_mean": 3.52,
+      "star_mean": 3.68,
       "bust_mean": 3.34,
-      "separation": 0.18,
-      "cohens_d": 0.052,
-      "n_valid": 494,
-      "combined_score": 0.0477
+      "separation": 0.34,
+      "cohens_d": 0.097,
+      "n_valid": 544,
+      "combined_score": 0.0839
     },
     "ortg": {
-      "r": 0.1503,
-      "abs_r": 0.1503,
+      "r": 0.1343,
+      "abs_r": 0.1343,
       "tier_means": {
-        "1": 116.02,
-        "2": 113.83,
-        "3": 114.54,
-        "4": 113.46,
-        "5": 111.06
+        "1": 112.28,
+        "2": 113.58,
+        "3": 113.77,
+        "4": 113.07,
+        "5": 110.58
       },
-      "star_mean": 114.56,
-      "bust_mean": 111.75,
-      "separation": 2.81,
-      "cohens_d": 0.333,
-      "n_valid": 496,
-      "combined_score": 0.348
+      "star_mean": 113.18,
+      "bust_mean": 111.7,
+      "separation": 1.49,
+      "cohens_d": 0.151,
+      "n_valid": 547,
+      "combined_score": 0.2085
     },
     "porpag": {
-      "r": 0.1836,
-      "abs_r": 0.1836,
+      "r": 0.1357,
+      "abs_r": 0.1357,
       "tier_means": {
-        "1": 4.92,
-        "2": 4.32,
-        "3": 4.37,
-        "4": 4.17,
-        "5": 3.91
+        "1": 4.29,
+        "2": 4.24,
+        "3": 4.17,
+        "4": 4.14,
+        "5": 3.61
       },
-      "star_mean": 4.52,
-      "bust_mean": 3.99,
-      "separation": 0.53,
-      "cohens_d": 0.367,
-      "n_valid": 496,
-      "combined_score": 0.1433
+      "star_mean": 4.26,
+      "bust_mean": 3.85,
+      "separation": 0.41,
+      "cohens_d": 0.285,
+      "n_valid": 547,
+      "combined_score": 0.1067
     },
     "adjoe": {
-      "r": 0.1799,
-      "abs_r": 0.1799,
+      "r": 0.1439,
+      "abs_r": 0.1439,
       "tier_means": {
-        "1": 130.33,
-        "2": 126.42,
-        "3": 126.21,
-        "4": 124.7,
-        "5": 121.72
+        "1": 124.81,
+        "2": 126.56,
+        "3": 125.18,
+        "4": 124.6,
+        "5": 120.59
       },
-      "star_mean": 127.73,
-      "bust_mean": 122.58,
-      "separation": 5.15,
-      "cohens_d": 0.455,
-      "n_valid": 496,
-      "combined_score": 0.5899
+      "star_mean": 126.02,
+      "bust_mean": 122.39,
+      "separation": 3.63,
+      "cohens_d": 0.309,
+      "n_valid": 547,
+      "combined_score": 0.4164
     },
     "rim_pct": {
-      "r": 0.1383,
-      "abs_r": 0.1383,
+      "r": 0.166,
+      "abs_r": 0.166,
       "tier_means": {
-        "1": 66.81,
-        "2": 67.76,
-        "3": 67.96,
-        "4": 67.18,
-        "5": 65.86
+        "1": 69.57,
+        "2": 67.48,
+        "3": 67.39,
+        "4": 65.86,
+        "5": 65.94
       },
-      "star_mean": 67.48,
-      "bust_mean": 66.24,
-      "separation": 1.24,
-      "cohens_d": 0.17,
-      "n_valid": 453,
-      "combined_score": 0.1895
+      "star_mean": 68.12,
+      "bust_mean": 65.9,
+      "separation": 2.21,
+      "cohens_d": 0.282,
+      "n_valid": 547,
+      "combined_score": 0.2927
     },
     "rim_att": {
-      "r": 0.1319,
-      "abs_r": 0.1319,
+      "r": 0.1001,
+      "abs_r": 0.1001,
       "tier_means": {
-        "1": 3.8,
-        "2": 4.37,
-        "3": 4.15,
-        "4": 3.68,
-        "5": 3.75
+        "1": 3.6,
+        "2": 4.32,
+        "3": 4.09,
+        "4": 3.92,
+        "5": 3.72
       },
-      "star_mean": 4.2,
-      "bust_mean": 3.73,
-      "separation": 0.47,
-      "cohens_d": 0.317,
-      "n_valid": 453,
-      "combined_score": 0.1116
+      "star_mean": 4.1,
+      "bust_mean": 3.81,
+      "separation": 0.29,
+      "cohens_d": 0.19,
+      "n_valid": 547,
+      "combined_score": 0.0776
     }
   },
   "ranked": [
     [
-      "adjoe",
-      {
-        "r": 0.1799,
-        "abs_r": 0.1799,
-        "tier_means": {
-          "1": 130.33,
-          "2": 126.42,
-          "3": 126.21,
-          "4": 124.7,
-          "5": 121.72
-        },
-        "star_mean": 127.73,
-        "bust_mean": 122.58,
-        "separation": 5.15,
-        "cohens_d": 0.455,
-        "n_valid": 496,
-        "combined_score": 0.5899
-      }
-    ],
-    [
       "ftr",
       {
-        "r": 0.1564,
-        "abs_r": 0.1564,
+        "r": 0.1825,
+        "abs_r": 0.1825,
         "tier_means": {
-          "1": 45.56,
-          "2": 44.84,
-          "3": 42.05,
-          "4": 42.4,
-          "5": 40.56
+          "1": 51.44,
+          "2": 43.16,
+          "3": 41.91,
+          "4": 40.03,
+          "5": 40.74
         },
-        "star_mean": 45.08,
-        "bust_mean": 41.09,
-        "separation": 3.99,
-        "cohens_d": 0.275,
-        "n_valid": 495,
-        "combined_score": 0.4656
+        "star_mean": 45.69,
+        "bust_mean": 40.42,
+        "separation": 5.27,
+        "cohens_d": 0.259,
+        "n_valid": 547,
+        "combined_score": 0.5913
       }
     ],
     [
-      "ortg",
+      "adjoe",
       {
-        "r": 0.1503,
-        "abs_r": 0.1503,
+        "r": 0.1439,
+        "abs_r": 0.1439,
         "tier_means": {
-          "1": 116.02,
-          "2": 113.83,
-          "3": 114.54,
-          "4": 113.46,
-          "5": 111.06
+          "1": 124.81,
+          "2": 126.56,
+          "3": 125.18,
+          "4": 124.6,
+          "5": 120.59
         },
-        "star_mean": 114.56,
-        "bust_mean": 111.75,
-        "separation": 2.81,
-        "cohens_d": 0.333,
-        "n_valid": 496,
-        "combined_score": 0.348
-      }
-    ],
-    [
-      "bpm",
-      {
-        "r": 0.2774,
-        "abs_r": 0.2774,
-        "tier_means": {
-          "1": 9.11,
-          "2": 7.67,
-          "3": 8.05,
-          "4": 7.34,
-          "5": 6.19
-        },
-        "star_mean": 8.15,
-        "bust_mean": 6.53,
-        "separation": 1.63,
-        "cohens_d": 0.526,
-        "n_valid": 496,
-        "combined_score": 0.297
-      }
-    ],
-    [
-      "threeP",
-      {
-        "r": -0.0908,
-        "abs_r": 0.0908,
-        "tier_means": {
-          "1": 34.1,
-          "2": 35.11,
-          "3": 35.64,
-          "4": 36.18,
-          "5": 36.85
-        },
-        "star_mean": 34.75,
-        "bust_mean": 36.67,
-        "separation": -1.92,
-        "cohens_d": -0.219,
-        "n_valid": 433,
-        "combined_score": 0.2318
-      }
-    ],
-    [
-      "ast_per",
-      {
-        "r": 0.0352,
-        "abs_r": 0.0352,
-        "tier_means": {
-          "1": 19.55,
-          "2": 17.01,
-          "3": 16.5,
-          "4": 14.56,
-          "5": 16.22
-        },
-        "star_mean": 17.85,
-        "bust_mean": 15.75,
-        "separation": 2.11,
-        "cohens_d": 0.204,
-        "n_valid": 496,
-        "combined_score": 0.2225
-      }
-    ],
-    [
-      "ts_per",
-      {
-        "r": 0.1382,
-        "abs_r": 0.1382,
-        "tier_means": {
-          "1": 59.26,
-          "2": 58.56,
-          "3": 58.39,
-          "4": 57.91,
-          "5": 56.97
-        },
-        "star_mean": 58.8,
-        "bust_mean": 57.24,
-        "separation": 1.56,
-        "cohens_d": 0.334,
-        "n_valid": 496,
-        "combined_score": 0.2206
-      }
-    ],
-    [
-      "age",
-      {
-        "r": -0.208,
-        "abs_r": 0.208,
-        "tier_means": {
-          "1": 1.84,
-          "2": 1.66,
-          "3": 2.39,
-          "4": 2.72,
-          "5": 2.87
-        },
-        "star_mean": 1.72,
-        "bust_mean": 2.82,
-        "separation": -1.1,
-        "cohens_d": -1.067,
-        "n_valid": 496,
-        "combined_score": 0.2108
-      }
-    ],
-    [
-      "obpm",
-      {
-        "r": 0.1873,
-        "abs_r": 0.1873,
-        "tier_means": {
-          "1": 6.14,
-          "2": 4.56,
-          "3": 4.83,
-          "4": 4.23,
-          "5": 3.79
-        },
-        "star_mean": 5.07,
-        "bust_mean": 3.92,
-        "separation": 1.15,
-        "cohens_d": 0.453,
-        "n_valid": 494,
-        "combined_score": 0.2053
-      }
-    ],
-    [
-      "ppg",
-      {
-        "r": 0.1085,
-        "abs_r": 0.1085,
-        "tier_means": {
-          "1": 17.18,
-          "2": 16.04,
-          "3": 15.51,
-          "4": 14.86,
-          "5": 15.08
-        },
-        "star_mean": 16.42,
-        "bust_mean": 15.01,
-        "separation": 1.41,
-        "cohens_d": 0.304,
-        "n_valid": 496,
-        "combined_score": 0.1911
-      }
-    ],
-    [
-      "usg",
-      {
-        "r": 0.087,
-        "abs_r": 0.087,
-        "tier_means": {
-          "1": 26.62,
-          "2": 25.64,
-          "3": 24.38,
-          "4": 24.43,
-          "5": 24.45
-        },
-        "star_mean": 25.97,
-        "bust_mean": 24.44,
-        "separation": 1.52,
-        "cohens_d": 0.33,
-        "n_valid": 496,
-        "combined_score": 0.1911
+        "star_mean": 126.02,
+        "bust_mean": 122.39,
+        "separation": 3.63,
+        "cohens_d": 0.309,
+        "n_valid": 547,
+        "combined_score": 0.4164
       }
     ],
     [
       "rim_pct",
       {
-        "r": 0.1383,
-        "abs_r": 0.1383,
+        "r": 0.166,
+        "abs_r": 0.166,
         "tier_means": {
-          "1": 66.81,
-          "2": 67.76,
-          "3": 67.96,
-          "4": 67.18,
-          "5": 65.86
+          "1": 69.57,
+          "2": 67.48,
+          "3": 67.39,
+          "4": 65.86,
+          "5": 65.94
         },
-        "star_mean": 67.48,
-        "bust_mean": 66.24,
-        "separation": 1.24,
-        "cohens_d": 0.17,
-        "n_valid": 453,
-        "combined_score": 0.1895
+        "star_mean": 68.12,
+        "bust_mean": 65.9,
+        "separation": 2.21,
+        "cohens_d": 0.282,
+        "n_valid": 547,
+        "combined_score": 0.2927
+      }
+    ],
+    [
+      "bpm",
+      {
+        "r": 0.2303,
+        "abs_r": 0.2303,
+        "tier_means": {
+          "1": 7.12,
+          "2": 7.63,
+          "3": 7.77,
+          "4": 7.06,
+          "5": 5.89
+        },
+        "star_mean": 7.48,
+        "bust_mean": 6.42,
+        "separation": 1.06,
+        "cohens_d": 0.277,
+        "n_valid": 547,
+        "combined_score": 0.2157
+      }
+    ],
+    [
+      "ortg",
+      {
+        "r": 0.1343,
+        "abs_r": 0.1343,
+        "tier_means": {
+          "1": 112.28,
+          "2": 113.58,
+          "3": 113.77,
+          "4": 113.07,
+          "5": 110.58
+        },
+        "star_mean": 113.18,
+        "bust_mean": 111.7,
+        "separation": 1.49,
+        "cohens_d": 0.151,
+        "n_valid": 547,
+        "combined_score": 0.2085
+      }
+    ],
+    [
+      "ast_per",
+      {
+        "r": -0.0156,
+        "abs_r": 0.0156,
+        "tier_means": {
+          "1": 19.64,
+          "2": 17.1,
+          "3": 16.52,
+          "4": 16.36,
+          "5": 15.25
+        },
+        "star_mean": 17.85,
+        "bust_mean": 15.75,
+        "separation": 2.09,
+        "cohens_d": 0.204,
+        "n_valid": 546,
+        "combined_score": 0.2061
+      }
+    ],
+    [
+      "threeP",
+      {
+        "r": -0.0841,
+        "abs_r": 0.0841,
+        "tier_means": {
+          "1": 34.99,
+          "2": 34.89,
+          "3": 35.5,
+          "4": 36.52,
+          "5": 36.58
+        },
+        "star_mean": 34.93,
+        "bust_mean": 36.55,
+        "separation": -1.63,
+        "cohens_d": -0.192,
+        "n_valid": 483,
+        "combined_score": 0.1967
       }
     ],
     [
       "fg",
       {
-        "r": 0.1047,
-        "abs_r": 0.1047,
+        "r": 0.1219,
+        "abs_r": 0.1219,
         "tier_means": {
-          "1": 54.49,
-          "2": 54.99,
-          "3": 54.94,
-          "4": 54.21,
-          "5": 53.29
+          "1": 56.46,
+          "2": 54.54,
+          "3": 54.56,
+          "4": 54.39,
+          "5": 53.13
         },
-        "star_mean": 54.82,
-        "bust_mean": 53.55,
-        "separation": 1.27,
-        "cohens_d": 0.245,
-        "n_valid": 496,
-        "combined_score": 0.1757
+        "star_mean": 55.13,
+        "bust_mean": 53.7,
+        "separation": 1.43,
+        "cohens_d": 0.208,
+        "n_valid": 547,
+        "combined_score": 0.1966
       }
     ],
     [
-      "fta",
+      "age",
       {
-        "r": 0.1731,
-        "abs_r": 0.1731,
+        "r": -0.1882,
+        "abs_r": 0.1882,
         "tier_means": {
-          "1": 5.34,
-          "2": 5.02,
-          "3": 4.57,
-          "4": 4.36,
-          "5": 4.44
+          "1": 1.78,
+          "2": 1.66,
+          "3": 2.27,
+          "4": 2.56,
+          "5": 2.86
         },
-        "star_mean": 5.13,
-        "bust_mean": 4.41,
-        "separation": 0.72,
-        "cohens_d": 0.397,
-        "n_valid": 495,
-        "combined_score": 0.1565
+        "star_mean": 1.69,
+        "bust_mean": 2.73,
+        "separation": -1.03,
+        "cohens_d": -0.963,
+        "n_valid": 547,
+        "combined_score": 0.1918
       }
     ],
     [
-      "porpag",
+      "ts_per",
       {
-        "r": 0.1836,
-        "abs_r": 0.1836,
+        "r": 0.1365,
+        "abs_r": 0.1365,
         "tier_means": {
-          "1": 4.92,
-          "2": 4.32,
-          "3": 4.37,
-          "4": 4.17,
-          "5": 3.91
+          "1": 60.03,
+          "2": 58.04,
+          "3": 58.08,
+          "4": 58.16,
+          "5": 56.85
         },
-        "star_mean": 4.52,
-        "bust_mean": 3.99,
-        "separation": 0.53,
-        "cohens_d": 0.367,
-        "n_valid": 496,
-        "combined_score": 0.1433
+        "star_mean": 58.65,
+        "bust_mean": 57.44,
+        "separation": 1.21,
+        "cohens_d": 0.237,
+        "n_valid": 547,
+        "combined_score": 0.1831
       }
     ],
     [
-      "ftm",
+      "usg",
       {
-        "r": 0.1653,
-        "abs_r": 0.1653,
+        "r": 0.0358,
+        "abs_r": 0.0358,
         "tier_means": {
-          "1": 4.18,
-          "2": 3.67,
-          "3": 3.34,
-          "4": 3.25,
-          "5": 3.28
+          "1": 25.86,
+          "2": 25.82,
+          "3": 24.39,
+          "4": 24.67,
+          "5": 24.24
         },
-        "star_mean": 3.84,
-        "bust_mean": 3.27,
-        "separation": 0.57,
-        "cohens_d": 0.388,
-        "n_valid": 495,
-        "combined_score": 0.138
-      }
-    ],
-    [
-      "dbpm",
-      {
-        "r": 0.1637,
-        "abs_r": 0.1637,
-        "tier_means": {
-          "1": 3.29,
-          "2": 3.12,
-          "3": 3.22,
-          "4": 3.15,
-          "5": 2.44
-        },
-        "star_mean": 3.18,
-        "bust_mean": 2.64,
-        "separation": 0.54,
-        "cohens_d": 0.227,
-        "n_valid": 493,
-        "combined_score": 0.1343
-      }
-    ],
-    [
-      "rim_att",
-      {
-        "r": 0.1319,
-        "abs_r": 0.1319,
-        "tier_means": {
-          "1": 3.8,
-          "2": 4.37,
-          "3": 4.15,
-          "4": 3.68,
-          "5": 3.75
-        },
-        "star_mean": 4.2,
-        "bust_mean": 3.73,
-        "separation": 0.47,
-        "cohens_d": 0.317,
-        "n_valid": 453,
-        "combined_score": 0.1116
-      }
-    ],
-    [
-      "ft",
-      {
-        "r": 0.0173,
-        "abs_r": 0.0173,
-        "tier_means": {
-          "1": 78.91,
-          "2": 72.34,
-          "3": 72.86,
-          "4": 73.88,
-          "5": 73.34
-        },
-        "star_mean": 74.53,
-        "bust_mean": 73.5,
-        "separation": 1.03,
-        "cohens_d": 0.099,
-        "n_valid": 495,
-        "combined_score": 0.1086
+        "star_mean": 25.83,
+        "bust_mean": 24.43,
+        "separation": 1.4,
+        "cohens_d": 0.328,
+        "n_valid": 547,
+        "combined_score": 0.1507
       }
     ],
     [
       "drb_per",
       {
-        "r": 0.0836,
-        "abs_r": 0.0836,
+        "r": 0.1109,
+        "abs_r": 0.1109,
         "tier_means": {
-          "1": 16.14,
-          "2": 17.27,
-          "3": 16.23,
-          "4": 17.23,
-          "5": 15.83
+          "1": 15.76,
+          "2": 17.79,
+          "3": 16.71,
+          "4": 16.44,
+          "5": 16.25
         },
-        "star_mean": 16.89,
-        "bust_mean": 16.23,
+        "star_mean": 17.17,
+        "bust_mean": 16.34,
+        "separation": 0.83,
+        "cohens_d": 0.142,
+        "n_valid": 547,
+        "combined_score": 0.1342
+      }
+    ],
+    [
+      "dbpm",
+      {
+        "r": 0.1719,
+        "abs_r": 0.1719,
+        "tier_means": {
+          "1": 2.71,
+          "2": 3.19,
+          "3": 3.2,
+          "4": 2.77,
+          "5": 2.49
+        },
+        "star_mean": 3.04,
+        "bust_mean": 2.62,
+        "separation": 0.42,
+        "cohens_d": 0.173,
+        "n_valid": 542,
+        "combined_score": 0.1258
+      }
+    ],
+    [
+      "obpm",
+      {
+        "r": 0.1237,
+        "abs_r": 0.1237,
+        "tier_means": {
+          "1": 4.65,
+          "2": 4.44,
+          "3": 4.56,
+          "4": 4.35,
+          "5": 3.44
+        },
+        "star_mean": 4.5,
+        "bust_mean": 3.85,
         "separation": 0.66,
-        "cohens_d": 0.11,
-        "n_valid": 496,
-        "combined_score": 0.1059
+        "cohens_d": 0.221,
+        "n_valid": 545,
+        "combined_score": 0.1245
       }
     ],
     [
       "rpg",
       {
-        "r": 0.13,
-        "abs_r": 0.13,
+        "r": 0.1567,
+        "abs_r": 0.1567,
         "tier_means": {
-          "1": 6.22,
-          "2": 6.7,
-          "3": 6.32,
-          "4": 6.48,
-          "5": 5.98
+          "1": 5.58,
+          "2": 6.81,
+          "3": 6.4,
+          "4": 6.09,
+          "5": 6.05
         },
-        "star_mean": 6.54,
-        "bust_mean": 6.12,
+        "star_mean": 6.44,
+        "bust_mean": 6.07,
+        "separation": 0.37,
+        "cohens_d": 0.148,
+        "n_valid": 547,
+        "combined_score": 0.1135
+      }
+    ],
+    [
+      "fta",
+      {
+        "r": 0.1298,
+        "abs_r": 0.1298,
+        "tier_means": {
+          "1": 4.64,
+          "2": 4.88,
+          "3": 4.51,
+          "4": 4.35,
+          "5": 4.33
+        },
+        "star_mean": 4.81,
+        "bust_mean": 4.34,
+        "separation": 0.47,
+        "cohens_d": 0.268,
+        "n_valid": 547,
+        "combined_score": 0.1095
+      }
+    ],
+    [
+      "ppg",
+      {
+        "r": 0.0508,
+        "abs_r": 0.0508,
+        "tier_means": {
+          "1": 15.6,
+          "2": 16.04,
+          "3": 15.33,
+          "4": 15.47,
+          "5": 14.68
+        },
+        "star_mean": 15.91,
+        "bust_mean": 15.03,
+        "separation": 0.88,
+        "cohens_d": 0.198,
+        "n_valid": 547,
+        "combined_score": 0.1089
+      }
+    ],
+    [
+      "porpag",
+      {
+        "r": 0.1357,
+        "abs_r": 0.1357,
+        "tier_means": {
+          "1": 4.29,
+          "2": 4.24,
+          "3": 4.17,
+          "4": 4.14,
+          "5": 3.61
+        },
+        "star_mean": 4.26,
+        "bust_mean": 3.85,
         "separation": 0.41,
-        "cohens_d": 0.158,
-        "n_valid": 496,
-        "combined_score": 0.1048
-      }
-    ],
-    [
-      "dreb",
-      {
-        "r": 0.1104,
-        "abs_r": 0.1104,
-        "tier_means": {
-          "1": 4.67,
-          "2": 4.8,
-          "3": 4.55,
-          "4": 4.57,
-          "5": 4.41
-        },
-        "star_mean": 4.76,
-        "bust_mean": 4.45,
-        "separation": 0.31,
-        "cohens_d": 0.17,
-        "n_valid": 496,
-        "combined_score": 0.0853
-      }
-    ],
-    [
-      "oreb",
-      {
-        "r": 0.1321,
-        "abs_r": 0.1321,
-        "tier_means": {
-          "1": 1.55,
-          "2": 1.9,
-          "3": 1.77,
-          "4": 1.92,
-          "5": 1.57
-        },
-        "star_mean": 1.78,
-        "bust_mean": 1.67,
-        "separation": 0.11,
-        "cohens_d": 0.103,
-        "n_valid": 496,
-        "combined_score": 0.0767
+        "cohens_d": 0.285,
+        "n_valid": 547,
+        "combined_score": 0.1067
       }
     ],
     [
       "orb_per",
       {
-        "r": 0.1023,
-        "abs_r": 0.1023,
+        "r": 0.1419,
+        "abs_r": 0.1419,
         "tier_means": {
-          "1": 6.03,
-          "2": 7.58,
-          "3": 6.92,
-          "4": 8.02,
-          "5": 6.32
+          "1": 5.26,
+          "2": 7.52,
+          "3": 6.89,
+          "4": 6.5,
+          "5": 6.55
         },
-        "star_mean": 7.06,
-        "bust_mean": 6.81,
-        "separation": 0.25,
-        "cohens_d": 0.058,
-        "n_valid": 496,
-        "combined_score": 0.0754
+        "star_mean": 6.86,
+        "bust_mean": 6.52,
+        "separation": 0.34,
+        "cohens_d": 0.079,
+        "n_valid": 546,
+        "combined_score": 0.1032
       }
     ],
     [
-      "stl_per",
+      "oreb",
       {
-        "r": 0.1119,
-        "abs_r": 0.1119,
+        "r": 0.1755,
+        "abs_r": 0.1755,
         "tier_means": {
-          "1": 2.52,
-          "2": 2.09,
-          "3": 2.3,
-          "4": 2.09,
-          "5": 2.02
+          "1": 1.35,
+          "2": 1.89,
+          "3": 1.74,
+          "4": 1.6,
+          "5": 1.61
         },
-        "star_mean": 2.24,
-        "bust_mean": 2.04,
-        "separation": 0.19,
-        "cohens_d": 0.225,
-        "n_valid": 496,
-        "combined_score": 0.0744
+        "star_mean": 1.73,
+        "bust_mean": 1.6,
+        "separation": 0.13,
+        "cohens_d": 0.131,
+        "n_valid": 546,
+        "combined_score": 0.1001
       }
     ],
     [
-      "spg",
+      "ftm",
       {
-        "r": 0.1116,
-        "abs_r": 0.1116,
+        "r": 0.1169,
+        "abs_r": 0.1169,
         "tier_means": {
-          "1": 1.37,
-          "2": 1.12,
-          "3": 1.23,
-          "4": 1.08,
-          "5": 1.08
+          "1": 3.75,
+          "2": 3.56,
+          "3": 3.3,
+          "4": 3.29,
+          "5": 3.19
         },
-        "star_mean": 1.21,
-        "bust_mean": 1.08,
-        "separation": 0.12,
-        "cohens_d": 0.232,
-        "n_valid": 496,
-        "combined_score": 0.0675
-      }
-    ],
-    [
-      "tpa",
-      {
-        "r": -0.073,
-        "abs_r": 0.073,
-        "tier_means": {
-          "1": 3.87,
-          "2": 3.06,
-          "3": 3.4,
-          "4": 3.24,
-          "5": 3.74
-        },
-        "star_mean": 3.33,
-        "bust_mean": 3.6,
-        "separation": -0.27,
-        "cohens_d": -0.115,
-        "n_valid": 453,
-        "combined_score": 0.0627
-      }
-    ],
-    [
-      "bpg",
-      {
-        "r": 0.0848,
-        "abs_r": 0.0848,
-        "tier_means": {
-          "1": 0.9,
-          "2": 1.09,
-          "3": 0.92,
-          "4": 1.01,
-          "5": 0.88
-        },
-        "star_mean": 1.03,
-        "bust_mean": 0.92,
-        "separation": 0.11,
-        "cohens_d": 0.118,
-        "n_valid": 485,
-        "combined_score": 0.0531
-      }
-    ],
-    [
-      "tpg",
-      {
-        "r": 0.0561,
-        "abs_r": 0.0561,
-        "tier_means": {
-          "1": 2.37,
-          "2": 2.3,
-          "3": 2.11,
-          "4": 2.0,
-          "5": 2.16
-        },
-        "star_mean": 2.32,
-        "bust_mean": 2.11,
-        "separation": 0.21,
-        "cohens_d": 0.258,
-        "n_valid": 496,
-        "combined_score": 0.0484
-      }
-    ],
-    [
-      "blk_per",
-      {
-        "r": 0.0605,
-        "abs_r": 0.0605,
-        "tier_means": {
-          "1": 2.9,
-          "2": 3.83,
-          "3": 3.24,
-          "4": 3.8,
-          "5": 3.15
-        },
-        "star_mean": 3.52,
-        "bust_mean": 3.34,
-        "separation": 0.18,
-        "cohens_d": 0.052,
-        "n_valid": 494,
-        "combined_score": 0.0477
+        "star_mean": 3.62,
+        "bust_mean": 3.24,
+        "separation": 0.38,
+        "cohens_d": 0.266,
+        "n_valid": 547,
+        "combined_score": 0.0945
       }
     ],
     [
       "gp",
       {
-        "r": 0.0099,
-        "abs_r": 0.0099,
+        "r": 0.0432,
+        "abs_r": 0.0432,
         "tier_means": {
-          "1": 33.68,
-          "2": 32.95,
-          "3": 34.24,
-          "4": 33.49,
-          "5": 33.58
+          "1": 30.67,
+          "2": 31.93,
+          "3": 33.19,
+          "4": 31.35,
+          "5": 33.06
         },
-        "star_mean": 33.19,
-        "bust_mean": 33.55,
-        "separation": -0.36,
-        "cohens_d": -0.06,
-        "n_valid": 496,
-        "combined_score": 0.0399
+        "star_mean": 31.54,
+        "bust_mean": 32.29,
+        "separation": -0.75,
+        "cohens_d": -0.102,
+        "n_valid": 547,
+        "combined_score": 0.0928
       }
     ],
     [
-      "apg",
+      "dreb",
       {
-        "r": 0.0101,
-        "abs_r": 0.0101,
+        "r": 0.128,
+        "abs_r": 0.128,
         "tier_means": {
-          "1": 2.93,
-          "2": 2.73,
-          "3": 2.62,
-          "4": 2.24,
-          "5": 2.56
+          "1": 4.31,
+          "2": 4.92,
+          "3": 4.66,
+          "4": 4.5,
+          "5": 4.44
         },
-        "star_mean": 2.8,
-        "bust_mean": 2.47,
-        "separation": 0.33,
-        "cohens_d": 0.174,
-        "n_valid": 495,
-        "combined_score": 0.0371
+        "star_mean": 4.74,
+        "bust_mean": 4.47,
+        "separation": 0.27,
+        "cohens_d": 0.158,
+        "n_valid": 547,
+        "combined_score": 0.0896
       }
     ],
     [
-      "tpm",
+      "blk_per",
       {
-        "r": -0.0545,
-        "abs_r": 0.0545,
+        "r": 0.1033,
+        "abs_r": 0.1033,
         "tier_means": {
-          "1": 1.43,
-          "2": 1.24,
-          "3": 1.32,
-          "4": 1.29,
-          "5": 1.43
+          "1": 3.1,
+          "2": 3.92,
+          "3": 3.3,
+          "4": 3.42,
+          "5": 3.28
         },
-        "star_mean": 1.31,
-        "bust_mean": 1.39,
-        "separation": -0.09,
-        "cohens_d": -0.096,
-        "n_valid": 433,
-        "combined_score": 0.036
+        "star_mean": 3.68,
+        "bust_mean": 3.34,
+        "separation": 0.34,
+        "cohens_d": 0.097,
+        "n_valid": 544,
+        "combined_score": 0.0839
       }
     ],
     [
-      "mpg",
+      "bpg",
       {
-        "r": 0.0581,
-        "abs_r": 0.0581,
+        "r": 0.1292,
+        "abs_r": 0.1292,
         "tier_means": {
-          "1": 31.69,
-          "2": 30.33,
-          "3": 31.31,
-          "4": 30.31,
-          "5": 30.89
+          "1": 0.98,
+          "2": 1.09,
+          "3": 0.95,
+          "4": 0.93,
+          "5": 0.91
         },
-        "star_mean": 30.78,
-        "bust_mean": 30.72,
-        "separation": 0.06,
-        "cohens_d": 0.012,
-        "n_valid": 496,
-        "combined_score": 0.0349
+        "star_mean": 1.06,
+        "bust_mean": 0.92,
+        "separation": 0.14,
+        "cohens_d": 0.152,
+        "n_valid": 532,
+        "combined_score": 0.0779
+      }
+    ],
+    [
+      "rim_att",
+      {
+        "r": 0.1001,
+        "abs_r": 0.1001,
+        "tier_means": {
+          "1": 3.6,
+          "2": 4.32,
+          "3": 4.09,
+          "4": 3.92,
+          "5": 3.72
+        },
+        "star_mean": 4.1,
+        "bust_mean": 3.81,
+        "separation": 0.29,
+        "cohens_d": 0.19,
+        "n_valid": 547,
+        "combined_score": 0.0776
+      }
+    ],
+    [
+      "tpa",
+      {
+        "r": -0.1122,
+        "abs_r": 0.1122,
+        "tier_means": {
+          "1": 4.12,
+          "2": 3.17,
+          "3": 3.42,
+          "4": 3.84,
+          "5": 3.51
+        },
+        "star_mean": 3.45,
+        "bust_mean": 3.66,
+        "separation": -0.21,
+        "cohens_d": -0.094,
+        "n_valid": 506,
+        "combined_score": 0.076
       }
     ],
     [
       "to_per",
       {
-        "r": -0.0391,
-        "abs_r": 0.0391,
+        "r": -0.0359,
+        "abs_r": 0.0359,
         "tier_means": {
-          "1": 16.19,
-          "2": 16.75,
-          "3": 16.13,
-          "4": 16.06,
-          "5": 16.82
+          "1": 18.83,
+          "2": 16.12,
+          "3": 16.17,
+          "4": 16.24,
+          "5": 16.83
         },
-        "star_mean": 16.57,
-        "bust_mean": 16.6,
-        "separation": -0.04,
-        "cohens_d": -0.009,
-        "n_valid": 496,
-        "combined_score": 0.0234
+        "star_mean": 16.95,
+        "bust_mean": 16.57,
+        "separation": 0.39,
+        "cohens_d": 0.073,
+        "n_valid": 547,
+        "combined_score": 0.055
+      }
+    ],
+    [
+      "tpm",
+      {
+        "r": -0.0859,
+        "abs_r": 0.0859,
+        "tier_means": {
+          "1": 1.53,
+          "2": 1.27,
+          "3": 1.34,
+          "4": 1.51,
+          "5": 1.34
+        },
+        "star_mean": 1.35,
+        "bust_mean": 1.42,
+        "separation": -0.07,
+        "cohens_d": -0.081,
+        "n_valid": 483,
+        "combined_score": 0.0496
+      }
+    ],
+    [
+      "stl_per",
+      {
+        "r": 0.0571,
+        "abs_r": 0.0571,
+        "tier_means": {
+          "1": 2.48,
+          "2": 2.1,
+          "3": 2.24,
+          "4": 2.07,
+          "5": 1.99
+        },
+        "star_mean": 2.21,
+        "bust_mean": 2.03,
+        "separation": 0.18,
+        "cohens_d": 0.219,
+        "n_valid": 546,
+        "combined_score": 0.0456
+      }
+    ],
+    [
+      "apg",
+      {
+        "r": -0.0223,
+        "abs_r": 0.0223,
+        "tier_means": {
+          "1": 3.07,
+          "2": 2.72,
+          "3": 2.61,
+          "4": 2.58,
+          "5": 2.36
+        },
+        "star_mean": 2.82,
+        "bust_mean": 2.46,
+        "separation": 0.36,
+        "cohens_d": 0.188,
+        "n_valid": 545,
+        "combined_score": 0.0453
+      }
+    ],
+    [
+      "ft",
+      {
+        "r": -0.0261,
+        "abs_r": 0.0261,
+        "tier_means": {
+          "1": 79.18,
+          "2": 72.49,
+          "3": 72.9,
+          "4": 75.4,
+          "5": 73.23
+        },
+        "star_mean": 74.53,
+        "bust_mean": 74.21,
+        "separation": 0.33,
+        "cohens_d": 0.032,
+        "n_valid": 547,
+        "combined_score": 0.0444
+      }
+    ],
+    [
+      "spg",
+      {
+        "r": 0.0565,
+        "abs_r": 0.0565,
+        "tier_means": {
+          "1": 1.37,
+          "2": 1.12,
+          "3": 1.18,
+          "4": 1.11,
+          "5": 1.05
+        },
+        "star_mean": 1.19,
+        "bust_mean": 1.08,
+        "separation": 0.11,
+        "cohens_d": 0.22,
+        "n_valid": 546,
+        "combined_score": 0.0387
+      }
+    ],
+    [
+      "mpg",
+      {
+        "r": 0.0239,
+        "abs_r": 0.0239,
+        "tier_means": {
+          "1": 30.02,
+          "2": 30.56,
+          "3": 31.28,
+          "4": 30.93,
+          "5": 30.47
+        },
+        "star_mean": 30.4,
+        "bust_mean": 30.68,
+        "separation": -0.28,
+        "cohens_d": -0.05,
+        "n_valid": 547,
+        "combined_score": 0.0385
+      }
+    ],
+    [
+      "tpg",
+      {
+        "r": -0.016,
+        "abs_r": 0.016,
+        "tier_means": {
+          "1": 2.38,
+          "2": 2.24,
+          "3": 2.11,
+          "4": 2.11,
+          "5": 2.12
+        },
+        "star_mean": 2.28,
+        "bust_mean": 2.12,
+        "separation": 0.16,
+        "cohens_d": 0.199,
+        "n_valid": 546,
+        "combined_score": 0.0232
       }
     ]
   ],
-  "n_players": 496,
+  "n_players": 547,
   "tier_counts": {
-    "1": 19,
-    "5": 218,
-    "3": 133,
-    "4": 88,
-    "2": 38
+    "4": 158,
+    "5": 193,
+    "2": 41,
+    "3": 137,
+    "1": 18
   }
 }
