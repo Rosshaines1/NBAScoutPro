@@ -1,13 +1,12 @@
-"""NBAScoutPro V4 - Archetype-based scouting with floor/ceiling ranges.
+"""NBAScoutPro — Prospect Translation Report.
 
-Archetype classifier: "What type of player is this?"
-Same-archetype comps: "Who are the most similar players of this type?"
-Floor/ceiling: "What's the range of outcomes for this player type?"
-Model prediction: "Where do the statistical signals point?"
+Projection based on position-adjusted statistical profile and team context.
+Style similarity does not imply identical NBA outcome.
 """
 import sys
 import os
 import json
+import math
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -16,7 +15,7 @@ import plotly.graph_objects as go
 
 from config import (
     POSITIONAL_AVGS, LEVEL_MODIFIERS, QUADRANT_MODIFIERS, TIER_LABELS,
-    PLAYER_DB_PATH, POSITIONAL_AVGS_PATH, MAX_STATS, DATA_DIR,
+    PLAYER_DB_PATH, POSITIONAL_AVGS_PATH, MAX_STATS, DATA_DIR, PROCESSED_DIR,
     STAR_SIGNAL_THRESHOLDS,
 )
 from app.similarity import (
@@ -25,9 +24,13 @@ from app.similarity import (
 )
 
 PROSPECTS_PATH = os.path.join(DATA_DIR, "prospects.json")
+DRAFT_SIMS_PATH = os.path.join(PROCESSED_DIR, "draft_simulations.json")
 
 st.set_page_config(page_title="NBAScoutPro", page_icon="\U0001f3c0", layout="wide")
 
+# ---------------------------------------------------------------------------
+# Data loading
+# ---------------------------------------------------------------------------
 
 @st.cache_data
 def load_data():
@@ -44,13 +47,87 @@ def load_data():
         with open(PROSPECTS_PATH) as f:
             prospects = json.load(f)
 
-    return player_db, pos_avgs, prospects
+    draft_sims = {}
+    if os.path.exists(DRAFT_SIMS_PATH):
+        with open(DRAFT_SIMS_PATH) as f:
+            draft_sims = json.load(f)
+
+    return player_db, pos_avgs, prospects, draft_sims
 
 
-def format_height(inches):
-    feet = int(inches) // 12
-    inc = int(inches) % 12
-    return f"{feet}'{inc}\""
+# ---------------------------------------------------------------------------
+# Constants & helpers
+# ---------------------------------------------------------------------------
+
+TIER_COLORS = {
+    1: "#FFD700",  # Gold
+    2: "#C0C0C0",  # Silver
+    3: "#4CAF50",  # Green
+    4: "#FF9800",  # Orange
+    5: "#F44336",  # Red
+    6: "#9E9E9E",  # Gray (TBD)
+}
+
+ARCHETYPE_COLORS = {
+    "Scoring Guard": "#E53935",
+    "Playmaking Guard": "#1E88E5",
+    "3&D Wing": "#43A047",
+    "Scoring Wing": "#FB8C00",
+    "Skilled Big": "#8E24AA",
+    "Athletic Big": "#6D4C41",
+}
+
+STAR_SIGNAL_LABELS = {
+    "bpm": ("BPM", STAR_SIGNAL_THRESHOLDS.get("bpm", 7.6)),
+    "obpm": ("Off BPM", STAR_SIGNAL_THRESHOLDS.get("obpm", 6.9)),
+    "fta": ("FTA Rate", STAR_SIGNAL_THRESHOLDS.get("fta", 4.7)),
+    "spg": ("Steals", STAR_SIGNAL_THRESHOLDS.get("spg", 1.4)),
+    "stl_per": ("Steal %", STAR_SIGNAL_THRESHOLDS.get("stl_per", 2.3)),
+    "usg": ("Usage", STAR_SIGNAL_THRESHOLDS.get("usg", 25.9)),
+    "ft": ("FT%", STAR_SIGNAL_THRESHOLDS.get("ft", 81.3)),
+}
+
+POS_LABELS = {"G": "Guard", "W": "Wing", "B": "Big"}
+
+ROLE_DESCRIPTORS = {
+    (1, "G"): "Franchise-level guard",
+    (1, "W"): "Franchise-level wing",
+    (1, "B"): "Franchise-level big",
+    (2, "G"): "Perennial All-Star guard",
+    (2, "W"): "Perennial All-Star wing",
+    (2, "B"): "Perennial All-Star big",
+    (3, "G"): "Quality starting guard",
+    (3, "W"): "Quality starting wing",
+    (3, "B"): "Quality starting big",
+    (4, "G"): "Rotation guard",
+    (4, "W"): "Rotation wing",
+    (4, "B"): "Rotation big",
+    (5, "G"): "Limited NBA tenure",
+    (5, "W"): "Limited NBA tenure",
+    (5, "B"): "Limited NBA tenure",
+}
+
+
+def get_role_descriptor(player):
+    tier = player.get("tier", 5)
+    pos = player.get("pos", "W")
+    return ROLE_DESCRIPTORS.get((tier, pos), TIER_LABELS.get(tier, "Unknown"))
+
+
+def compute_projection_stability(matches):
+    """Determine how tightly clustered the comparison group is."""
+    if not matches or len(matches) < 3:
+        return "High Variance Outcome"
+    tiers = [m["player"]["tier"] for m in matches[:8]]
+    mean_t = sum(tiers) / len(tiers)
+    var = sum((t - mean_t) ** 2 for t in tiers) / len(tiers)
+    std = math.sqrt(var)
+    if std < 0.7:
+        return "Stable Projection"
+    elif std < 1.2:
+        return "Moderate Variance"
+    else:
+        return "High Variance Outcome"
 
 
 def build_radar_chart(prospect, matches, stat_keys=None):
@@ -98,59 +175,19 @@ def build_radar_chart(prospect, matches, stat_keys=None):
     return fig
 
 
-UNICORN_LABELS = {
-    "rebounding_guard": "Rebounding Guard",
-    "passing_big": "Passing Big",
-    "stretch_big": "Stretch Big",
-    "shot_blocking_wing": "Shot-Blocking Wing",
-    "tall_playmaker": "Tall Playmaker",
-    "pickpocket": "Pickpocket",
-    "defensive_unicorn": "Defensive Unicorn",
-}
-
-STAR_SIGNAL_LABELS = {
-    "bpm": ("BPM", STAR_SIGNAL_THRESHOLDS.get("bpm", 9.6)),
-    "obpm": ("Off BPM", STAR_SIGNAL_THRESHOLDS.get("obpm", 7.1)),
-    "fta": ("FTA Rate", STAR_SIGNAL_THRESHOLDS.get("fta", 4.6)),
-    "spg": ("Steals", STAR_SIGNAL_THRESHOLDS.get("spg", 1.4)),
-    "stl_per": ("Steal %", STAR_SIGNAL_THRESHOLDS.get("stl_per", 2.5)),
-    "usg": ("Usage", STAR_SIGNAL_THRESHOLDS.get("usg", 25.9)),
-    "ft": ("FT%", STAR_SIGNAL_THRESHOLDS.get("ft", 79.9)),
-}
-
-TIER_COLORS = {
-    1: "#FFD700",  # Gold
-    2: "#C0C0C0",  # Silver
-    3: "#4CAF50",  # Green
-    4: "#FF9800",  # Orange
-    5: "#F44336",  # Red
-    6: "#9E9E9E",  # Gray (TBD)
-}
-
-ARCHETYPE_COLORS = {
-    "Scoring Guard": "#E53935",
-    "Playmaking Guard": "#1E88E5",
-    "3&D Wing": "#43A047",
-    "Scoring Wing": "#FB8C00",
-    "Skilled Big": "#8E24AA",
-    "Athletic Big": "#6D4C41",
-}
-
-ARCHETYPE_ICONS = {
-    "Scoring Guard": "Bucket-getter who creates their own shot",
-    "Playmaking Guard": "Pass-first floor general who controls tempo",
-    "3&D Wing": "Shooting + defense role player, complementary piece",
-    "Scoring Wing": "Primary scorer with size and versatility",
-    "Skilled Big": "Big with shooting touch, offensive skill, and floor spacing",
-    "Athletic Big": "Rim protector and rebounder, physicality over finesse",
-}
-
+# ---------------------------------------------------------------------------
+# Main app
+# ---------------------------------------------------------------------------
 
 def main():
-    player_db, pos_avgs, prospects = load_data()
+    player_db, pos_avgs, prospects, draft_sims = load_data()
 
-    st.title("NBAScoutPro")
-    st.caption(f"Compare prospects against {len(player_db)} historical college players")
+    # ---- HEADER ----
+    st.markdown("# Prospect Translation Report")
+    st.caption(
+        "Projection based on position-adjusted statistical profile and team context. "
+        "Style similarity does not imply identical NBA outcome."
+    )
 
     pos_list = ["G", "W", "B"]
     quadrant_list = list(QUADRANT_MODIFIERS.keys())
@@ -180,7 +217,6 @@ def main():
         if p.get("quadrant") in quadrant_list:
             st.session_state["inp_quadrant"] = p["quadrant"]
         elif p.get("level") in list(LEVEL_MODIFIERS.keys()):
-            # Legacy fallback: map level to quadrant
             level_to_quad = {"High Major": "Q1", "Mid Major": "Q2", "Low Major": "Q4"}
             st.session_state["inp_quadrant"] = level_to_quad.get(p["level"], "Q1")
 
@@ -218,7 +254,7 @@ def main():
             class_yr_sel = st.selectbox("Class Year", class_yr_list, index=0, key="inp_age")
             age = class_yr_map[class_yr_sel]
         with c2:
-            pass  # Removed Athleticism — placeholder data only
+            pass
 
         st.subheader("Stats (Per Game)")
         c1, c2, c3 = st.columns(3)
@@ -246,11 +282,10 @@ def main():
             mpg = st.number_input("MPG", 10.0, 42.0, 30.0, step=0.1, format="%.1f", key="inp_mpg")
         with c2:
             tpa = st.number_input("3PA/G", 0.0, 12.0, 0.0, step=0.1, format="%.1f",
-                                  help="3-point attempts per game (volume context for 3P%)", key="inp_tpa")
+                                  help="3-point attempts per game", key="inp_tpa")
 
-        st.subheader("Advanced Stats (Per Game)")
+        st.subheader("Advanced Stats")
         st.caption("These stats drive the prediction model. Add them for full accuracy.")
-        st.caption("(from basketball-reference or equivalent)")
         ac1, ac2, ac3 = st.columns(3)
         with ac1:
             bpm = st.number_input("BPM", -10.0, 20.0, 0.0, step=0.1, format="%.1f",
@@ -267,11 +302,11 @@ def main():
                                    help="Defensive BPM", key="inp_dbpm")
         with ac3:
             ftr = st.number_input("FT Rate", 0.0, 70.0, 0.0, step=0.1, format="%.1f",
-                                  help="FTA/FGA — how often you get to the line", key="inp_ftr")
+                                  help="FTA/FGA ratio", key="inp_ftr")
             rim_pct = st.number_input("Rim %", 0.0, 90.0, 0.0, step=0.1, format="%.1f",
                                       help="Shooting % at the rim", key="inp_rim_pct")
 
-    # Build prospect dict (w/ws/ath set as internal defaults — no user input)
+    # Build prospect dict
     prospect = {
         "name": name, "pos": position, "h": height, "w": 200,
         "ws": height + 4, "age": age, "quadrant": quadrant,
@@ -283,21 +318,17 @@ def main():
         "ftr": ftr, "rim_pct": rim_pct, "tpa": tpa,
     }
 
-    # ---- RUN V4 SYSTEMS ----
+    # ---- RUN MODEL ----
     prediction = predict_tier(prospect, pos_avgs)
-    arch_result = find_archetype_matches(prospect, player_db, pos_avgs, top_n=10, anchor_tier=prediction["tier"], use_v3=True)
+    arch_result = find_archetype_matches(
+        prospect, player_db, pos_avgs, top_n=10,
+        anchor_tier=prediction["tier"], use_v3=True,
+    )
 
     archetype = arch_result["archetype"]
-    secondary = arch_result["secondary"]
-    arch_color = ARCHETYPE_COLORS.get(archetype, "#888")
-    arch_desc = ARCHETYPE_ICONS.get(archetype, "")
-
-    ceil_tier = arch_result["ceiling_tier"]
-    floor_tier = arch_result["floor_tier"]
-    predicted_tier = arch_result["predicted_tier"]
-    closest_comp = arch_result["closest_comp"]
     ceil_comp = arch_result["ceiling_comp"]
     floor_comp = arch_result["floor_comp"]
+    closest_comp = arch_result["closest_comp"]
     matches = arch_result["matches"]
     pool_size = arch_result["pool_size"]
 
@@ -310,133 +341,145 @@ def main():
         st.warning("No advanced stats provided. Add BPM, OBPM, and FTA for full prediction accuracy.")
 
     # ================================================================
-    # SECTION 1: THE VERDICT (archetype tag + tier headline)
+    # SECTION 1: PROJECTED NBA OUTCOME TIER
     # ================================================================
+    st.markdown("### Projected NBA Outcome Tier")
+
     st.markdown(
-        f"<div style='padding:16px 20px; border-radius:10px; "
-        f"border: 2px solid {pred_color}; background: {pred_color}0D;'>"
-        f"<span style='display:inline-block; padding:3px 12px; border-radius:20px; "
-        f"background:{arch_color}; color:white; font-size:0.85em; font-weight:bold; "
-        f"margin-right:12px; vertical-align:middle;'>{archetype}</span>"
-        f"<span style='font-size:1.6em; font-weight:bold; color:{pred_color}; "
-        f"vertical-align:middle;'>{pred_label}</span>"
-        f"<span style='font-size:0.95em; color:#888; margin-left:10px; "
-        f"vertical-align:middle;'>Tier {pred_tier} Projection</span>"
-        f"<br><span style='font-size:0.85em; color:#888; margin-left:2px;'>"
-        f"{arch_desc} &nbsp;|&nbsp; 2nd: {secondary} &nbsp;|&nbsp; "
-        f"Pool: {pool_size} players</span>"
+        f"<div style='padding:20px 24px; border-radius:10px; "
+        f"border:2px solid {pred_color}; background:{pred_color}0D; "
+        f"margin-bottom:8px;'>"
+        f"<div style='font-size:2.0em; font-weight:bold; color:{pred_color};'>"
+        f"{pred_label}</div>"
+        f"<div style='font-size:0.95em; color:#aaa; margin-top:4px;'>"
+        f"Star Signals Triggered: {prediction['star_signals']} / {len(STAR_SIGNAL_LABELS)} "
+        f"Historical Star Thresholds Met</div>"
+        f"</div>",
+        unsafe_allow_html=True,
+    )
+
+    st.caption(
+        "Tier is determined using historical outcomes of players with "
+        "similar statistical and contextual profiles."
+    )
+
+    # ================================================================
+    # SECTION 2: HISTORICAL OUTCOME RANGE
+    # ================================================================
+    st.divider()
+    st.markdown("### Historical Outcome Range")
+    st.caption("Best and worst NBA outcomes among statistically similar prospects.")
+
+    def _outcome_block(label, comp):
+        if not comp:
+            return (
+                f"<div style='padding:10px 14px; margin:6px 0; "
+                f"border-left:4px solid #555; background:#5550D; "
+                f"border-radius:0 6px 6px 0;'>"
+                f"<b>{label}:</b> No comparable player found</div>"
+            )
+        p = comp["player"]
+        t_color = TIER_COLORS.get(p["tier"], "#888")
+        descriptor = get_role_descriptor(p)
+        return (
+            f"<div style='padding:10px 14px; margin:6px 0; "
+            f"border-left:4px solid {t_color}; background:{t_color}0D; "
+            f"border-radius:0 6px 6px 0;'>"
+            f"<div><b>{label}</b></div>"
+            f"<div style='font-size:1.15em; font-weight:bold; color:{t_color}; "
+            f"margin:2px 0;'>{p['name']}</div>"
+            f"<div style='font-size:0.9em; color:#aaa;'>{descriptor}</div>"
+            f"</div>"
+        )
+
+    range_html = _outcome_block("Upper Historical Outcome", ceil_comp)
+    range_html += _outcome_block("Lower Historical Outcome", floor_comp)
+    st.markdown(range_html, unsafe_allow_html=True)
+
+    st.caption(
+        "These reflect the historical range of outcomes, not prediction certainty. "
+        "The prospect will not necessarily match either outcome."
+    )
+
+    # ================================================================
+    # SECTION 3: KEY INDICATORS DRIVING PROJECTION
+    # ================================================================
+    st.divider()
+    st.markdown("### Key Indicators Driving Projection")
+
+    reasons = prediction.get("reasons", [])
+    if reasons:
+        for reason in reasons[:6]:
+            st.markdown(f"- {reason}")
+    else:
+        st.markdown("- No strong statistical signals detected")
+
+    # ================================================================
+    # SECTION 4: CLOSEST STATISTICAL STYLE MATCHES
+    # ================================================================
+    st.divider()
+    st.markdown("### Closest Statistical Style Matches")
+    st.caption(
+        "These players had similar college statistical profiles. "
+        "Similarity does not guarantee similar NBA outcome."
+    )
+
+    if matches:
+        table_header = "| # | Player | Similarity | College Profile |"
+        table_sep = "|:--|:---|:---:|:---|"
+        table_rows = [table_header, table_sep]
+        for i, match in enumerate(matches[:10]):
+            p = match["player"]
+            sim = match["similarity"]
+            s = p["stats"]
+            arch_tag, _, _ = classify_archetype(p)
+            stat_line = (
+                f"{s['ppg']:.1f}p / {s['rpg']:.1f}r / {s['apg']:.1f}a | "
+                f"{s['fg']:.0f}% eFG | {arch_tag}"
+            )
+            table_rows.append(
+                f"| {i+1} | **{p['name']}** | {sim['score']:.0f}% | {stat_line} |"
+            )
+        st.markdown("\n".join(table_rows))
+
+    st.caption(
+        "All performance metrics are evaluated relative to the player's position group "
+        f"({POS_LABELS.get(position, 'Wing')})."
+    )
+
+    # ================================================================
+    # PROJECTION STABILITY
+    # ================================================================
+    stability = compute_projection_stability(matches)
+    stability_colors = {
+        "Stable Projection": "#4CAF50",
+        "Moderate Variance": "#FF9800",
+        "High Variance Outcome": "#F44336",
+    }
+    stab_color = stability_colors.get(stability, "#888")
+    st.markdown(
+        f"<div style='margin-top:8px; padding:8px 14px; border-radius:6px; "
+        f"border:1px solid {stab_color}; display:inline-block;'>"
+        f"<span style='font-weight:bold; color:{stab_color};'>{stability}</span>"
         f"</div>",
         unsafe_allow_html=True,
     )
 
     # ================================================================
-    # SECTION 2: OUTCOME RANGE (ceiling → likely → floor)
-    # ================================================================
-    st.divider()
-    st.markdown("### Outcome Range")
-
-    def _range_line(label, comp, tier):
-        if not comp:
-            tier_label = TIER_LABELS.get(tier, "?")
-            return f"<div style='padding:6px 0;'><b>{label}:</b> T{tier} {tier_label} — no comp found</div>"
-        p = comp["player"]
-        sim_score = comp["similarity"]["score"]
-        ws = p.get("nba_ws", 0) or 0
-        tier_label = TIER_LABELS.get(p["tier"], "?")
-        t_color = TIER_COLORS.get(p["tier"], "#888")
-        return (
-            f"<div style='padding:8px 12px; margin:4px 0; border-left:4px solid {t_color}; "
-            f"background:{t_color}0D; border-radius:0 6px 6px 0;'>"
-            f"<b>{label}:</b> &nbsp;"
-            f"<span style='color:{t_color}; font-weight:bold;'>{p['name']}</span>"
-            f" &nbsp;— T{p['tier']} {tier_label}"
-            f" &nbsp;| {ws:.0f} WS | {sim_score:.0f}% match"
-            f"</div>"
-        )
-
-    range_html = ""
-    range_html += _range_line("Ceiling", ceil_comp, ceil_tier)
-    range_html += _range_line("Floor", floor_comp, floor_tier)
-
-    st.markdown(range_html, unsafe_allow_html=True)
-
-    # ================================================================
-    # SECTION 3: PLAYS MOST LIKE (top 3 similar players)
+    # EXPANDED STATISTICAL COMPARISON (collapsible)
     # ================================================================
     if matches:
-        st.divider()
-        st.markdown("### Plays Most Like")
-        st.caption("Based on college statistical similarity — not an outcome prediction.")
-
-        cols = st.columns(3)
-        for i, match in enumerate(matches[:3]):
-            p = match["player"]
-            sim = match["similarity"]
-            s = p["stats"]
-            ws_val = p.get("nba_ws", 0) or 0
-            t_color = TIER_COLORS.get(p["tier"], "#888")
-            tier_label = TIER_LABELS.get(p["tier"], "?")
-            pick_str = f"#{p['draft_pick']}" if p.get("draft_pick", 61) <= 60 else "Undrafted"
-
-            with cols[i]:
-                st.markdown(
-                    f"<div style='text-align:center; padding:14px 8px; border-radius:8px; "
-                    f"border:2px solid {t_color}; background:{t_color}0D; min-height:160px;'>"
-                    f"<div style='font-size:1.15em; font-weight:bold;'>{p['name']}</div>"
-                    f"<div style='font-size:1.3em; font-weight:bold; color:{t_color}; "
-                    f"margin:4px 0;'>{sim['score']:.0f}% match</div>"
-                    f"<div style='font-size:0.85em; color:#888;'>{p['college']}</div>"
-                    f"<div style='font-size:0.85em; color:#888;'>{pick_str} | "
-                    f"{ws_val:.0f} WS</div>"
-                    f"<div style='margin-top:6px; font-size:0.8em;'>"
-                    f"{s['ppg']:.1f}p / {s['rpg']:.1f}r / {s['apg']:.1f}a | "
-                    f"{s['fg']:.0f}% eFG</div>"
-                    f"</div>",
-                    unsafe_allow_html=True,
-                )
-
-    # ================================================================
-    # SECTION 4: WHY WE THINK THIS (collapsed)
-    # ================================================================
-    with st.expander("Why We Think This", expanded=False):
-        # Star signals
-        if prediction["star_signals"] > 0:
-            total_signals = len(STAR_SIGNAL_LABELS)
-            st.markdown(f"**Star Signals: {prediction['star_signals']}/{total_signals} thresholds exceeded**")
-            signal_details = []
-            for tag in prediction["star_signal_tags"]:
-                label, threshold = STAR_SIGNAL_LABELS.get(tag, (tag, "?"))
-                signal_details.append(f"- {label} (>{threshold})")
-            st.markdown("\n".join(signal_details))
-        else:
-            st.markdown("**Star Signals:** None — no elite thresholds exceeded")
-
-        # Unicorn traits
-        if prediction["unicorn_traits"]:
-            labels = [UNICORN_LABELS.get(t, t) for t in prediction["unicorn_traits"]]
-            st.markdown(f"**Unicorn Traits:** {' | '.join(labels)}")
-
-        # Model reasoning
-        if prediction["reasons"]:
-            st.markdown("**Model Reasoning:**")
-            for reason in prediction["reasons"]:
-                st.markdown(f"- {reason}")
-
-    # ================================================================
-    # SECTION 5: DEEP DIVE (collapsed — stat table, radar, full comps)
-    # ================================================================
-    if matches:
-        with st.expander("Deep Dive — Full Comparisons", expanded=False):
-            # Side-by-side stat comparison vs top comp
+        with st.expander("Expanded Statistical Comparison", expanded=False):
             if closest_comp:
                 comp_p = closest_comp["player"]
                 comp_s = comp_p["stats"]
-                st.markdown(f"**Stat Comparison: Prospect vs {comp_p['name']}**")
+                st.markdown(f"**Prospect vs {comp_p['name']}**")
 
                 stat_compare = {
                     "PPG": "ppg", "RPG": "rpg", "APG": "apg",
                     "SPG": "spg", "BPG": "bpg",
-                    "eFG%": "fg", "FT%": "ft", "BPM": "bpm",
+                    "eFG%": "fg", "3P%": "threeP", "FT%": "ft",
+                    "BPM": "bpm", "USG%": "usg",
                 }
 
                 header = "| Stat | Prospect | Comp |"
@@ -445,46 +488,63 @@ def main():
                 for label, key in stat_compare.items():
                     p_val = prospect.get(key, 0)
                     c_val = comp_s.get(key, 0)
-                    fmt = ".0f" if label in ("eFG%", "FT%") else ".1f"
-                    suffix = "%" if label in ("eFG%", "FT%") else ""
+                    fmt = ".0f" if "%" in label else ".1f"
+                    suffix = "%" if "%" in label else ""
                     rows.append(f"| **{label}** | {p_val:{fmt}}{suffix} | {c_val:{fmt}}{suffix} |")
                 st.markdown("\n".join(rows))
 
             st.markdown("---")
 
-            # Radar chart with top 3
             fig = build_radar_chart(prospect, matches)
-            st.plotly_chart(fig, width="stretch")
+            st.plotly_chart(fig, use_container_width=True)
 
-            # Full comp table
-            st.markdown(f"**Top 10 {archetype} Comps** (from {pool_size} in pool)")
+    # ================================================================
+    # PAST DRAFT SIMULATIONS (trust-building)
+    # ================================================================
+    if draft_sims:
+        st.divider()
+        st.markdown("### Model Validation: Past Draft Simulations")
+        st.caption(
+            "The model was run retroactively on every draft class from 2010-2021. "
+            "Below is how the model would have ranked each class using only their "
+            "college stats — no draft position or NBA data."
+        )
 
-            table_header = "| # | Player | Sim% | Tier | Outcome | WS | Pick |"
-            table_sep = "|:--|:---|:---:|:---:|:---|:---:|:---:|"
-            table_rows = [table_header, table_sep]
-            for i, match in enumerate(matches[:10]):
-                p = match["player"]
-                sim = match["similarity"]
-                ws_val = p.get("nba_ws", 0) or 0
-                t_label = TIER_LABELS.get(p["tier"], "?")
-                pick_str = f"#{p['draft_pick']}" if p.get("draft_pick", 61) <= 60 else "—"
-                tag = ""
-                if ceil_comp and p["name"] == ceil_comp["player"]["name"]:
-                    tag = " ▲"
-                elif floor_comp and p["name"] == floor_comp["player"]["name"]:
-                    tag = " ▼"
-                table_rows.append(
-                    f"| {i+1} | {p['name']}{tag} | {sim['score']:.0f}% | T{p['tier']} | "
-                    f"{t_label} | {ws_val:.0f} | {pick_str} |"
-                )
-            st.markdown("\n".join(table_rows))
+        sim_years = sorted(draft_sims.keys(), reverse=True)
+        for year in sim_years:
+            players = draft_sims[year]
+            correct = sum(1 for p in players if p["predicted_tier"] == p["actual_tier"])
+            within1 = sum(1 for p in players if abs(p["predicted_tier"] - p["actual_tier"]) <= 1)
+            n = len(players)
+            acc_pct = correct / n * 100 if n > 0 else 0
+            w1_pct = within1 / n * 100 if n > 0 else 0
+
+            with st.expander(
+                f"{year} Draft  —  {n} players  |  "
+                f"Exact: {acc_pct:.0f}%  |  Within 1 Tier: {w1_pct:.0f}%",
+                expanded=False,
+            ):
+                header = "| Rank | Player | Model Projection | Actual Outcome |"
+                sep = "|:---:|:---|:---|:---|"
+                rows = [header, sep]
+                for p in players:
+                    pred_lbl = p["predicted_label"]
+                    actual_lbl = p["actual_label"]
+                    match_icon = "" if p["predicted_tier"] == p["actual_tier"] else ""
+                    if abs(p["predicted_tier"] - p["actual_tier"]) <= 1 and p["predicted_tier"] != p["actual_tier"]:
+                        match_icon = ""
+                    rows.append(
+                        f"| {p['rank']} | {p['name']} | {pred_lbl} | {actual_lbl} {match_icon} |"
+                    )
+                st.markdown("\n".join(rows))
 
     # Footer
     st.divider()
-    st.caption(f"Database: {len(player_db)} players | "
-               f"Archetypes: 6 types | "
-               f"Model: BPM/OBPM/FTA/SPG/age + star signals | "
-               f"Comps: Archetype-filtered weighted Euclidean distance")
+    st.caption(
+        "All performance metrics are evaluated relative to the player's position group "
+        "(Guard / Wing / Big). Model uses archetype-filtered weighted Euclidean distance "
+        "across advanced and counting stats."
+    )
 
 
 if __name__ == "__main__":

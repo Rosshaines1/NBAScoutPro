@@ -164,11 +164,11 @@ TIER_THRESHOLDS = {
 }
 
 TIER_LABELS = {
-    1: "Superstar / MVP",
-    2: "All-Star",
-    3: "Solid Starter",
-    4: "Role Player",
-    5: "Bust / Out of League",
+    1: "Superstar",
+    2: "Yearly All-Star",
+    3: "Top Level Starter",
+    4: "Rotation / Bench",
+    5: "Bust Risk",
     6: "TBD (Too Early)",
 }
 
