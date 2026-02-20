@@ -356,27 +356,49 @@ def main():
     if not prediction["has_advanced_stats"]:
         st.warning("No advanced stats provided. Add BPM, OBPM, and FTA for full prediction accuracy.")
 
-    # ================================================================
-    # SECTION 1: PROJECTED NBA OUTCOME TIER
-    # ================================================================
-    st.markdown("### Projected NBA Outcome Tier")
+    # Compute stability once (used in Section 1)
+    stability = compute_projection_stability(matches)
+    stability_colors = {
+        "Stable Projection": "#4CAF50",
+        "Moderate Variance": "#FF9800",
+        "High Variance Outcome": "#F44336",
+    }
+    stab_color = stability_colors.get(stability, "#888")
 
+    arch_color = ARCHETYPE_COLORS.get(archetype, "#888")
+
+    # ================================================================
+    # SECTION 1: PLAYER IDENTITY + PROJECTED NBA OUTCOME
+    # ================================================================
     st.markdown(
         f"<div style='padding:20px 24px; border-radius:10px; "
         f"border:2px solid {pred_color}; background:{pred_color}0D; "
-        f"margin-bottom:8px;'>"
-        f"<div style='font-size:2.0em; font-weight:bold; color:{pred_color};'>"
-        f"{pred_label}</div>"
-        f"<div style='font-size:0.95em; color:#aaa; margin-top:4px;'>"
-        f"Star Signals Triggered: {prediction['star_signals']} / {len(STAR_SIGNAL_LABELS)} "
-        f"Historical Star Thresholds Met</div>"
+        f"margin-bottom:12px;'>"
+        # Player name
+        f"<div style='font-size:1.5em; font-weight:bold; margin-bottom:6px;'>{name}</div>"
+        # Archetype badge + Stability badge on same line
+        f"<div style='margin-bottom:10px;'>"
+        f"<span style='display:inline-block; padding:3px 10px; border-radius:12px; "
+        f"font-size:0.8em; font-weight:600; color:white; background:{arch_color}; "
+        f"margin-right:8px;'>{archetype}</span>"
+        f"<span style='display:inline-block; padding:3px 10px; border-radius:12px; "
+        f"font-size:0.8em; font-weight:600; color:{stab_color}; "
+        f"border:1px solid {stab_color};'>{stability}</span>"
+        f"</div>"
+        # Tier prediction
+        f"<div style='font-size:1.8em; font-weight:bold; color:{pred_color};'>"
+        f"Projects as: {pred_label}</div>"
+        # Star signals
+        f"<div style='font-size:0.9em; color:#aaa; margin-top:6px;'>"
+        f"{prediction['star_signals']} of {len(STAR_SIGNAL_LABELS)} historical star thresholds met"
+        f"</div>"
         f"</div>",
         unsafe_allow_html=True,
     )
 
     st.caption(
-        "Tier is determined using historical outcomes of players with "
-        "similar statistical and contextual profiles."
+        "Projection based on historical outcomes of players with "
+        "similar statistical profiles, adjusted for position and competition level."
     )
 
     # ================================================================
@@ -384,7 +406,10 @@ def main():
     # ================================================================
     st.divider()
     st.markdown("### Historical Outcome Range")
-    st.caption("Best and worst NBA outcomes among statistically similar prospects.")
+    st.caption(
+        "Among statistically similar college players, these represent "
+        "the best and worst NBA careers that followed."
+    )
 
     def _outcome_block(label, comp):
         if not comp:
@@ -395,13 +420,15 @@ def main():
                 f"<b>{label}:</b> No comparable player found</div>"
             )
         p = comp["player"]
+        sim_score = comp["similarity"]["score"]
         t_color = TIER_COLORS.get(p["tier"], "#888")
         descriptor = get_role_descriptor(p)
         return (
-            f"<div style='padding:10px 14px; margin:6px 0; "
+            f"<div style='padding:12px 16px; margin:6px 0; "
             f"border-left:4px solid {t_color}; background:{t_color}0D; "
             f"border-radius:0 6px 6px 0;'>"
-            f"<div><b>{label}</b></div>"
+            f"<div style='font-size:0.8em; color:#888; margin-bottom:2px;'>"
+            f"{label} &nbsp;·&nbsp; {sim_score:.0f}% statistical match</div>"
             f"<div style='font-size:1.15em; font-weight:bold; color:{t_color}; "
             f"margin:2px 0;'>{p['name']}</div>"
             f"<div style='font-size:0.9em; color:#aaa;'>{descriptor}</div>"
@@ -413,7 +440,7 @@ def main():
     st.markdown(range_html, unsafe_allow_html=True)
 
     st.caption(
-        "These reflect the historical range of outcomes, not prediction certainty. "
+        "These reflect the range of historical outcomes, not prediction certainty. "
         "The prospect will not necessarily match either outcome."
     )
 
@@ -424,11 +451,22 @@ def main():
     st.markdown("### Key Indicators Driving Projection")
 
     reasons = prediction.get("reasons", [])
-    if reasons:
-        for reason in reasons[:6]:
+    # Separate positive/neutral reasons from concerns
+    concerns = [r for r in reasons if r.startswith("Concern:") or r.startswith("Size concern:")]
+    positives = [r for r in reasons if r not in concerns]
+
+    if positives:
+        for reason in positives[:5]:
             st.markdown(f"- {reason}")
     else:
         st.markdown("- No strong statistical signals detected")
+
+    if concerns:
+        st.markdown("**Areas of Concern**")
+        for reason in concerns[:4]:
+            # Strip the "Concern: " / "Size concern: " prefix for cleaner display
+            clean = reason.split(": ", 1)[1] if ": " in reason else reason
+            st.markdown(f"- {clean}")
 
     # ================================================================
     # SECTION 4: CLOSEST STATISTICAL STYLE MATCHES
@@ -441,44 +479,22 @@ def main():
     )
 
     if matches:
-        table_header = "| # | Player | Similarity | College Profile |"
-        table_sep = "|:--|:---|:---:|:---|"
+        table_header = "| # | Player | Match | Archetype | Stat Line |"
+        table_sep = "|:--|:---|:---:|:---|:---|"
         table_rows = [table_header, table_sep]
         for i, match in enumerate(matches[:10]):
             p = match["player"]
             sim = match["similarity"]
             s = p["stats"]
             arch_tag, _, _ = classify_archetype(p)
-            stat_line = (
-                f"{s['ppg']:.1f}p / {s['rpg']:.1f}r / {s['apg']:.1f}a | "
-                f"{s['fg']:.0f}% eFG | {arch_tag}"
-            )
+            stat_line = f"{s['ppg']:.1f}p / {s['rpg']:.1f}r / {s['apg']:.1f}a"
             table_rows.append(
-                f"| {i+1} | **{p['name']}** | {sim['score']:.0f}% | {stat_line} |"
+                f"| {i+1} | **{p['name']}** | {sim['score']:.0f}% | {arch_tag} | {stat_line} |"
             )
         st.markdown("\n".join(table_rows))
 
     st.caption(
-        "All performance metrics are evaluated relative to the player's position group "
-        f"({POS_LABELS.get(position, 'Wing')})."
-    )
-
-    # ================================================================
-    # PROJECTION STABILITY
-    # ================================================================
-    stability = compute_projection_stability(matches)
-    stability_colors = {
-        "Stable Projection": "#4CAF50",
-        "Moderate Variance": "#FF9800",
-        "High Variance Outcome": "#F44336",
-    }
-    stab_color = stability_colors.get(stability, "#888")
-    st.markdown(
-        f"<div style='margin-top:8px; padding:8px 14px; border-radius:6px; "
-        f"border:1px solid {stab_color}; display:inline-block;'>"
-        f"<span style='font-weight:bold; color:{stab_color};'>{stability}</span>"
-        f"</div>",
-        unsafe_allow_html=True,
+        f"Evaluated relative to the {POS_LABELS.get(position, 'Wing').lower()} position group."
     )
 
     # ================================================================
@@ -489,7 +505,8 @@ def main():
             if closest_comp:
                 comp_p = closest_comp["player"]
                 comp_s = comp_p["stats"]
-                st.markdown(f"**Prospect vs {comp_p['name']}**")
+                comp_sim = closest_comp["similarity"]["score"]
+                st.markdown(f"**{name} vs {comp_p['name']}** ({comp_sim:.0f}% match)")
 
                 stat_compare = {
                     "PPG": "ppg", "RPG": "rpg", "APG": "apg",
@@ -498,7 +515,7 @@ def main():
                     "BPM": "bpm", "USG%": "usg",
                 }
 
-                header = "| Stat | Prospect | Comp |"
+                header = f"| Stat | {name} | {comp_p['name']} |"
                 sep = "|:---|:---:|:---:|"
                 rows = [header, sep]
                 for label, key in stat_compare.items():
@@ -542,9 +559,9 @@ def main():
     # Footer
     st.divider()
     st.caption(
-        "All performance metrics are evaluated relative to the player's position group "
-        "(Guard / Wing / Big). Model uses archetype-filtered weighted Euclidean distance "
-        "across advanced and counting stats."
+        "Metrics evaluated relative to position group (Guard / Wing / Big). "
+        "Model uses archetype-filtered weighted Euclidean distance across "
+        "advanced and counting stats."
     )
 
 

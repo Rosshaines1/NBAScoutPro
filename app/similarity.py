@@ -176,41 +176,41 @@ def predict_tier(player, pos_avgs=None):
 
     if adj_bpm >= 12.0:
         score += 20
-        reasons.append(f"Elite adj-BPM ({adj_bpm:.1f})")
+        reasons.append("Dominant all-around impact — elite production relative to competition")
     elif adj_bpm >= 8.0:
         score += 14
-        reasons.append(f"Star-level adj-BPM ({adj_bpm:.1f})")
+        reasons.append("Strong all-around impact — producing at a high level on both ends")
     elif adj_bpm >= 5.0:
         score += 9
-        reasons.append(f"Strong adj-BPM ({adj_bpm:.1f})")
+        reasons.append("Solid overall impact — positive contributor across the board")
     elif adj_bpm >= 3.0:
         score += 5
-        reasons.append(f"Above-avg adj-BPM ({adj_bpm:.1f})")
+        reasons.append("Moderate overall impact — above-average contributor")
     elif adj_bpm >= 0:
         score += 2
     elif adj_bpm >= -2.0:
         score -= 3
     else:
         score -= 8
-        reasons.append(f"Negative adj-BPM ({adj_bpm:.1f}) — bust signal")
+        reasons.append("Negative overall impact — production does not translate to winning")
 
     if adj_obpm > 0:
         if adj_obpm >= 7.0:
             score += 16
-            reasons.append(f"Elite adj-OBPM ({adj_obpm:.1f})")
+            reasons.append("Elite offensive creation — generates scoring at a star-level rate")
         elif adj_obpm >= 5.0:
             score += 11
-            reasons.append(f"Star adj-OBPM ({adj_obpm:.1f})")
+            reasons.append("Strong offensive creation — high-level scoring impact")
         elif adj_obpm >= 3.0:
             score += 7
-            reasons.append(f"Strong adj-OBPM ({adj_obpm:.1f})")
+            reasons.append("Good offensive creation — positive scoring impact")
         elif adj_obpm >= 1.0:
             score += 3
 
     if dbpm > 0:
         if dbpm >= 4.0:
             score += 8
-            reasons.append(f"Elite DBPM ({dbpm:.1f})")
+            reasons.append("Defensive playmaking signals — high-impact defender by the numbers")
         elif dbpm >= 2.5:
             score += 4
 
@@ -218,10 +218,10 @@ def predict_tier(player, pos_avgs=None):
     fta_pg = fta
     if fta_pg >= 7.0:
         score += 16
-        reasons.append(f"Elite FTA rate ({fta_pg:.1f}/game)")
+        reasons.append(f"Free throw rate indicates scoring scalability ({fta_pg:.1f} FTA/game)")
     elif fta_pg >= 5.5:
         score += 10
-        reasons.append(f"High FTA rate ({fta_pg:.1f}/game)")
+        reasons.append(f"Good free throw rate — gets to the line at a strong clip ({fta_pg:.1f} FTA/game)")
     elif fta_pg >= 4.0:
         score += 5
     elif fta_pg >= 2.5:
@@ -233,7 +233,7 @@ def predict_tier(player, pos_avgs=None):
     if ftr > 0:
         if ftr >= 50:
             score += 8
-            reasons.append(f"Elite FT rate ({ftr:.0f}% of shots)")
+            reasons.append(f"Aggressive scorer — draws fouls at an elite rate ({ftr:.0f}% FT rate)")
         elif ftr >= 42:
             score += 4
         elif ftr >= 35:
@@ -245,25 +245,25 @@ def predict_tier(player, pos_avgs=None):
     if rim_pct > 0:
         if rim_pct >= 72:
             score += 6
-            reasons.append(f"Elite rim finisher ({rim_pct:.0f}%)")
+            reasons.append(f"Finishes at the rim at an elite rate ({rim_pct:.0f}%) — translates to NBA")
         elif rim_pct >= 65:
             score += 3
         elif rim_pct < 55:
             score -= 3
-            reasons.append(f"Poor rim finishing ({rim_pct:.0f}%)")
+            reasons.append(f"Struggles finishing at the rim ({rim_pct:.0f}%) — concerning for NBA translation")
 
     # --- Steals (consolidated: use STL_PER if available, else SPG) ---
     # Both r~0.11 and highly correlated — pick the better one, don't double-dip.
     if stl_per > 0:
         if stl_per >= 2.5:
             score += 8
-            reasons.append(f"Elite steal rate ({stl_per:.1f}%)")
+            reasons.append("Defensive playmaking — elite ball-hawk instincts")
         elif stl_per >= 1.8:
             score += 4
     else:
         if spg >= 1.8:
             score += 8
-            reasons.append(f"Elite steals ({spg:.1f})")
+            reasons.append(f"Defensive playmaking — active hands and anticipation ({spg:.1f} SPG)")
         elif spg >= 1.3:
             score += 4
 
@@ -271,7 +271,7 @@ def predict_tier(player, pos_avgs=None):
     if usg > 0:
         if usg >= 30:
             score += 8
-            reasons.append(f"High usage ({usg:.0f}%)")
+            reasons.append(f"High-volume role — the offense runs through this player ({usg:.0f}% USG)")
         elif usg >= 27:
             score += 5
         elif usg >= 24:
@@ -287,17 +287,17 @@ def predict_tier(player, pos_avgs=None):
         ft_pts = 0
     elif ft_pct >= 60:
         ft_pts = -6
-        reasons.append(f"Poor FT shooter ({ft_pct:.0f}%)")
+        reasons.append(f"Concerning free throw shooting ({ft_pct:.0f}%) — limits scoring ceiling")
     else:
         ft_pts = -12
-        reasons.append(f"Broken FT shot ({ft_pct:.0f}%)")
+        reasons.append(f"Free throw shooting is a major concern ({ft_pct:.0f}%) — historically a bust indicator")
     score += ft_pts * ft_weight
 
     # --- PPG with team strength adjustment ---
     adj_ppg = ppg * quad_mod
     if adj_ppg >= 20:
         score += 8
-        reasons.append(f"20+ PPG scorer ({adj_ppg:.1f} adj)")
+        reasons.append(f"High-level scorer — {adj_ppg:.1f} PPG adjusted for competition")
     elif adj_ppg >= 16:
         score += 4
     elif adj_ppg >= 12:
@@ -306,7 +306,7 @@ def predict_tier(player, pos_avgs=None):
     # --- RPG for position ---
     if pos == "G" and rpg >= 6:
         score += 4
-        reasons.append(f"Rebounding guard ({rpg:.1f})")
+        reasons.append(f"Rebounding guard — rare trait that signals versatility ({rpg:.1f} RPG)")
     elif pos in ("W", "B") and rpg >= 9:
         score += 4
     elif rpg >= 5:
@@ -317,7 +317,7 @@ def predict_tier(player, pos_avgs=None):
     # --- Efficiency with volume ---
     if fg >= 52 and adj_ppg >= 15:
         score += 4
-        reasons.append(f"Efficient scorer ({fg:.0f}% on {adj_ppg:.0f} PPG)")
+        reasons.append(f"Efficient production at moderate-to-high usage ({fg:.0f}% eFG on {adj_ppg:.0f} PPG)")
 
     # --- 3PA volume context ---
     # Good 3P% on low volume is meaningless; high volume + good % is a real skill
@@ -325,7 +325,7 @@ def predict_tier(player, pos_avgs=None):
     if tpa > 0 and threeP > 0:
         if tpa >= 5 and threeP >= 35:
             score += 4
-            reasons.append(f"High-volume 3PT shooter ({tpa:.1f} 3PA on {threeP:.0f}%)")
+            reasons.append(f"Proven 3-point shooter on volume ({tpa:.1f} attempts at {threeP:.0f}%)")
         elif tpa >= 3 and threeP >= 37:
             score += 2
 
@@ -333,32 +333,32 @@ def predict_tier(player, pos_avgs=None):
     n_thresholds = len(STAR_SIGNAL_THRESHOLDS)
     if star_count >= 5:
         score += 12
-        reasons.append(f"5+ star signals ({star_count}/{n_thresholds})")
+        reasons.append(f"Strong star profile — exceeds {star_count} of {n_thresholds} historical star thresholds")
     elif star_count >= 3:
         score += 6
-        reasons.append(f"3+ star signals ({star_count}/{n_thresholds})")
+        reasons.append(f"Promising star profile — exceeds {star_count} of {n_thresholds} historical star thresholds")
     elif star_count >= 2:
         score += 2
 
     # --- Unicorn bonus ---
     if unicorns:
         score += 3 * len(unicorns)
-        reasons.append(f"Unicorn traits: {', '.join(unicorns)}")
+        reasons.append(f"Rare statistical outlier: {', '.join(unicorns)}")
 
     # --- Team strength penalty (quadrant-based) ---
     if quadrant == "Q2":
         score -= 3
     elif quadrant == "Q3":
         score -= 7
-        reasons.append("Q3 team (rank 101-200)")
+        reasons.append("Competition level discount — mid-tier program (team rank 101-200)")
     elif quadrant == "Q4":
         score -= 12
-        reasons.append("Q4 team (rank 200+)")
+        reasons.append("Competition level discount — low-tier program (team rank 200+)")
 
     # --- Minutes context ---
     if mpg < 22:
         score -= 5
-        reasons.append(f"Low minutes ({mpg:.0f} MPG)")
+        reasons.append(f"Limited sample size — only {mpg:.0f} minutes per game")
 
     # --- Height / size filter ---
     # Guards under 6'1": 77% bust rate, only 1 star (Isaiah Thomas) in dataset.
@@ -366,13 +366,13 @@ def predict_tier(player, pos_avgs=None):
     h = player.get("h", 78) or 78
     if pos == "G" and h < 73:
         score -= 10
-        reasons.append(f"Red flag: undersized guard ({h // 12}'{h % 12:02d}\" — 77% bust rate under 6'1\")")
+        reasons.append(f"Size concern: undersized guard at {h // 12}'{h % 12:02d}\" — historically 77% bust rate")
     elif pos == "G" and h < 74:
         score -= 5
-        reasons.append(f"Red flag: undersized guard ({h // 12}'{h % 12:02d}\")")
+        reasons.append(f"Size concern: undersized guard at {h // 12}'{h % 12:02d}\"")
     elif pos == "W" and h < 76:
         score -= 8
-        reasons.append(f"Red flag: undersized wing ({h // 12}'{h % 12:02d}\" — 60% bust rate under 6'4\")")
+        reasons.append(f"Size concern: undersized wing at {h // 12}'{h % 12:02d}\" — historically 60% bust rate")
 
     # --- Missing advanced stats fallback ---
     # Players without BPM/OBPM/USG can't earn those star signals, so they're
@@ -383,14 +383,14 @@ def predict_tier(player, pos_avgs=None):
         # Elite scorer + good touch = proxy for high BPM/USG
         if adj_ppg >= 20 and ft_pct >= 78:
             proxy += 12
-            reasons.append(f"Proxy: elite scorer + good FT ({adj_ppg:.0f} PPG, {ft_pct:.0f}% FT)")
+            reasons.append(f"Scoring profile suggests high impact ({adj_ppg:.0f} PPG, {ft_pct:.0f}% FT)")
         elif adj_ppg >= 16 and ft_pct >= 75:
             proxy += 6
-            reasons.append(f"Proxy: strong scorer + decent FT")
+            reasons.append("Solid scoring profile with respectable touch")
         # High FTA rate even without other advanced stats
         if fta_pg >= 5.5:
             proxy += 8
-            reasons.append(f"Proxy: high FTA rate ({fta_pg:.1f}/game)")
+            reasons.append(f"Gets to the foul line at a high rate ({fta_pg:.1f}/game)")
         elif fta_pg >= 3.5:
             proxy += 4
         # Elite steals per game = defensive instincts proxy
@@ -399,22 +399,22 @@ def predict_tier(player, pos_avgs=None):
         score += proxy
         if proxy == 0 and score > 40:
             score = 40
-            reasons.append("Capped: no advanced stats, no proxy signals")
+            reasons.append("Projection capped — add advanced stats (BPM, OBPM, FTA) for full accuracy")
 
     # --- Class year signal (V3: verified strong, r=-0.209) ---
     # Fr avg WS=23.7, So=19.1, Jr=16.9, Sr=10.5
     class_yr = player.get("age", 0) or 0
     if class_yr == 1:  # Freshman
         score += 5
-        reasons.append("Freshman declaring (strong signal)")
+        reasons.append("Freshman declaring — historically the strongest age signal for NBA success")
     elif class_yr == 2:  # Sophomore
         score += 2
     elif class_yr == 3:  # Junior — 64% bust rate, 9% star rate
         score -= 2
-        reasons.append("Junior (weaker outlook than underclassmen)")
+        reasons.append("Junior — later declaration correlates with lower NBA outcomes historically")
     elif class_yr == 4:  # Senior
         score -= 6
-        reasons.append("Senior (weaker NBA outlook)")
+        reasons.append("Senior — four-year players have significantly worse NBA track records")
 
     # ================================================================
     # RED FLAGS: Counter-indicators that predict bust despite good stats
@@ -429,25 +429,25 @@ def predict_tier(player, pos_avgs=None):
         gap_severity = (24 - adj_bpm) / 4  # 0 at BPM=6, ~1.5 at BPM=0
         ec_penalty = min(10, round(4 + gap_severity * 4))
         score -= ec_penalty
-        reasons.append(f"Red flag: empty calories (USG {usg:.0f}% but adj-BPM only {adj_bpm:.1f})")
+        reasons.append(f"Concern: high usage without proportional impact ({usg:.0f}% USG but limited BPM)")
 
     # Red flag 2: Offense-only player — no defensive value
     # OBPM>5 + DBPM<1 = 67% bust rate
     if has_advanced and obpm >= 5 and dbpm < 1:
         score -= 6
-        reasons.append(f"Red flag: offense-only (OBPM {obpm:.1f} but DBPM {dbpm:.1f})")
+        reasons.append("Concern: offensive production with no defensive contribution")
 
     # Red flag 3: Inefficient volume scorer
     # PPG>14 + eFG<46 = 62% bust rate, 0% star rate
     if adj_ppg >= 14 and fg < 46:
         score -= 8
-        reasons.append(f"Red flag: inefficient volume ({adj_ppg:.0f} PPG on {fg:.0f}% eFG)")
+        reasons.append(f"Concern: scoring volume without efficiency ({adj_ppg:.0f} PPG on {fg:.0f}% eFG)")
 
     # Red flag 4: Can't draw fouls at high usage
     # USG>24 + FTA<3 = 70% bust rate — can't create at next level
     if has_advanced and usg >= 24 and fta_pg < 3:
         score -= 6
-        reasons.append(f"Red flag: high usage but can't draw fouls (USG {usg:.0f}%, FTA {fta_pg:.1f})")
+        reasons.append("Concern: high usage but rarely gets to the foul line — questions NBA-level shot creation")
 
     # Red flag 5: Senior stat-stuffer — strongest bust signal in dataset
     # Senior + PPG>14 = 75% bust rate, 3% star rate
@@ -455,10 +455,10 @@ def predict_tier(player, pos_avgs=None):
     # Stacks with -6 senior penalty above.
     if class_yr == 4 and adj_ppg >= 14:
         score -= 7
-        reasons.append(f"Red flag: senior scorer ({adj_ppg:.0f} adj PPG at age 4 — 75% bust rate)")
+        reasons.append("Concern: senior scorer — historically 75% bust rate for 4-year scorers")
     if class_yr == 4 and has_advanced and adj_bpm >= 7:
         score -= 5
-        reasons.append(f"Red flag: senior with high BPM ({adj_bpm:.1f} — likely peaked)")
+        reasons.append("Concern: strong senior production often represents a peak, not a trajectory")
 
     # Red flag 6: Weak team stat inflation
     # Q3/Q4 team + BPM>8 = inflated stats against weak competition
@@ -466,7 +466,7 @@ def predict_tier(player, pos_avgs=None):
     if quadrant in ("Q3", "Q4") and has_advanced and bpm >= 8:
         penalty = -5 if quadrant == "Q3" else -8
         score += penalty
-        reasons.append(f"Red flag: {quadrant} stat inflation (raw BPM {bpm:.1f} vs weak competition)")
+        reasons.append(f"Concern: inflated stats from weak competition ({quadrant} program)")
 
     # Map score to tier (V4: retuned after adding ftr/rim_pct/tpa, removing draft_pick)
     if score >= 80:
