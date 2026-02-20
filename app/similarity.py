@@ -401,19 +401,21 @@ def predict_tier(player, pos_avgs=None):
             score = 40
             reasons.append("Projection capped — add advanced stats (BPM, OBPM, FTA) for full accuracy")
 
-    # --- Class year signal (V3: verified strong, r=-0.209) ---
-    # Fr avg WS=23.7, So=19.1, Jr=16.9, Sr=10.5
+    # --- Class year signal (V4: retuned Feb 2026 on 582 players) ---
+    # Fr: 22.9% star, 22.2% bust | So: 8.8% star, 34.6% bust
+    # Jr: 6.0% star, 41.9% bust  | Sr: 2.8% star, 54.5% bust
+    # Fr->So is the steepest cliff (14pp star drop), gap widened accordingly.
     class_yr = player.get("age", 0) or 0
-    if class_yr == 1:  # Freshman
-        score += 5
+    if class_yr == 1:  # Freshman — 51.6% starter+ rate
+        score += 6
         reasons.append("Freshman declaring — historically the strongest age signal for NBA success")
-    elif class_yr == 2:  # Sophomore
-        score += 2
-    elif class_yr == 3:  # Junior — 64% bust rate, 9% star rate
+    elif class_yr == 2:  # Sophomore — 38.2% starter+ rate
+        score += 1
+    elif class_yr == 3:  # Junior — 27.4% starter+ rate, 41.9% bust rate
         score -= 2
         reasons.append("Junior — later declaration correlates with lower NBA outcomes historically")
-    elif class_yr == 4:  # Senior
-        score -= 6
+    elif class_yr == 4:  # Senior — 18.8% starter+ rate, 54.5% bust rate
+        score -= 5
         reasons.append("Senior — four-year players have significantly worse NBA track records")
 
     # ================================================================
@@ -449,16 +451,17 @@ def predict_tier(player, pos_avgs=None):
         score -= 6
         reasons.append("Concern: high usage but rarely gets to the foul line — questions NBA-level shot creation")
 
-    # Red flag 5: Senior stat-stuffer — strongest bust signal in dataset
-    # Senior + PPG>14 = 75% bust rate, 3% star rate
-    # Senior + BPM>7 = 70% bust rate, 3% star rate
-    # Stacks with -6 senior penalty above.
+    # Red flag 5: Senior stat-stuffer — retuned Feb 2026.
+    # Senior + PPG>14 = 75% bust rate, 3% star rate.
+    # Senior + BPM>7: avg tier 4.03 (best Sr subgroup, but still bad).
+    # Reduced BPM penalty (was -5, now -3) since high-BPM seniors are the
+    # most likely to succeed. Max Sr penalty = -5 + -6 + -3 = -14.
     if class_yr == 4 and adj_ppg >= 14:
-        score -= 7
+        score -= 6
         reasons.append("Concern: senior scorer — historically 75% bust rate for 4-year scorers")
     if class_yr == 4 and has_advanced and adj_bpm >= 7:
-        score -= 5
-        reasons.append("Concern: strong senior production often represents a peak, not a trajectory")
+        score -= 3
+        reasons.append("Concern: strong senior production may represent a peak, not a trajectory")
 
     # Red flag 6: Weak team stat inflation
     # Q3/Q4 team + BPM>8 = inflated stats against weak competition

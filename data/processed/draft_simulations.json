@@ -15,17 +15,8 @@
       "predicted_label": "Superstar",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 82.6,
+      "score": 83.6,
       "rank": 2
-    },
-    {
-      "name": "Greg Monroe",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 76.6,
-      "rank": 3
     },
     {
       "name": "Dominique Jones",
@@ -34,6 +25,15 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 76.0,
+      "rank": 3
+    },
+    {
+      "name": "Greg Monroe",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 75.6,
       "rank": 4
     },
     {
@@ -42,7 +42,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 67.0,
+      "score": 66.0,
       "rank": 5
     },
     {
@@ -51,8 +51,17 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 63.0,
+      "score": 64.0,
       "rank": 6
+    },
+    {
+      "name": "Greivis Vasquez",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 61.0,
+      "rank": 7
     },
     {
       "name": "Wes Johnson",
@@ -61,25 +70,7 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 61.0,
-      "rank": 7
-    },
-    {
-      "name": "Greivis Vasquez",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 57.0,
       "rank": 8
-    },
-    {
-      "name": "Jordan Crawford",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 54.0,
-      "rank": 9
     },
     {
       "name": "Landry Fields",
@@ -87,25 +78,34 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 54.0,
+      "score": 58.0,
+      "rank": 9
+    },
+    {
+      "name": "Damion James",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 55.0,
       "rank": 10
     },
     {
       "name": "Xavier Henry",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 53.0,
+      "score": 54.0,
       "rank": 11
     },
     {
-      "name": "Damion James",
+      "name": "Jordan Crawford",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 51.0,
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 53.0,
       "rank": 12
     },
     {
@@ -114,7 +114,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 46.0,
+      "score": 50.0,
       "rank": 13
     },
     {
@@ -127,22 +127,31 @@
       "rank": 14
     },
     {
-      "name": "Elliot Williams",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 42.0,
-      "rank": 15
-    },
-    {
       "name": "Cole Aldrich",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 41.6,
+      "rank": 15
+    },
+    {
+      "name": "Elliot Williams",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 41.0,
       "rank": 16
+    },
+    {
+      "name": "Derrick Favors",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 40.6,
+      "rank": 17
     },
     {
       "name": "Al-Farouq Aminu",
@@ -150,35 +159,8 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 41.0,
-      "rank": 17
-    },
-    {
-      "name": "Derrick Favors",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 39.6,
+      "score": 40.0,
       "rank": 18
-    },
-    {
-      "name": "Ed Davis",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 39.6,
-      "rank": 19
-    },
-    {
-      "name": "Devin Ebanks",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 37.0,
-      "rank": 20
     },
     {
       "name": "Jarvis Varnado",
@@ -186,11 +168,29 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 36.0,
-      "rank": 21
+      "score": 39.0,
+      "rank": 19
+    },
+    {
+      "name": "Ed Davis",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 38.6,
+      "rank": 20
     },
     {
       "name": "Lazar Hayward",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 38.0,
+      "rank": 21
+    },
+    {
+      "name": "Da'Sean Butler",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
@@ -199,40 +199,22 @@
       "rank": 22
     },
     {
+      "name": "Devin Ebanks",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 36.0,
+      "rank": 23
+    },
+    {
       "name": "Ekpe Udoh",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 35.6,
-      "rank": 23
-    },
-    {
-      "name": "Luke Babbitt",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 34.0,
       "rank": 24
-    },
-    {
-      "name": "Paul George",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 1,
-      "actual_label": "Superstar",
-      "score": 34.0,
-      "rank": 25
-    },
-    {
-      "name": "Da'Sean Butler",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 32.0,
-      "rank": 26
     },
     {
       "name": "Andy Rautins",
@@ -240,8 +222,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 31.0,
-      "rank": 27
+      "score": 34.0,
+      "rank": 25
     },
     {
       "name": "Trevor Booker",
@@ -249,7 +231,25 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 30.0,
+      "score": 34.0,
+      "rank": 26
+    },
+    {
+      "name": "Luke Babbitt",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 33.0,
+      "rank": 27
+    },
+    {
+      "name": "Paul George",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 1,
+      "actual_label": "Superstar",
+      "score": 33.0,
       "rank": 28
     },
     {
@@ -262,30 +262,30 @@
       "rank": 29
     },
     {
+      "name": "Daniel Orton",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 25.2,
+      "rank": 30
+    },
+    {
       "name": "Patrick Patterson",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
       "score": 25.0,
-      "rank": 30
+      "rank": 31
     },
     {
-      "name": "Daniel Orton",
+      "name": "Dexter Pittman",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 24.2,
-      "rank": 31
-    },
-    {
-      "name": "Willie Warren",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 24.0,
       "rank": 32
     },
     {
@@ -294,17 +294,26 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 22.0,
+      "score": 24.0,
       "rank": 33
     },
     {
-      "name": "Dexter Pittman",
+      "name": "Willie Warren",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 23.0,
+      "rank": 34
+    },
+    {
+      "name": "Jerome Jordan",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 21.2,
-      "rank": 34
+      "score": 20.6,
+      "rank": 35
     },
     {
       "name": "Larry Sanders",
@@ -313,7 +322,7 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 20.6,
-      "rank": 35
+      "rank": 36
     },
     {
       "name": "Hassan Whiteside",
@@ -321,8 +330,8 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 19.2,
-      "rank": 36
+      "score": 20.2,
+      "rank": 37
     },
     {
       "name": "Eric Bledsoe",
@@ -330,16 +339,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 19.0,
-      "rank": 37
-    },
-    {
-      "name": "Jerome Jordan",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 18.6,
+      "score": 20.0,
       "rank": 38
     },
     {
@@ -348,7 +348,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 15.0,
+      "score": 16.0,
       "rank": 39
     },
     {
@@ -357,7 +357,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 14.0,
+      "score": 15.0,
       "rank": 40
     },
     {
@@ -375,7 +375,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 11.0,
+      "score": 10.0,
       "rank": 42
     },
     {
@@ -384,7 +384,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 8.6,
+      "score": 9.6,
       "rank": 43
     },
     {
@@ -393,7 +393,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 3.0,
+      "score": 4.0,
       "rank": 44
     },
     {
@@ -406,21 +406,21 @@
       "rank": 45
     },
     {
+      "name": "Dwayne Collins",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 1.0,
+      "rank": 46
+    },
+    {
       "name": "James Anderson",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 0.6,
-      "rank": 46
-    },
-    {
-      "name": "Dwayne Collins",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 0.0,
       "rank": 47
     },
     {
@@ -438,7 +438,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -3.0,
+      "score": -2.0,
       "rank": 49
     },
     {
@@ -447,7 +447,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -8.0,
+      "score": -7.0,
       "rank": 50
     },
     {
@@ -456,7 +456,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -10.4,
+      "score": -9.4,
       "rank": 51
     },
     {
@@ -474,7 +474,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -12.0,
+      "score": -11.0,
       "rank": 53
     }
   ],
@@ -485,7 +485,7 @@
       "predicted_label": "Superstar",
       "actual_tier": 1,
       "actual_label": "Superstar",
-      "score": 98.0,
+      "score": 99.0,
       "rank": 1
     },
     {
@@ -503,7 +503,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 64.0,
+      "score": 68.0,
       "rank": 3
     },
     {
@@ -521,7 +521,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 1,
       "actual_label": "Superstar",
-      "score": 60.0,
+      "score": 59.0,
       "rank": 5
     },
     {
@@ -530,8 +530,17 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 57.0,
+      "score": 58.0,
       "rank": 6
+    },
+    {
+      "name": "Jimmer Fredette",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 56.0,
+      "rank": 7
     },
     {
       "name": "Jordan Hamilton",
@@ -539,15 +548,6 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 53.0,
-      "rank": 7
-    },
-    {
-      "name": "Jimmer Fredette",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
       "score": 52.0,
       "rank": 8
     },
@@ -575,7 +575,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 50.0,
+      "score": 49.0,
       "rank": 11
     },
     {
@@ -606,13 +606,31 @@
       "rank": 14
     },
     {
+      "name": "Nolan Smith",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 43.0,
+      "rank": 15
+    },
+    {
       "name": "Kenneth Faried",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
+      "score": 42.0,
+      "rank": 16
+    },
+    {
+      "name": "Jimmy Butler",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 1,
+      "actual_label": "Superstar",
       "score": 41.0,
-      "rank": 15
+      "rank": 17
     },
     {
       "name": "Travis Leslie",
@@ -621,16 +639,7 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 41.0,
-      "rank": 16
-    },
-    {
-      "name": "Nolan Smith",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 39.0,
-      "rank": 17
+      "rank": 18
     },
     {
       "name": "Reggie Jackson",
@@ -639,43 +648,7 @@
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
       "score": 39.0,
-      "rank": 18
-    },
-    {
-      "name": "Jimmy Butler",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 1,
-      "actual_label": "Superstar",
-      "score": 37.0,
       "rank": 19
-    },
-    {
-      "name": "Jordan Williams",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 35.2,
-      "rank": 20
-    },
-    {
-      "name": "Darius Morris",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 34.0,
-      "rank": 21
-    },
-    {
-      "name": "Charles Jenkins",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 33.0,
-      "rank": 22
     },
     {
       "name": "E'Twaun Moore",
@@ -683,16 +656,43 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
+      "score": 37.0,
+      "rank": 20
+    },
+    {
+      "name": "Charles Jenkins",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 35.0,
+      "rank": 21
+    },
+    {
+      "name": "Jordan Williams",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 34.2,
+      "rank": 22
+    },
+    {
+      "name": "Darius Morris",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
       "score": 33.0,
       "rank": 23
     },
     {
-      "name": "Isaiah Thomas",
+      "name": "JaJuan Johnson",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
-      "score": 31.0,
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 33.0,
       "rank": 24
     },
     {
@@ -701,20 +701,20 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 30.0,
+      "score": 32.0,
       "rank": 25
     },
     {
-      "name": "JaJuan Johnson",
+      "name": "Isaiah Thomas",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 29.0,
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 31.0,
       "rank": 26
     },
     {
-      "name": "Tyler Honeycutt",
+      "name": "Jon Diebler",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
@@ -723,12 +723,12 @@
       "rank": 27
     },
     {
-      "name": "Jon Diebler",
+      "name": "Tyler Honeycutt",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 26.0,
+      "score": 28.0,
       "rank": 28
     },
     {
@@ -737,7 +737,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 25.0,
+      "score": 26.0,
       "rank": 29
     },
     {
@@ -746,8 +746,17 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 22.2,
+      "score": 25.2,
       "rank": 30
+    },
+    {
+      "name": "Justin Harper",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 24.0,
+      "rank": 31
     },
     {
       "name": "Brandon Knight",
@@ -755,17 +764,17 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 22.0,
-      "rank": 31
+      "score": 23.0,
+      "rank": 32
     },
     {
-      "name": "Justin Harper",
+      "name": "Keith Benson",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 20.0,
-      "rank": 32
+      "score": 20.6,
+      "rank": 33
     },
     {
       "name": "Malcolm Lee",
@@ -774,7 +783,7 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 20.0,
-      "rank": 33
+      "rank": 34
     },
     {
       "name": "Shelvin Mack",
@@ -783,15 +792,6 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 19.0,
-      "rank": 34
-    },
-    {
-      "name": "Keith Benson",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 18.6,
       "rank": 35
     },
     {
@@ -804,16 +804,16 @@
       "rank": 36
     },
     {
-      "name": "DeAndre Liggins",
+      "name": "Marshon Brooks",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 15.0,
+      "score": 17.0,
       "rank": 37
     },
     {
-      "name": "Marshon Brooks",
+      "name": "DeAndre Liggins",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
@@ -822,31 +822,22 @@
       "rank": 38
     },
     {
-      "name": "Lavoy Allen",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 14.0,
-      "rank": 39
-    },
-    {
       "name": "Kyle Singler",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 13.0,
-      "rank": 40
+      "score": 15.0,
+      "rank": 39
     },
     {
-      "name": "Tobias Harris",
+      "name": "Lavoy Allen",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
-      "score": 13.0,
-      "rank": 41
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 15.0,
+      "rank": 40
     },
     {
       "name": "Andrew Goudelock",
@@ -854,17 +845,17 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 12.0,
-      "rank": 42
+      "score": 14.0,
+      "rank": 41
     },
     {
-      "name": "Derrick Williams",
+      "name": "Tobias Harris",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 10.0,
-      "rank": 43
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 14.0,
+      "rank": 42
     },
     {
       "name": "Chandler Parsons",
@@ -872,6 +863,15 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
+      "score": 12.0,
+      "rank": 43
+    },
+    {
+      "name": "Derrick Williams",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
       "score": 9.0,
       "rank": 44
     },
@@ -881,7 +881,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 6.2,
+      "score": 7.2,
       "rank": 45
     },
     {
@@ -890,7 +890,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 6.0,
+      "score": 7.0,
       "rank": 46
     },
     {
@@ -899,7 +899,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -13.8,
+      "score": -12.8,
       "rank": 47
     }
   ],
@@ -910,26 +910,17 @@
       "predicted_label": "Superstar",
       "actual_tier": 1,
       "actual_label": "Superstar",
-      "score": 81.0,
+      "score": 82.0,
       "rank": 1
     },
     {
       "name": "Jared Sullinger",
-      "predicted_tier": 1,
-      "predicted_label": "Superstar",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 80.0,
-      "rank": 2
-    },
-    {
-      "name": "Damian Lillard",
       "predicted_tier": 2,
       "predicted_label": "Yearly All-Star",
-      "actual_tier": 1,
-      "actual_label": "Superstar",
-      "score": 58.0,
-      "rank": 3
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 79.0,
+      "rank": 2
     },
     {
       "name": "Jae Crowder",
@@ -937,7 +928,16 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 58.0,
+      "score": 62.0,
+      "rank": 3
+    },
+    {
+      "name": "Damian Lillard",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 1,
+      "actual_label": "Superstar",
+      "score": 60.0,
       "rank": 4
     },
     {
@@ -946,8 +946,17 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 58.0,
+      "score": 57.0,
       "rank": 5
+    },
+    {
+      "name": "Draymond Green",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 56.0,
+      "rank": 6
     },
     {
       "name": "Michael Kidd-Gilchrist",
@@ -955,44 +964,17 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 54.0,
-      "rank": 6
-    },
-    {
-      "name": "Bradley Beal",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 1,
-      "actual_label": "Superstar",
-      "score": 53.0,
+      "score": 55.0,
       "rank": 7
     },
     {
-      "name": "Royce White",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 53.0,
+      "name": "Bradley Beal",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 1,
+      "actual_label": "Superstar",
+      "score": 54.0,
       "rank": 8
-    },
-    {
-      "name": "Terrence Jones",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 53.0,
-      "rank": 9
-    },
-    {
-      "name": "Draymond Green",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
-      "score": 52.0,
-      "rank": 10
     },
     {
       "name": "Tyler Zeller",
@@ -1000,7 +982,25 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 49.0,
+      "score": 53.0,
+      "rank": 9
+    },
+    {
+      "name": "Royce White",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 52.0,
+      "rank": 10
+    },
+    {
+      "name": "Terrence Jones",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 52.0,
       "rank": 11
     },
     {
@@ -1013,7 +1013,7 @@
       "rank": 12
     },
     {
-      "name": "Thomas Robinson",
+      "name": "Marcus Denmon",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
@@ -1022,39 +1022,39 @@
       "rank": 13
     },
     {
+      "name": "Thomas Robinson",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 45.0,
+      "rank": 14
+    },
+    {
       "name": "Jared Cunningham",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 44.0,
-      "rank": 14
-    },
-    {
-      "name": "Marcus Denmon",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 41.0,
       "rank": 15
     },
     {
       "name": "Andrew Nicholson",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 39.0,
+      "score": 43.0,
       "rank": 16
     },
     {
       "name": "Quincy Acy",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 39.0,
+      "score": 42.0,
       "rank": 17
     },
     {
@@ -1063,7 +1063,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 36.0,
+      "score": 35.0,
       "rank": 18
     },
     {
@@ -1072,8 +1072,17 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 31.0,
+      "score": 32.0,
       "rank": 19
+    },
+    {
+      "name": "Jeffery Taylor",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 30.0,
+      "rank": 20
     },
     {
       "name": "Harrison Barnes",
@@ -1081,20 +1090,11 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 27.0,
-      "rank": 20
-    },
-    {
-      "name": "Meyers Leonard",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 27.0,
+      "score": 26.0,
       "rank": 21
     },
     {
-      "name": "Jeffery Taylor",
+      "name": "Kris Joseph",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
@@ -1103,13 +1103,31 @@
       "rank": 22
     },
     {
-      "name": "Fab Melo",
+      "name": "Meyers Leonard",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 26.0,
+      "rank": 23
+    },
+    {
+      "name": "Robert Sacre",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 25.6,
-      "rank": 23
+      "score": 26.0,
+      "rank": 24
+    },
+    {
+      "name": "Andre Drummond",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 25.2,
+      "rank": 25
     },
     {
       "name": "John Henson",
@@ -1118,61 +1136,16 @@
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
       "score": 25.2,
-      "rank": 24
-    },
-    {
-      "name": "Kris Joseph",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 25.0,
-      "rank": 25
-    },
-    {
-      "name": "Robert Sacre",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 25.0,
       "rank": 26
     },
     {
-      "name": "Andre Drummond",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
-      "score": 24.2,
-      "rank": 27
-    },
-    {
-      "name": "Terrence Ross",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 23.0,
-      "rank": 28
-    },
-    {
-      "name": "Doron Lamb",
+      "name": "Fab Melo",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 22.0,
-      "rank": 29
-    },
-    {
-      "name": "Kyle O'Quinn",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 22.0,
-      "rank": 30
+      "score": 24.6,
+      "rank": 27
     },
     {
       "name": "Mike Scott",
@@ -1180,7 +1153,34 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
+      "score": 24.0,
+      "rank": 28
+    },
+    {
+      "name": "Kyle O'Quinn",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 23.0,
+      "rank": 29
+    },
+    {
+      "name": "Terrence Ross",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
       "score": 22.0,
+      "rank": 30
+    },
+    {
+      "name": "Doron Lamb",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 21.0,
       "rank": 31
     },
     {
@@ -1193,12 +1193,12 @@
       "rank": 32
     },
     {
-      "name": "Justin Hamilton",
+      "name": "Robbie Hummel",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 17.0,
+      "score": 19.0,
       "rank": 33
     },
     {
@@ -1207,35 +1207,8 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 17.0,
+      "score": 19.0,
       "rank": 34
-    },
-    {
-      "name": "Quincy Miller",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 16.0,
-      "rank": 35
-    },
-    {
-      "name": "Miles Plumlee",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 15.6,
-      "rank": 36
-    },
-    {
-      "name": "Perry Jones",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 15.6,
-      "rank": 37
     },
     {
       "name": "Darius Miller",
@@ -1243,25 +1216,52 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 15.0,
+      "score": 18.0,
+      "rank": 35
+    },
+    {
+      "name": "Justin Hamilton",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 17.0,
+      "rank": 36
+    },
+    {
+      "name": "Quincy Miller",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 17.0,
+      "rank": 37
+    },
+    {
+      "name": "Miles Plumlee",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 16.6,
       "rank": 38
     },
     {
-      "name": "Robbie Hummel",
+      "name": "Perry Jones",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 15.0,
+      "score": 14.6,
       "rank": 39
     },
     {
-      "name": "Kendall Marshall",
+      "name": "Bernard James",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 13.0,
+      "score": 14.2,
       "rank": 40
     },
     {
@@ -1270,16 +1270,16 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 12.0,
+      "score": 13.0,
       "rank": 41
     },
     {
-      "name": "Bernard James",
+      "name": "Kendall Marshall",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 11.2,
+      "score": 12.0,
       "rank": 42
     },
     {
@@ -1288,7 +1288,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 10.0,
+      "score": 11.0,
       "rank": 43
     },
     {
@@ -1297,26 +1297,8 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 9.0,
+      "score": 11.0,
       "rank": 44
-    },
-    {
-      "name": "Orlando Johnson",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 8.0,
-      "rank": 45
-    },
-    {
-      "name": "Festus Ezeli",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 6.6,
-      "rank": 46
     },
     {
       "name": "Kim English",
@@ -1324,7 +1306,25 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 6.0,
+      "score": 10.0,
+      "rank": 45
+    },
+    {
+      "name": "Orlando Johnson",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 10.0,
+      "rank": 46
+    },
+    {
+      "name": "Festus Ezeli",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 7.6,
       "rank": 47
     },
     {
@@ -1333,7 +1333,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 3.0,
+      "score": 4.0,
       "rank": 48
     },
     {
@@ -1342,7 +1342,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": -3.0,
+      "score": -4.0,
       "rank": 49
     },
     {
@@ -1360,18 +1360,18 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -17.0,
+      "score": -15.0,
       "rank": 51
     }
   ],
   "2013": [
     {
       "name": "Cody Zeller",
-      "predicted_tier": 1,
-      "predicted_label": "Superstar",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 80.0,
+      "score": 79.0,
       "rank": 1
     },
     {
@@ -1380,7 +1380,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 75.0,
+      "score": 74.0,
       "rank": 2
     },
     {
@@ -1416,7 +1416,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 64.0,
+      "score": 63.0,
       "rank": 6
     },
     {
@@ -1425,7 +1425,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 59.0,
+      "score": 58.0,
       "rank": 7
     },
     {
@@ -1434,8 +1434,26 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 56.2,
+      "score": 57.2,
       "rank": 8
+    },
+    {
+      "name": "Nate Wolters",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 54.0,
+      "rank": 9
+    },
+    {
+      "name": "Mason Plumlee",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 52.6,
+      "rank": 10
     },
     {
       "name": "Michael Carter-Williams",
@@ -1443,8 +1461,26 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 53.0,
-      "rank": 9
+      "score": 52.0,
+      "rank": 11
+    },
+    {
+      "name": "Mike Muscala",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 52.0,
+      "rank": 12
+    },
+    {
+      "name": "Ben McLemore",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 51.0,
+      "rank": 13
     },
     {
       "name": "Gorgui Dieng",
@@ -1453,52 +1489,7 @@
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
       "score": 50.6,
-      "rank": 10
-    },
-    {
-      "name": "Ben McLemore",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 50.0,
-      "rank": 11
-    },
-    {
-      "name": "Nate Wolters",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 50.0,
-      "rank": 12
-    },
-    {
-      "name": "Mason Plumlee",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 48.6,
-      "rank": 13
-    },
-    {
-      "name": "Mike Muscala",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 48.0,
       "rank": 14
-    },
-    {
-      "name": "Arsalan Kazemi",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 46.0,
-      "rank": 15
     },
     {
       "name": "Pierre Jackson",
@@ -1506,7 +1497,16 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 46.0,
+      "score": 50.0,
+      "rank": 15
+    },
+    {
+      "name": "Arsalan Kazemi",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 49.0,
       "rank": 16
     },
     {
@@ -1524,26 +1524,17 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 41.0,
+      "score": 43.0,
       "rank": 18
     },
     {
       "name": "Shane Larkin",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 40.0,
-      "rank": 19
-    },
-    {
-      "name": "Anthony Bennett",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 36.0,
-      "rank": 20
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 39.0,
+      "rank": 19
     },
     {
       "name": "C.J. McCollum",
@@ -1551,8 +1542,26 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 36.0,
+      "score": 38.0,
+      "rank": 20
+    },
+    {
+      "name": "Anthony Bennett",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 37.0,
       "rank": 21
+    },
+    {
+      "name": "Jeff Withey",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 37.0,
+      "rank": 22
     },
     {
       "name": "Andre Roberson",
@@ -1561,16 +1570,16 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 35.0,
-      "rank": 22
+      "rank": 23
     },
     {
-      "name": "Jeff Withey",
+      "name": "Romero Osby",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 34.0,
-      "rank": 23
+      "score": 35.0,
+      "rank": 24
     },
     {
       "name": "Ray McCallum",
@@ -1579,7 +1588,7 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 33.0,
-      "rank": 24
+      "rank": 25
     },
     {
       "name": "Steven Adams",
@@ -1587,8 +1596,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 31.2,
-      "rank": 25
+      "score": 32.2,
+      "rank": 26
     },
     {
       "name": "Alex Oriakhi",
@@ -1596,16 +1605,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 31.0,
-      "rank": 26
-    },
-    {
-      "name": "Romero Osby",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 31.0,
+      "score": 32.0,
       "rank": 27
     },
     {
@@ -1614,17 +1614,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 29.0,
+      "score": 32.0,
       "rank": 28
-    },
-    {
-      "name": "Shabazz Muhammad",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 29.0,
-      "rank": 29
     },
     {
       "name": "Solomon Hill",
@@ -1632,8 +1623,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 29.0,
-      "rank": 30
+      "score": 32.0,
+      "rank": 29
     },
     {
       "name": "Ryan Kelly",
@@ -1641,7 +1632,16 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 28.0,
+      "score": 31.0,
+      "rank": 30
+    },
+    {
+      "name": "Shabazz Muhammad",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 30.0,
       "rank": 31
     },
     {
@@ -1650,7 +1650,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 26.6,
+      "score": 25.6,
       "rank": 32
     },
     {
@@ -1659,7 +1659,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 23.2,
+      "score": 25.2,
       "rank": 33
     },
     {
@@ -1672,20 +1672,20 @@
       "rank": 34
     },
     {
+      "name": "Peyton Siva",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 22.0,
+      "rank": 35
+    },
+    {
       "name": "Allen Crabbe",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 21.0,
-      "rank": 35
-    },
-    {
-      "name": "Peyton Siva",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
       "score": 21.0,
       "rank": 36
     },
@@ -1695,8 +1695,26 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 20.0,
+      "score": 21.0,
       "rank": 37
+    },
+    {
+      "name": "Isaiah Canaan",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 21.0,
+      "rank": 38
+    },
+    {
+      "name": "Archie Goodwin",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 19.0,
+      "rank": 39
     },
     {
       "name": "Deshaun Thomas",
@@ -1705,24 +1723,6 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 19.0,
-      "rank": 38
-    },
-    {
-      "name": "Isaiah Canaan",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 19.0,
-      "rank": 39
-    },
-    {
-      "name": "Archie Goodwin",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 18.0,
       "rank": 40
     },
     {
@@ -1731,7 +1731,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 13.0,
+      "score": 14.0,
       "rank": 41
     },
     {
@@ -1740,7 +1740,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 11.0,
+      "score": 12.0,
       "rank": 42
     },
     {
@@ -1767,7 +1767,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 7.0,
+      "score": 6.0,
       "rank": 45
     },
     {
@@ -1776,7 +1776,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 6.0,
+      "score": 5.0,
       "rank": 46
     }
   ],
@@ -1787,7 +1787,7 @@
       "predicted_label": "Superstar",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 94.0,
+      "score": 93.0,
       "rank": 1
     },
     {
@@ -1796,7 +1796,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 79.0,
+      "score": 78.0,
       "rank": 2
     },
     {
@@ -1814,7 +1814,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 64.0,
+      "score": 63.0,
       "rank": 4
     },
     {
@@ -1823,8 +1823,26 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 59.0,
+      "score": 63.0,
       "rank": 5
+    },
+    {
+      "name": "Shabazz Napier",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 58.0,
+      "rank": 6
+    },
+    {
+      "name": "Russ Smith",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 57.0,
+      "rank": 7
     },
     {
       "name": "T.J. Warren",
@@ -1832,8 +1850,8 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 58.0,
-      "rank": 6
+      "score": 57.0,
+      "rank": 8
     },
     {
       "name": "Nik Stauskas",
@@ -1841,35 +1859,8 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 57.0,
-      "rank": 7
-    },
-    {
-      "name": "Gary Harris",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
       "score": 56.0,
-      "rank": 8
-    },
-    {
-      "name": "P.J. Hairston",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 55.0,
       "rank": 9
-    },
-    {
-      "name": "Mitch McGary",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 54.6,
-      "rank": 10
     },
     {
       "name": "Andrew Wiggins",
@@ -1877,7 +1868,16 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 54.0,
+      "score": 55.0,
+      "rank": 10
+    },
+    {
+      "name": "Gary Harris",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 55.0,
       "rank": 11
     },
     {
@@ -1886,26 +1886,35 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 54.0,
+      "score": 55.0,
       "rank": 12
     },
     {
-      "name": "Shabazz Napier",
+      "name": "P.J. Hairston",
       "predicted_tier": 2,
       "predicted_label": "Yearly All-Star",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
       "score": 54.0,
       "rank": 13
     },
     {
-      "name": "Russ Smith",
+      "name": "Mitch McGary",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 53.6,
+      "rank": 14
+    },
+    {
+      "name": "Cameron Bairstow",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 53.0,
-      "rank": 14
+      "rank": 15
     },
     {
       "name": "Jarnell Stokes",
@@ -1914,16 +1923,16 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 52.0,
-      "rank": 15
+      "rank": 16
     },
     {
-      "name": "Cameron Bairstow",
+      "name": "Lamar Patterson",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 51.0,
-      "rank": 16
+      "score": 52.0,
+      "rank": 17
     },
     {
       "name": "K.J. McDaniels",
@@ -1932,15 +1941,6 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 50.0,
-      "rank": 17
-    },
-    {
-      "name": "Lamar Patterson",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 48.0,
       "rank": 18
     },
     {
@@ -1949,7 +1949,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 47.0,
+      "score": 49.0,
       "rank": 19
     },
     {
@@ -1958,7 +1958,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 46.0,
+      "score": 47.0,
       "rank": 20
     },
     {
@@ -1967,8 +1967,17 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 44.0,
+      "score": 45.0,
       "rank": 21
+    },
+    {
+      "name": "Tyler Ennis",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 42.0,
+      "rank": 22
     },
     {
       "name": "Nick Johnson",
@@ -1977,34 +1986,7 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 41.0,
-      "rank": 22
-    },
-    {
-      "name": "Tyler Ennis",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 41.0,
       "rank": 23
-    },
-    {
-      "name": "Aaron Gordon",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
-      "score": 35.0,
-      "rank": 24
-    },
-    {
-      "name": "Elfrid Payton",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 33.0,
-      "rank": 25
     },
     {
       "name": "Roy Devyn Marble",
@@ -2012,6 +1994,24 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
+      "score": 37.0,
+      "rank": 24
+    },
+    {
+      "name": "Aaron Gordon",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 36.0,
+      "rank": 25
+    },
+    {
+      "name": "Elfrid Payton",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
       "score": 33.0,
       "rank": 26
     },
@@ -2021,8 +2021,17 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 28.0,
+      "score": 32.0,
       "rank": 27
+    },
+    {
+      "name": "Markel Brown",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 27.0,
+      "rank": 28
     },
     {
       "name": "Rodney Hood",
@@ -2030,16 +2039,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 28.0,
-      "rank": 28
-    },
-    {
-      "name": "Glenn Robinson III",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 25.0,
+      "score": 27.0,
       "rank": 29
     },
     {
@@ -2048,7 +2048,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 24.0,
+      "score": 25.0,
       "rank": 30
     },
     {
@@ -2057,26 +2057,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 24.0,
+      "score": 25.0,
       "rank": 31
-    },
-    {
-      "name": "Jerami Grant",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 24.0,
-      "rank": 32
-    },
-    {
-      "name": "Markel Brown",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 23.0,
-      "rank": 33
     },
     {
       "name": "Dwight Powell",
@@ -2084,25 +2066,43 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 22.6,
+      "score": 24.6,
+      "rank": 32
+    },
+    {
+      "name": "Glenn Robinson III",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 24.0,
+      "rank": 33
+    },
+    {
+      "name": "Joe Harris",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 24.0,
       "rank": 34
     },
     {
       "name": "Cleanthony Early",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 21.0,
+      "score": 23.0,
       "rank": 35
     },
     {
-      "name": "Joe Harris",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
+      "name": "Jerami Grant",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 21.0,
+      "score": 23.0,
       "rank": 36
     },
     {
@@ -2120,7 +2120,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 18.0,
+      "score": 20.0,
       "rank": 38
     },
     {
@@ -2129,7 +2129,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 18.0,
+      "score": 17.0,
       "rank": 39
     },
     {
@@ -2138,7 +2138,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 14.0,
+      "score": 15.0,
       "rank": 40
     },
     {
@@ -2156,7 +2156,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 10.0,
+      "score": 11.0,
       "rank": 42
     },
     {
@@ -2174,7 +2174,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -6.0,
+      "score": -4.0,
       "rank": 44
     },
     {
@@ -2183,7 +2183,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -7.0,
+      "score": -5.0,
       "rank": 45
     }
   ],
@@ -2194,7 +2194,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 69.0,
+      "score": 73.0,
       "rank": 1
     },
     {
@@ -2203,16 +2203,16 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 67.0,
+      "score": 68.0,
       "rank": 2
     },
     {
-      "name": "Cameron Payne",
+      "name": "Delon Wright",
       "predicted_tier": 2,
       "predicted_label": "Yearly All-Star",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 63.0,
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 66.0,
       "rank": 3
     },
     {
@@ -2221,15 +2221,15 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 63.0,
+      "score": 64.0,
       "rank": 4
     },
     {
-      "name": "Delon Wright",
+      "name": "Cameron Payne",
       "predicted_tier": 2,
       "predicted_label": "Yearly All-Star",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
       "score": 62.0,
       "rank": 5
     },
@@ -2239,8 +2239,26 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 58.2,
+      "score": 59.2,
       "rank": 6
+    },
+    {
+      "name": "Frank Kaminsky",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 59.0,
+      "rank": 7
+    },
+    {
+      "name": "Jerian Grant",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 58.0,
+      "rank": 8
     },
     {
       "name": "R.J. Hunter",
@@ -2249,34 +2267,7 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 57.0,
-      "rank": 7
-    },
-    {
-      "name": "Frank Kaminsky",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 55.0,
-      "rank": 8
-    },
-    {
-      "name": "Rondae Hollis-Jefferson",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 55.0,
       "rank": 9
-    },
-    {
-      "name": "Jerian Grant",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 54.0,
-      "rank": 10
     },
     {
       "name": "Tyus Jones",
@@ -2284,6 +2275,15 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
+      "score": 55.0,
+      "rank": 10
+    },
+    {
+      "name": "Rondae Hollis-Jefferson",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
       "score": 54.0,
       "rank": 11
     },
@@ -2293,8 +2293,17 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 1,
       "actual_label": "Superstar",
-      "score": 52.0,
+      "score": 53.0,
       "rank": 12
+    },
+    {
+      "name": "Sir'Dominic Pointer",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 52.0,
+      "rank": 13
     },
     {
       "name": "Willie Cauley-Stein",
@@ -2303,15 +2312,6 @@
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
       "score": 51.6,
-      "rank": 13
-    },
-    {
-      "name": "Bobby Portis",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 49.0,
       "rank": 14
     },
     {
@@ -2320,26 +2320,17 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 49.0,
+      "score": 50.0,
       "rank": 15
     },
     {
-      "name": "Sir'Dominic Pointer",
+      "name": "Bobby Portis",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 49.0,
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 48.0,
       "rank": 16
-    },
-    {
-      "name": "Andrew Harrison",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 43.0,
-      "rank": 17
     },
     {
       "name": "Chris McCullough",
@@ -2347,7 +2338,16 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 41.2,
+      "score": 42.2,
+      "rank": 17
+    },
+    {
+      "name": "Andrew Harrison",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 42.0,
       "rank": 18
     },
     {
@@ -2356,8 +2356,17 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 40.0,
+      "score": 41.0,
       "rank": 19
+    },
+    {
+      "name": "Rakeem Christmas",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 41.0,
+      "rank": 20
     },
     {
       "name": "J.P. Tokoto",
@@ -2366,7 +2375,7 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 37.0,
-      "rank": 20
+      "rank": 21
     },
     {
       "name": "Justin Anderson",
@@ -2375,16 +2384,16 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 37.0,
-      "rank": 21
+      "rank": 22
     },
     {
-      "name": "Rakeem Christmas",
+      "name": "Darrun Hilliard",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 37.0,
-      "rank": 22
+      "score": 36.0,
+      "rank": 23
     },
     {
       "name": "Kelly Oubre",
@@ -2392,16 +2401,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 35.0,
-      "rank": 23
-    },
-    {
-      "name": "Terry Rozier",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 35.0,
+      "score": 36.0,
       "rank": 24
     },
     {
@@ -2414,12 +2414,12 @@
       "rank": 25
     },
     {
-      "name": "Darrun Hilliard",
+      "name": "Terry Rozier",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 32.0,
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 34.0,
       "rank": 26
     },
     {
@@ -2428,17 +2428,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 32.0,
+      "score": 33.0,
       "rank": 27
-    },
-    {
-      "name": "Jarell Martin",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 30.0,
-      "rank": 28
     },
     {
       "name": "Myles Turner",
@@ -2446,6 +2437,15 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
+      "score": 30.0,
+      "rank": 28
+    },
+    {
+      "name": "Jarell Martin",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
       "score": 29.0,
       "rank": 29
     },
@@ -2459,12 +2459,12 @@
       "rank": 30
     },
     {
-      "name": "Dakari Johnson",
+      "name": "Branden Dawson",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 24.6,
+      "score": 24.0,
       "rank": 31
     },
     {
@@ -2473,8 +2473,17 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 23.0,
+      "score": 24.0,
       "rank": 32
+    },
+    {
+      "name": "Dakari Johnson",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 23.6,
+      "rank": 33
     },
     {
       "name": "Devin Booker",
@@ -2482,26 +2491,26 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 1,
       "actual_label": "Superstar",
-      "score": 22.0,
-      "rank": 33
-    },
-    {
-      "name": "Branden Dawson",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 21.0,
+      "score": 23.0,
       "rank": 34
     },
     {
       "name": "Joe Young",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 20.0,
+      "score": 22.0,
       "rank": 35
+    },
+    {
+      "name": "Pat Connaughton",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 18.0,
+      "rank": 36
     },
     {
       "name": "Olivier Hanlan",
@@ -2510,25 +2519,7 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 17.0,
-      "rank": 36
-    },
-    {
-      "name": "Jordan Mickey",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 15.0,
       "rank": 37
-    },
-    {
-      "name": "Pat Connaughton",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 15.0,
-      "rank": 38
     },
     {
       "name": "Tyler Harvey",
@@ -2537,6 +2528,15 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 15.0,
+      "rank": 38
+    },
+    {
+      "name": "Jordan Mickey",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 14.0,
       "rank": 39
     },
     {
@@ -2545,7 +2545,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 13.0,
+      "score": 14.0,
       "rank": 40
     },
     {
@@ -2554,7 +2554,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 10.0,
+      "score": 12.0,
       "rank": 41
     },
     {
@@ -2563,17 +2563,8 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 8.0,
+      "score": 9.0,
       "rank": 42
-    },
-    {
-      "name": "Josh Richardson",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 7.0,
-      "rank": 43
     },
     {
       "name": "Norman Powell",
@@ -2581,7 +2572,16 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 7.0,
+      "score": 9.0,
+      "rank": 43
+    },
+    {
+      "name": "Josh Richardson",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 8.0,
       "rank": 44
     },
     {
@@ -2590,7 +2590,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 3.0,
+      "score": 4.0,
       "rank": 45
     }
   ],
@@ -2601,7 +2601,7 @@
       "predicted_label": "Superstar",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 98.6,
+      "score": 99.6,
       "rank": 1
     },
     {
@@ -2619,17 +2619,8 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 66.6,
+      "score": 65.6,
       "rank": 3
-    },
-    {
-      "name": "Domantas Sabonis",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
-      "score": 59.0,
-      "rank": 4
     },
     {
       "name": "Buddy Hield",
@@ -2637,8 +2628,26 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 55.0,
+      "score": 59.0,
+      "rank": 4
+    },
+    {
+      "name": "Domantas Sabonis",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 58.0,
       "rank": 5
+    },
+    {
+      "name": "Denzel Valentine",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 56.0,
+      "rank": 6
     },
     {
       "name": "Jamal Murray",
@@ -2646,26 +2655,8 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 55.0,
-      "rank": 6
-    },
-    {
-      "name": "Denzel Valentine",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 52.0,
+      "score": 56.0,
       "rank": 7
-    },
-    {
-      "name": "Tyler Ulis",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 52.0,
-      "rank": 8
     },
     {
       "name": "Kay Felder",
@@ -2674,34 +2665,16 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 51.0,
-      "rank": 9
+      "rank": 8
     },
     {
-      "name": "Isaiah Whitehead",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 47.0,
-      "rank": 10
-    },
-    {
-      "name": "Wade Baldwin IV",
+      "name": "Tyler Ulis",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 47.0,
-      "rank": 11
-    },
-    {
-      "name": "Ben Bentil",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 44.0,
-      "rank": 12
+      "score": 51.0,
+      "rank": 9
     },
     {
       "name": "Brice Johnson",
@@ -2709,8 +2682,26 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 42.0,
-      "rank": 13
+      "score": 46.0,
+      "rank": 10
+    },
+    {
+      "name": "Isaiah Whitehead",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 46.0,
+      "rank": 11
+    },
+    {
+      "name": "Wade Baldwin IV",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 46.0,
+      "rank": 12
     },
     {
       "name": "Malcolm Brogdon",
@@ -2718,7 +2709,16 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 41.0,
+      "score": 45.0,
+      "rank": 13
+    },
+    {
+      "name": "Ben Bentil",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 43.0,
       "rank": 14
     },
     {
@@ -2727,7 +2727,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 40.0,
+      "score": 41.0,
       "rank": 15
     },
     {
@@ -2740,31 +2740,22 @@
       "rank": 16
     },
     {
-      "name": "Patrick McCaw",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 35.0,
-      "rank": 17
-    },
-    {
       "name": "Michael Gbinije",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 33.0,
-      "rank": 18
+      "score": 35.0,
+      "rank": 17
     },
     {
-      "name": "Pascal Siakam",
+      "name": "Patrick McCaw",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
-      "score": 32.6,
-      "rank": 19
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 34.0,
+      "rank": 18
     },
     {
       "name": "Caris LeVert",
@@ -2772,35 +2763,17 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 29.0,
+      "score": 33.0,
+      "rank": 19
+    },
+    {
+      "name": "Pascal Siakam",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 31.6,
       "rank": 20
-    },
-    {
-      "name": "Tyrone Wallace",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 28.0,
-      "rank": 21
-    },
-    {
-      "name": "Deyonta Davis",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 27.6,
-      "rank": 22
-    },
-    {
-      "name": "Chinanu Onuaku",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 27.2,
-      "rank": 23
     },
     {
       "name": "A.J. Hammons",
@@ -2808,16 +2781,43 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 26.0,
-      "rank": 24
+      "score": 30.0,
+      "rank": 21
     },
     {
-      "name": "Daniel Hamilton",
+      "name": "Tyrone Wallace",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 26.0,
+      "score": 30.0,
+      "rank": 22
+    },
+    {
+      "name": "Deyonta Davis",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 28.6,
+      "rank": 23
+    },
+    {
+      "name": "Georges Niang",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 28.0,
+      "rank": 24
+    },
+    {
+      "name": "Chinanu Onuaku",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 26.2,
       "rank": 25
     },
     {
@@ -2826,7 +2826,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 1,
       "actual_label": "Superstar",
-      "score": 25.0,
+      "score": 26.0,
       "rank": 26
     },
     {
@@ -2835,16 +2835,16 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 25.0,
+      "score": 26.0,
       "rank": 27
     },
     {
-      "name": "Georges Niang",
+      "name": "Daniel Hamilton",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 24.0,
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 25.0,
       "rank": 28
     },
     {
@@ -2853,7 +2853,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 24.0,
+      "score": 25.0,
       "rank": 29
     },
     {
@@ -2862,16 +2862,16 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 23.0,
+      "score": 24.0,
       "rank": 30
     },
     {
       "name": "Marcus Paige",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 20.0,
+      "score": 23.0,
       "rank": 31
     },
     {
@@ -2880,8 +2880,17 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 20.0,
+      "score": 21.0,
       "rank": 32
+    },
+    {
+      "name": "Henry Ellenson",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 19.0,
+      "rank": 33
     },
     {
       "name": "Damian Jones",
@@ -2890,15 +2899,6 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 18.2,
-      "rank": 33
-    },
-    {
-      "name": "Henry Ellenson",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 18.0,
       "rank": 34
     },
     {
@@ -2907,7 +2907,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 14.6,
+      "score": 15.6,
       "rank": 35
     },
     {
@@ -2916,7 +2916,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 13.0,
+      "score": 14.0,
       "rank": 36
     },
     {
@@ -2925,26 +2925,8 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 13.0,
+      "score": 14.0,
       "rank": 37
-    },
-    {
-      "name": "Abdel Nader",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 12.0,
-      "rank": 38
-    },
-    {
-      "name": "Dejounte Murray",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 12.0,
-      "rank": 39
     },
     {
       "name": "Taurean Prince",
@@ -2952,7 +2934,25 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 12.0,
+      "score": 14.0,
+      "rank": 38
+    },
+    {
+      "name": "Abdel Nader",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 13.0,
+      "rank": 39
+    },
+    {
+      "name": "Dejounte Murray",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 13.0,
       "rank": 40
     },
     {
@@ -2961,7 +2961,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 9.0,
+      "score": 10.0,
       "rank": 41
     },
     {
@@ -2970,7 +2970,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 6.0,
+      "score": 7.0,
       "rank": 42
     },
     {
@@ -2979,7 +2979,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 3.6,
+      "score": 4.6,
       "rank": 43
     },
     {
@@ -2999,7 +2999,7 @@
       "predicted_label": "Superstar",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 89.0,
+      "score": 93.0,
       "rank": 1
     },
     {
@@ -3017,7 +3017,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 68.0,
+      "score": 67.0,
       "rank": 3
     },
     {
@@ -3026,26 +3026,8 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 66.0,
+      "score": 65.0,
       "rank": 4
-    },
-    {
-      "name": "De'Aaron Fox",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
-      "score": 62.0,
-      "rank": 5
-    },
-    {
-      "name": "Josh Jackson",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 62.0,
-      "rank": 6
     },
     {
       "name": "Josh Hart",
@@ -3053,7 +3035,25 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 60.0,
+      "score": 64.0,
+      "rank": 5
+    },
+    {
+      "name": "De'Aaron Fox",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 63.0,
+      "rank": 6
+    },
+    {
+      "name": "Josh Jackson",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 63.0,
       "rank": 7
     },
     {
@@ -3062,7 +3062,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 59.0,
+      "score": 58.0,
       "rank": 8
     },
     {
@@ -3071,7 +3071,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 55.0,
+      "score": 56.0,
       "rank": 9
     },
     {
@@ -3080,7 +3080,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 54.0,
+      "score": 55.0,
       "rank": 10
     },
     {
@@ -3089,7 +3089,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 51.0,
+      "score": 52.0,
       "rank": 11
     },
     {
@@ -3098,8 +3098,17 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 51.0,
+      "score": 50.0,
       "rank": 12
+    },
+    {
+      "name": "Dennis Smith Jr.",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 48.0,
+      "rank": 13
     },
     {
       "name": "Dillon Brooks",
@@ -3108,25 +3117,7 @@
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
       "score": 48.0,
-      "rank": 13
-    },
-    {
-      "name": "Dennis Smith Jr.",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 47.0,
       "rank": 14
-    },
-    {
-      "name": "Edmond Sumner",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 47.0,
-      "rank": 15
     },
     {
       "name": "Bam Adebayo",
@@ -3134,7 +3125,16 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 46.6,
+      "score": 47.6,
+      "rank": 15
+    },
+    {
+      "name": "Edmond Sumner",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 46.0,
       "rank": 16
     },
     {
@@ -3143,8 +3143,17 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 1,
       "actual_label": "Superstar",
-      "score": 44.0,
+      "score": 45.0,
       "rank": 17
+    },
+    {
+      "name": "Derrick White",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 43.0,
+      "rank": 18
     },
     {
       "name": "Semi Ojeleye",
@@ -3153,7 +3162,7 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 43.0,
-      "rank": 18
+      "rank": 19
     },
     {
       "name": "TJ Leaf",
@@ -3161,8 +3170,8 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 41.6,
-      "rank": 19
+      "score": 42.6,
+      "rank": 20
     },
     {
       "name": "Lauri Markkanen",
@@ -3170,8 +3179,8 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 41.0,
-      "rank": 20
+      "score": 42.0,
+      "rank": 21
     },
     {
       "name": "Malik Monk",
@@ -3179,17 +3188,17 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 40.0,
-      "rank": 21
+      "score": 41.0,
+      "rank": 22
     },
     {
-      "name": "Derrick White",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 39.0,
-      "rank": 22
+      "name": "Frank Mason",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 40.0,
+      "rank": 23
     },
     {
       "name": "Justin Patton",
@@ -3197,8 +3206,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 38.2,
-      "rank": 23
+      "score": 39.2,
+      "rank": 24
     },
     {
       "name": "Zach Collins",
@@ -3206,8 +3215,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 38.0,
-      "rank": 24
+      "score": 39.0,
+      "rank": 25
     },
     {
       "name": "Tony Bradley",
@@ -3215,26 +3224,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 37.6,
-      "rank": 25
-    },
-    {
-      "name": "Frank Mason",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 36.0,
+      "score": 38.6,
       "rank": 26
-    },
-    {
-      "name": "Thomas Bryant",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 36.0,
-      "rank": 27
     },
     {
       "name": "Monte Morris",
@@ -3242,17 +3233,17 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 34.0,
-      "rank": 28
+      "score": 38.0,
+      "rank": 27
     },
     {
-      "name": "OG Anunoby",
+      "name": "Thomas Bryant",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
-      "score": 33.0,
-      "rank": 29
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 35.0,
+      "rank": 28
     },
     {
       "name": "Wesley Iwundu",
@@ -3260,8 +3251,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 33.0,
-      "rank": 30
+      "score": 34.0,
+      "rank": 29
     },
     {
       "name": "Sterling Brown",
@@ -3269,20 +3260,29 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 30.0,
-      "rank": 31
+      "score": 33.0,
+      "rank": 30
     },
     {
-      "name": "D.J. Wilson",
+      "name": "Kadeem Allen",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 29.0,
+      "score": 32.0,
+      "rank": 31
+    },
+    {
+      "name": "OG Anunoby",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 32.0,
       "rank": 32
     },
     {
-      "name": "Kadeem Allen",
+      "name": "D.J. Wilson",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
@@ -3296,7 +3296,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 29.0,
+      "score": 28.0,
       "rank": 34
     },
     {
@@ -3305,7 +3305,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 27.6,
+      "score": 26.6,
       "rank": 35
     },
     {
@@ -3314,7 +3314,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 23.0,
+      "score": 25.0,
       "rank": 36
     },
     {
@@ -3323,7 +3323,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 22.0,
+      "score": 23.0,
       "rank": 37
     },
     {
@@ -3332,35 +3332,8 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 21.0,
+      "score": 20.0,
       "rank": 38
-    },
-    {
-      "name": "Dwayne Bacon",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 16.0,
-      "rank": 39
-    },
-    {
-      "name": "Jarrett Allen",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 14.2,
-      "rank": 40
-    },
-    {
-      "name": "Damyean Dotson",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 14.0,
-      "rank": 41
     },
     {
       "name": "Davon Reed",
@@ -3368,7 +3341,34 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 13.0,
+      "score": 17.0,
+      "rank": 39
+    },
+    {
+      "name": "Damyean Dotson",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 16.0,
+      "rank": 40
+    },
+    {
+      "name": "Jarrett Allen",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 15.2,
+      "rank": 41
+    },
+    {
+      "name": "Dwayne Bacon",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 15.0,
       "rank": 42
     },
     {
@@ -3377,7 +3377,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 11.0,
+      "score": 10.0,
       "rank": 43
     },
     {
@@ -3386,7 +3386,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 7.2,
+      "score": 8.2,
       "rank": 44
     },
     {
@@ -3395,7 +3395,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 6.0,
+      "score": 8.0,
       "rank": 45
     },
     {
@@ -3413,7 +3413,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 1.2,
+      "score": 2.2,
       "rank": 47
     },
     {
@@ -3422,7 +3422,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 1.0,
+      "score": 2.0,
       "rank": 48
     },
     {
@@ -3431,7 +3431,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": -3.0,
+      "score": -4.0,
       "rank": 49
     },
     {
@@ -3440,7 +3440,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 1,
       "actual_label": "Superstar",
-      "score": -26.0,
+      "score": -27.0,
       "rank": 50
     },
     {
@@ -3460,7 +3460,7 @@
       "predicted_label": "Superstar",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 89.0,
+      "score": 90.0,
       "rank": 1
     },
     {
@@ -3478,7 +3478,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 70.0,
+      "score": 71.0,
       "rank": 3
     },
     {
@@ -3487,7 +3487,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 64.6,
+      "score": 65.6,
       "rank": 4
     },
     {
@@ -3496,8 +3496,17 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 59.0,
+      "score": 60.0,
       "rank": 5
+    },
+    {
+      "name": "Jevon Carter",
+      "predicted_tier": 2,
+      "predicted_label": "Yearly All-Star",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 58.0,
+      "rank": 6
     },
     {
       "name": "Chandler Hutchison",
@@ -3505,8 +3514,8 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 55.0,
-      "rank": 6
+      "score": 57.0,
+      "rank": 7
     },
     {
       "name": "Keita Bates-Diop",
@@ -3515,16 +3524,16 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 55.0,
-      "rank": 7
+      "rank": 8
     },
     {
-      "name": "Jevon Carter",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 54.0,
-      "rank": 8
+      "name": "Jaren Jackson Jr.",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 50.0,
+      "rank": 9
     },
     {
       "name": "Khyri Thomas",
@@ -3533,15 +3542,6 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 50.0,
-      "rank": 9
-    },
-    {
-      "name": "Jaren Jackson Jr.",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
-      "score": 49.0,
       "rank": 10
     },
     {
@@ -3550,7 +3550,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 1,
       "actual_label": "Superstar",
-      "score": 49.0,
+      "score": 50.0,
       "rank": 11
     },
     {
@@ -3568,7 +3568,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 46.0,
+      "score": 47.0,
       "rank": 13
     },
     {
@@ -3577,7 +3577,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 44.0,
+      "score": 45.0,
       "rank": 14
     },
     {
@@ -3599,40 +3599,22 @@
       "rank": 16
     },
     {
-      "name": "Miles Bridges",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 39.0,
-      "rank": 17
-    },
-    {
       "name": "Mohamed Bamba",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 38.6,
-      "rank": 18
+      "score": 39.6,
+      "rank": 17
     },
     {
-      "name": "Donte DiVincenzo",
+      "name": "Miles Bridges",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
       "score": 38.0,
-      "rank": 19
-    },
-    {
-      "name": "Josh Okogie",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 37.0,
-      "rank": 20
+      "rank": 18
     },
     {
       "name": "Collin Sexton",
@@ -3640,6 +3622,24 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
+      "score": 37.0,
+      "rank": 19
+    },
+    {
+      "name": "Donte DiVincenzo",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 37.0,
+      "rank": 20
+    },
+    {
+      "name": "Josh Okogie",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
       "score": 36.0,
       "rank": 21
     },
@@ -3649,7 +3649,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 36.0,
+      "score": 35.0,
       "rank": 22
     },
     {
@@ -3658,7 +3658,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 33.0,
+      "score": 34.0,
       "rank": 23
     },
     {
@@ -3667,8 +3667,26 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 32.0,
+      "score": 33.0,
       "rank": 24
+    },
+    {
+      "name": "Devon Hall",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 31.0,
+      "rank": 25
+    },
+    {
+      "name": "Grayson Allen",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 31.0,
+      "rank": 26
     },
     {
       "name": "Shake Milton",
@@ -3677,16 +3695,7 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 31.0,
-      "rank": 25
-    },
-    {
-      "name": "Robert Williams",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 30.2,
-      "rank": 26
+      "rank": 27
     },
     {
       "name": "Aaron Holiday",
@@ -3695,7 +3704,16 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 30.0,
-      "rank": 27
+      "rank": 28
+    },
+    {
+      "name": "Robert Williams",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 29.2,
+      "rank": 29
     },
     {
       "name": "Kevin Huerter",
@@ -3703,8 +3721,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 30.0,
-      "rank": 28
+      "score": 29.0,
+      "rank": 30
     },
     {
       "name": "Landry Shamet",
@@ -3712,26 +3730,17 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 30.0,
-      "rank": 29
+      "score": 29.0,
+      "rank": 31
     },
     {
-      "name": "Devon Hall",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 28.0,
-      "rank": 30
-    },
-    {
-      "name": "Grayson Allen",
+      "name": "Devonte' Graham",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 27.0,
-      "rank": 31
+      "score": 26.0,
+      "rank": 32
     },
     {
       "name": "Moritz Wagner",
@@ -3740,7 +3749,7 @@
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
       "score": 24.6,
-      "rank": 32
+      "rank": 33
     },
     {
       "name": "Bruce Brown",
@@ -3748,8 +3757,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 24.0,
-      "rank": 33
+      "score": 23.0,
+      "rank": 34
     },
     {
       "name": "Chimezie Metu",
@@ -3758,42 +3767,33 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 22.0,
-      "rank": 34
+      "rank": 35
     },
     {
-      "name": "Devonte' Graham",
+      "name": "Jarred Vanderbilt",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
       "score": 22.0,
-      "rank": 35
-    },
-    {
-      "name": "Jarred Vanderbilt",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 21.0,
       "rank": 36
     },
     {
       "name": "Kevin Knox",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 21.0,
+      "score": 22.0,
       "rank": 37
     },
     {
       "name": "Lonnie Walker",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 21.0,
+      "score": 22.0,
       "rank": 38
     },
     {
@@ -3815,31 +3815,22 @@
       "rank": 40
     },
     {
-      "name": "Troy Brown",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 17.0,
-      "rank": 41
-    },
-    {
       "name": "Sviatoslav Mykhailiuk",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 16.0,
-      "rank": 42
+      "score": 18.0,
+      "rank": 41
     },
     {
-      "name": "Hamidou Diallo",
+      "name": "Troy Brown",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 11.0,
-      "rank": 43
+      "score": 18.0,
+      "rank": 42
     },
     {
       "name": "Vince Edwards",
@@ -3847,7 +3838,16 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 10.0,
+      "score": 14.0,
+      "rank": 43
+    },
+    {
+      "name": "Hamidou Diallo",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 12.0,
       "rank": 44
     },
     {
@@ -3856,7 +3856,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 8.0,
+      "score": 9.0,
       "rank": 45
     },
     {
@@ -3865,7 +3865,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 5.0,
+      "score": 6.0,
       "rank": 46
     },
     {
@@ -3874,7 +3874,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 3.0,
+      "score": 4.0,
       "rank": 47
     },
     {
@@ -3883,7 +3883,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -3.0,
+      "score": -2.0,
       "rank": 48
     },
     {
@@ -3892,7 +3892,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -6.0,
+      "score": -4.0,
       "rank": 49
     },
     {
@@ -3901,7 +3901,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -6.8,
+      "score": -5.8,
       "rank": 50
     }
   ],
@@ -3912,7 +3912,7 @@
       "predicted_label": "Superstar",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 101.0,
+      "score": 102.0,
       "rank": 1
     },
     {
@@ -3930,7 +3930,7 @@
       "predicted_label": "Superstar",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 85.0,
+      "score": 84.0,
       "rank": 3
     },
     {
@@ -3939,7 +3939,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 72.0,
+      "score": 73.0,
       "rank": 4
     },
     {
@@ -3948,7 +3948,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 68.0,
+      "score": 67.0,
       "rank": 5
     },
     {
@@ -3966,7 +3966,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 59.0,
+      "score": 58.0,
       "rank": 7
     },
     {
@@ -3975,7 +3975,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 57.0,
+      "score": 56.0,
       "rank": 8
     },
     {
@@ -3984,11 +3984,11 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 49.0,
+      "score": 48.0,
       "rank": 9
     },
     {
-      "name": "PJ Washington",
+      "name": "Dylan Windler",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
@@ -3997,13 +3997,22 @@
       "rank": 10
     },
     {
+      "name": "PJ Washington",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 47.0,
+      "rank": 11
+    },
+    {
       "name": "Ty Jerome",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
       "score": 47.0,
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "Jaxson Hayes",
@@ -4011,8 +4020,17 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
+      "score": 46.0,
+      "rank": 13
+    },
+    {
+      "name": "Cameron Johnson",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
       "score": 45.0,
-      "rank": 12
+      "rank": 14
     },
     {
       "name": "Rui Hachimura",
@@ -4021,24 +4039,6 @@
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
       "score": 45.0,
-      "rank": 13
-    },
-    {
-      "name": "Dylan Windler",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 44.0,
-      "rank": 14
-    },
-    {
-      "name": "De'Andre Hunter",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 43.0,
       "rank": 15
     },
     {
@@ -4047,26 +4047,35 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 42.0,
+      "score": 44.0,
       "rank": 16
     },
     {
-      "name": "Cameron Johnson",
+      "name": "De'Andre Hunter",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 41.0,
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 42.0,
       "rank": 17
     },
     {
-      "name": "Mfiondu Kabengele",
+      "name": "Coby White",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
       "score": 38.0,
       "rank": 18
+    },
+    {
+      "name": "Ignas Brazdeikis",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 38.0,
+      "rank": 19
     },
     {
       "name": "Carsen Edwards",
@@ -4075,25 +4084,34 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 37.0,
-      "rank": 19
+      "rank": 20
     },
     {
-      "name": "Coby White",
+      "name": "Mfiondu Kabengele",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 37.0,
+      "rank": 21
+    },
+    {
+      "name": "R.J. Barrett",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 37.0,
-      "rank": 20
+      "score": 35.0,
+      "rank": 22
     },
     {
-      "name": "Ignas Brazdeikis",
+      "name": "Tyler Herro",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 37.0,
-      "rank": 21
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 35.0,
+      "rank": 23
     },
     {
       "name": "Nicolas Claxton",
@@ -4101,17 +4119,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 35.6,
-      "rank": 22
-    },
-    {
-      "name": "Daniel Gafford",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 34.2,
-      "rank": 23
+      "score": 34.6,
+      "rank": 24
     },
     {
       "name": "Kyle Guy",
@@ -4120,16 +4129,25 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 34.0,
-      "rank": 24
+      "rank": 25
     },
     {
-      "name": "R.J. Barrett",
+      "name": "Matisse Thybulle",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 34.0,
+      "rank": 26
+    },
+    {
+      "name": "Daniel Gafford",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 34.0,
-      "rank": 25
+      "score": 33.2,
+      "rank": 27
     },
     {
       "name": "Tremont Waters",
@@ -4137,25 +4155,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 34.0,
-      "rank": 26
-    },
-    {
-      "name": "Tyler Herro",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
-      "score": 34.0,
-      "rank": 27
-    },
-    {
-      "name": "Jordan Poole",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 31.0,
+      "score": 33.0,
       "rank": 28
     },
     {
@@ -4164,26 +4164,17 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 31.0,
+      "score": 32.0,
       "rank": 29
     },
     {
-      "name": "Matisse Thybulle",
+      "name": "Jordan Poole",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 31.0,
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 30.0,
       "rank": 30
-    },
-    {
-      "name": "Cam Reddish",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 26.0,
-      "rank": 31
     },
     {
       "name": "Terance Mann",
@@ -4191,7 +4182,16 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 25.0,
+      "score": 28.0,
+      "rank": 31
+    },
+    {
+      "name": "Cam Reddish",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 27.0,
       "rank": 32
     },
     {
@@ -4205,11 +4205,11 @@
     },
     {
       "name": "Cody Martin",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 21.0,
+      "score": 22.0,
       "rank": 34
     },
     {
@@ -4218,7 +4218,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 18.0,
+      "score": 19.0,
       "rank": 35
     },
     {
@@ -4227,7 +4227,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 13.0,
+      "score": 15.0,
       "rank": 36
     },
     {
@@ -4236,7 +4236,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 10.0,
+      "score": 12.0,
       "rank": 37
     },
     {
@@ -4249,7 +4249,7 @@
       "rank": 38
     },
     {
-      "name": "Jaylen Nowell",
+      "name": "Jordan Bone",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
@@ -4258,7 +4258,7 @@
       "rank": 39
     },
     {
-      "name": "Jordan Bone",
+      "name": "Marial Shayok",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
@@ -4267,25 +4267,25 @@
       "rank": 40
     },
     {
-      "name": "Marial Shayok",
+      "name": "Jaylen Nowell",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 7.0,
+      "score": 8.0,
       "rank": 41
     },
     {
-      "name": "Jalen McDaniels",
+      "name": "Jarrell Brantley",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 4.0,
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 6.0,
       "rank": 42
     },
     {
-      "name": "Jarrell Brantley",
+      "name": "Justin James",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
@@ -4299,8 +4299,17 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 3.0,
+      "score": 4.0,
       "rank": 44
+    },
+    {
+      "name": "Jalen McDaniels",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 3.0,
+      "rank": 45
     },
     {
       "name": "Dewan Hernandez",
@@ -4308,29 +4317,20 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 2.6,
-      "rank": 45
-    },
-    {
-      "name": "Jaylen Hands",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 2.0,
+      "score": 1.6,
       "rank": 46
     },
     {
-      "name": "Justin James",
+      "name": "Darius Garland",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 2.0,
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 1.0,
       "rank": 47
     },
     {
-      "name": "Kezie Okpala",
+      "name": "Jaylen Hands",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
@@ -4339,11 +4339,11 @@
       "rank": 48
     },
     {
-      "name": "Darius Garland",
+      "name": "Kezie Okpala",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
       "score": 0.0,
       "rank": 49
     },
@@ -4353,7 +4353,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": -2.0,
+      "score": -1.0,
       "rank": 50
     },
     {
@@ -4362,7 +4362,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": -3.0,
+      "score": -2.0,
       "rank": 51
     },
     {
@@ -4371,7 +4371,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -6.0,
+      "score": -4.0,
       "rank": 52
     }
   ],
@@ -4382,7 +4382,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 68.6,
+      "score": 69.6,
       "rank": 1
     },
     {
@@ -4400,7 +4400,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 62.0,
+      "score": 61.0,
       "rank": 3
     },
     {
@@ -4409,7 +4409,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 62.0,
+      "score": 61.0,
       "rank": 4
     },
     {
@@ -4418,7 +4418,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 1,
       "actual_label": "Superstar",
-      "score": 62.0,
+      "score": 61.0,
       "rank": 5
     },
     {
@@ -4427,7 +4427,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 59.0,
+      "score": 58.0,
       "rank": 6
     },
     {
@@ -4445,25 +4445,25 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 55.0,
+      "score": 56.0,
       "rank": 8
     },
     {
-      "name": "Jalen Smith",
+      "name": "Payton Pritchard",
       "predicted_tier": 2,
       "predicted_label": "Yearly All-Star",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 54.0,
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 56.0,
       "rank": 9
     },
     {
-      "name": "Payton Pritchard",
+      "name": "Jalen Smith",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 52.0,
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 53.0,
       "rank": 10
     },
     {
@@ -4490,7 +4490,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 45.0,
+      "score": 44.0,
       "rank": 13
     },
     {
@@ -4499,7 +4499,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 44.0,
+      "score": 43.0,
       "rank": 14
     },
     {
@@ -4508,7 +4508,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 40.0,
+      "score": 41.0,
       "rank": 15
     },
     {
@@ -4517,17 +4517,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 38.0,
+      "score": 39.0,
       "rank": 16
-    },
-    {
-      "name": "Saddiq Bey",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 36.0,
-      "rank": 17
     },
     {
       "name": "Skylar Mays",
@@ -4535,7 +4526,16 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 35.0,
+      "score": 37.0,
+      "rank": 17
+    },
+    {
+      "name": "Udoka Azubuike",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 36.2,
       "rank": 18
     },
     {
@@ -4544,7 +4544,7 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 34.2,
+      "score": 35.2,
       "rank": 19
     },
     {
@@ -4553,26 +4553,17 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 34.0,
+      "score": 35.0,
       "rank": 20
     },
     {
-      "name": "Udoka Azubuike",
+      "name": "Saddiq Bey",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 33.2,
+      "score": 35.0,
       "rank": 21
-    },
-    {
-      "name": "Immanuel Quickley",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 33.0,
-      "rank": 22
     },
     {
       "name": "Nick Richards",
@@ -4581,7 +4572,25 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 33.0,
+      "rank": 22
+    },
+    {
+      "name": "Immanuel Quickley",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 32.0,
       "rank": 23
+    },
+    {
+      "name": "Sam Merrill",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 31.0,
+      "rank": 24
     },
     {
       "name": "Isaac Okoro",
@@ -4589,8 +4598,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 29.0,
-      "rank": 24
+      "score": 30.0,
+      "rank": 25
     },
     {
       "name": "Grant Riller",
@@ -4598,8 +4607,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 27.0,
-      "rank": 25
+      "score": 29.0,
+      "rank": 26
     },
     {
       "name": "Patrick Williams",
@@ -4607,8 +4616,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 27.0,
-      "rank": 26
+      "score": 28.0,
+      "rank": 27
     },
     {
       "name": "Saben Lee",
@@ -4617,25 +4626,7 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 27.0,
-      "rank": 27
-    },
-    {
-      "name": "Sam Merrill",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 27.0,
       "rank": 28
-    },
-    {
-      "name": "Kira Lewis Jr.",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 26.0,
-      "rank": 29
     },
     {
       "name": "Anthony Edwards",
@@ -4643,6 +4634,15 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 1,
       "actual_label": "Superstar",
+      "score": 26.0,
+      "rank": 29
+    },
+    {
+      "name": "Kira Lewis Jr.",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
       "score": 25.0,
       "rank": 30
     },
@@ -4656,30 +4656,30 @@
       "rank": 31
     },
     {
-      "name": "CJ Elleby",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 23.0,
-      "rank": 32
-    },
-    {
       "name": "Tyrell Terry",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 23.0,
+      "score": 24.0,
+      "rank": 32
+    },
+    {
+      "name": "CJ Elleby",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 22.0,
       "rank": 33
     },
     {
       "name": "Aaron Nesmith",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 22.0,
+      "score": 21.0,
       "rank": 34
     },
     {
@@ -4688,7 +4688,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 20.0,
+      "score": 21.0,
       "rank": 35
     },
     {
@@ -4697,17 +4697,26 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 20.0,
+      "score": 21.0,
       "rank": 36
     },
     {
-      "name": "Robert Woodard",
+      "name": "Desmond Bane",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 2,
+      "actual_label": "Yearly All-Star",
+      "score": 19.0,
+      "rank": 37
+    },
+    {
+      "name": "Cassius Stanley",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 19.0,
-      "rank": 37
+      "score": 18.0,
+      "rank": 38
     },
     {
       "name": "Elijah Hughes",
@@ -4716,24 +4725,15 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 18.0,
-      "rank": 38
-    },
-    {
-      "name": "Isaiah Joe",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 18.0,
       "rank": 39
     },
     {
-      "name": "Cassius Stanley",
+      "name": "Robert Woodard",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 17.0,
+      "score": 18.0,
       "rank": 40
     },
     {
@@ -4742,8 +4742,17 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 16.0,
+      "score": 17.0,
       "rank": 41
+    },
+    {
+      "name": "Isaiah Joe",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 17.0,
+      "rank": 42
     },
     {
       "name": "Tyrese Maxey",
@@ -4751,16 +4760,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 16.0,
-      "rank": 42
-    },
-    {
-      "name": "Desmond Bane",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 2,
-      "actual_label": "Yearly All-Star",
-      "score": 15.0,
+      "score": 17.0,
       "rank": 43
     },
     {
@@ -4769,7 +4769,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 14.0,
+      "score": 16.0,
       "rank": 44
     },
     {
@@ -4778,7 +4778,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 9.0,
+      "score": 11.0,
       "rank": 45
     },
     {
@@ -4796,7 +4796,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 3.0,
+      "score": 4.0,
       "rank": 47
     }
   ],
@@ -4807,7 +4807,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 1,
       "actual_label": "Superstar",
-      "score": 74.0,
+      "score": 75.0,
       "rank": 1
     },
     {
@@ -4816,7 +4816,7 @@
       "predicted_label": "Yearly All-Star",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 70.6,
+      "score": 71.6,
       "rank": 2
     },
     {
@@ -4838,30 +4838,30 @@
       "rank": 4
     },
     {
-      "name": "Jalen Suggs",
-      "predicted_tier": 2,
-      "predicted_label": "Yearly All-Star",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 55.0,
-      "rank": 5
-    },
-    {
       "name": "Luka Garza",
       "predicted_tier": 2,
       "predicted_label": "Yearly All-Star",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 55.0,
-      "rank": 6
+      "score": 59.0,
+      "rank": 5
     },
     {
-      "name": "Miles McBride",
+      "name": "Jalen Suggs",
       "predicted_tier": 2,
       "predicted_label": "Yearly All-Star",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 54.0,
+      "score": 56.0,
+      "rank": 6
+    },
+    {
+      "name": "Miles McBride",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 53.0,
       "rank": 7
     },
     {
@@ -4883,12 +4883,12 @@
       "rank": 9
     },
     {
-      "name": "Franz Wagner",
+      "name": "Chris Duarte",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 45.0,
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 46.0,
       "rank": 10
     },
     {
@@ -4897,8 +4897,17 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 44.0,
+      "score": 45.0,
       "rank": 11
+    },
+    {
+      "name": "Franz Wagner",
+      "predicted_tier": 3,
+      "predicted_label": "Top Level Starter",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 44.0,
+      "rank": 12
     },
     {
       "name": "Nah'Shon Hyland",
@@ -4906,16 +4915,7 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 44.0,
-      "rank": 12
-    },
-    {
-      "name": "Chris Duarte",
-      "predicted_tier": 3,
-      "predicted_label": "Top Level Starter",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 42.0,
+      "score": 43.0,
       "rank": 13
     },
     {
@@ -4924,20 +4924,20 @@
       "predicted_label": "Top Level Starter",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 41.0,
+      "score": 42.0,
       "rank": 14
     },
     {
-      "name": "Filip Petrusev",
+      "name": "Isaiah Jackson",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 40.6,
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 41.0,
       "rank": 15
     },
     {
-      "name": "Isaiah Jackson",
+      "name": "Herb Jones",
       "predicted_tier": 3,
       "predicted_label": "Top Level Starter",
       "actual_tier": 4,
@@ -4946,22 +4946,31 @@
       "rank": 16
     },
     {
+      "name": "Filip Petrusev",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
+      "score": 39.6,
+      "rank": 17
+    },
+    {
       "name": "Davion Mitchell",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 39.0,
-      "rank": 17
+      "rank": 18
     },
     {
-      "name": "Herb Jones",
+      "name": "Corey Kispert",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 37.0,
-      "rank": 18
+      "rank": 19
     },
     {
       "name": "Raiquan Gray",
@@ -4970,7 +4979,7 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 37.0,
-      "rank": 19
+      "rank": 20
     },
     {
       "name": "Scottie Barnes",
@@ -4978,8 +4987,8 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 2,
       "actual_label": "Yearly All-Star",
-      "score": 36.0,
-      "rank": 20
+      "score": 37.0,
+      "rank": 21
     },
     {
       "name": "Kai Jones",
@@ -4987,17 +4996,17 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 33.6,
-      "rank": 21
+      "score": 32.6,
+      "rank": 22
     },
     {
-      "name": "Corey Kispert",
+      "name": "Day'Ron Sharpe",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 33.0,
-      "rank": 22
+      "score": 32.2,
+      "rank": 23
     },
     {
       "name": "Charles Bassey",
@@ -5006,34 +5015,7 @@
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
       "score": 32.0,
-      "rank": 23
-    },
-    {
-      "name": "Jeremiah Robinson-Earl",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 32.0,
       "rank": 24
-    },
-    {
-      "name": "Scottie Lewis",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 5,
-      "actual_label": "Bust Risk",
-      "score": 32.0,
-      "rank": 25
-    },
-    {
-      "name": "Day'Ron Sharpe",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 31.2,
-      "rank": 26
     },
     {
       "name": "Sharife Cooper",
@@ -5041,6 +5023,24 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
+      "score": 32.0,
+      "rank": 25
+    },
+    {
+      "name": "Jeremiah Robinson-Earl",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 31.0,
+      "rank": 26
+    },
+    {
+      "name": "Scottie Lewis",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 5,
+      "actual_label": "Bust Risk",
       "score": 31.0,
       "rank": 27
     },
@@ -5050,11 +5050,11 @@
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 29.0,
+      "score": 30.0,
       "rank": 28
     },
     {
-      "name": "James Bouknight",
+      "name": "Isaiah Livers",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
@@ -5063,40 +5063,31 @@
       "rank": 29
     },
     {
-      "name": "Tre Mann",
-      "predicted_tier": 4,
-      "predicted_label": "Rotation / Bench",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 29.0,
-      "rank": 30
-    },
-    {
       "name": "Jalen Johnson",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 3,
       "actual_label": "Top Level Starter",
-      "score": 27.0,
-      "rank": 31
+      "score": 28.0,
+      "rank": 30
     },
     {
-      "name": "Isaiah Livers",
+      "name": "James Bouknight",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 26.0,
-      "rank": 32
+      "score": 28.0,
+      "rank": 31
     },
     {
-      "name": "Santi Aldama",
+      "name": "Tre Mann",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
-      "actual_tier": 3,
-      "actual_label": "Top Level Starter",
-      "score": 25.6,
-      "rank": 33
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 28.0,
+      "rank": 32
     },
     {
       "name": "Marcus Zegarowski",
@@ -5105,6 +5096,15 @@
       "actual_tier": 5,
       "actual_label": "Bust Risk",
       "score": 25.0,
+      "rank": 33
+    },
+    {
+      "name": "Santi Aldama",
+      "predicted_tier": 4,
+      "predicted_label": "Rotation / Bench",
+      "actual_tier": 3,
+      "actual_label": "Top Level Starter",
+      "score": 24.6,
       "rank": 34
     },
     {
@@ -5126,21 +5126,21 @@
       "rank": 36
     },
     {
-      "name": "Balsa Koprivica",
+      "name": "JT Thor",
       "predicted_tier": 4,
       "predicted_label": "Rotation / Bench",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 22.6,
+      "score": 22.0,
       "rank": 37
     },
     {
-      "name": "JT Thor",
+      "name": "Balsa Koprivica",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 21.0,
+      "score": 21.6,
       "rank": 38
     },
     {
@@ -5149,7 +5149,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 20.2,
+      "score": 21.2,
       "rank": 39
     },
     {
@@ -5158,7 +5158,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 20.0,
+      "score": 21.0,
       "rank": 40
     },
     {
@@ -5176,7 +5176,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 15.0,
+      "score": 16.0,
       "rank": 42
     },
     {
@@ -5185,7 +5185,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 15.0,
+      "score": 16.0,
       "rank": 43
     },
     {
@@ -5194,11 +5194,11 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 14.0,
+      "score": 13.0,
       "rank": 44
     },
     {
-      "name": "Kessler Edwards",
+      "name": "Josh Christopher",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
@@ -5207,21 +5207,21 @@
       "rank": 45
     },
     {
+      "name": "Kessler Edwards",
+      "predicted_tier": 5,
+      "predicted_label": "Bust Risk",
+      "actual_tier": 4,
+      "actual_label": "Rotation / Bench",
+      "score": 13.0,
+      "rank": 46
+    },
+    {
       "name": "David Johnson",
       "predicted_tier": 5,
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": 12.0,
-      "rank": 46
-    },
-    {
-      "name": "Josh Christopher",
-      "predicted_tier": 5,
-      "predicted_label": "Bust Risk",
-      "actual_tier": 4,
-      "actual_label": "Rotation / Bench",
-      "score": 12.0,
+      "score": 11.0,
       "rank": 47
     },
     {
@@ -5239,7 +5239,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": 3.0,
+      "score": 5.0,
       "rank": 49
     },
     {
@@ -5248,7 +5248,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 5,
       "actual_label": "Bust Risk",
-      "score": -8.0,
+      "score": -7.0,
       "rank": 50
     },
     {
@@ -5257,7 +5257,7 @@
       "predicted_label": "Bust Risk",
       "actual_tier": 4,
       "actual_label": "Rotation / Bench",
-      "score": -10.0,
+      "score": -9.0,
       "rank": 51
     }
   ]
